@@ -34,11 +34,6 @@ jobs:
         # @emnapi/* optional native deps that Windows doesn't record.
         run: npm install --no-audit --no-fund
 
-      - name: Debug key length (temporary, remove after diagnosing)
-        run: echo "VITE_GEMINI_API_KEY length is ${#VITE_GEMINI_API_KEY} chars"
-        env:
-          VITE_GEMINI_API_KEY: ${{ secrets.VITE_GEMINI_API_KEY }}
-
       - name: Build
         run: npm run build
         env:
