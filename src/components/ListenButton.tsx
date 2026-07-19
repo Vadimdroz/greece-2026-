@@ -13,6 +13,10 @@ interface Props {
   audioAssetPath?: string;
   /** Label used for the tooltip + a11y; falls back to the dict copy. */
   label?: string;
+  /** Visible button text override (default variant only); falls back to the dict copy.
+   *  Used for one-off audio tracks that aren't part of the EN/HE dict system
+   *  (e.g. the kids' Russian narration, which is offered regardless of app language). */
+  text?: string;
   variant?: Variant;
 }
 
@@ -20,6 +24,7 @@ export default function ListenButton({
   attractionId,
   audioAssetPath,
   label,
+  text,
   variant = "default"
 }: Props) {
   const t = useT();
@@ -94,11 +99,12 @@ export default function ListenButton({
         <Play size={13} strokeWidth={2.2} />
       )}
       <span>
-        {state === "playing"
-          ? t("listen_pause")
-          : state === "error"
-            ? t("listen_unavailable")
-            : t("listen_play")}
+        {text ??
+          (state === "playing"
+            ? t("listen_pause")
+            : state === "error"
+              ? t("listen_unavailable")
+              : t("listen_play"))}
       </span>
     </button>
   );

@@ -1052,8 +1052,15 @@ function ActivityRow({
                   {/* Italian-accented narration of the description.
                       Audio is pre-generated as a static asset, so no
                       runtime API key or call is needed. */}
-                  <div className="mt-3">
+                  <div className="mt-3 flex flex-wrap gap-2">
                     <ListenButton attractionId={att.id} />
+                    {/* Extra track for the kids, offered regardless of app
+                        language — see scripts/fetch-attraction-audio-ru-kids.mjs. */}
+                    <ListenButton
+                      audioAssetPath={`attractions/${att.id}.ru-kids`}
+                      label="Russian narration for kids"
+                      text="🇷🇺 Детям"
+                    />
                   </div>
                   {(att.openingNote || att.bookingNote) && (
                     <div className="mt-3 text-xs text-terracotta-700 bg-terracotta-500/10 border border-terracotta-500/25 rounded-lg px-3 py-2 leading-snug">
