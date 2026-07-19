@@ -59,7 +59,14 @@ export const itinerary: Day[] = [
         example: "Καλώς ήρθατε στους Δελφούς!",
         exampleMeaning: "Welcome to Delphi!"
       }
-    ]
+    ],
+    leadImage: "./images/athens-acropolis.jpg",
+    leadImageCredit: {
+      author: "Giles Laurent",
+      license: "CC BY-SA 4.0",
+      source: "https://commons.wikimedia.org/wiki/File:1029_Acropolis_of_Athens_in_Greece_at_night_Photo_by_Giles_Laurent.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+    }
   },
   {
     dayNumber: 2,
@@ -158,6 +165,13 @@ export const itinerary: Day[] = [
       type: "digestif",
       pairing: "The mountains' answer to ouzo — unsweetened, often served with a small meze plate. Fits Plastiras' cooler, alpine-lake mood better than a beach cocktail would.",
       servingNote: "Small chilled glass, sipped slowly with olives or cheese"
+    },
+    leadImage: "./images/plastiras-horses.jpg",
+    leadImageCredit: {
+      author: "Αλεξανδρής Αλέξης",
+      license: "CC BY-SA 4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Forest_Lake_Plastiras.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
     }
   },
   {

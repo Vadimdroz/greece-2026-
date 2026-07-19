@@ -78,17 +78,17 @@ function shade(hex: string, percent: number): string {
   return "#" + (0x1000000 + (R << 16) + (G << 8) + B).toString(16).slice(1);
 }
 
-/* Generous bounding box for "is the device currently in Italy?".
-   Includes the islands (Sicily, Sardinia) and a safety margin so we
-   don't accidentally reject a user near the border. */
-const ITALY_BBOX = { south: 35.4, north: 47.5, west: 6.4, east: 19.0 };
+/* Generous bounding box for "is the device currently in Greece?".
+   Covers the whole country (not just the mainland route) and a safety
+   margin so we don't accidentally reject a user near the border. */
+const GREECE_BBOX = { south: 34.5, north: 41.8, west: 19.0, east: 29.7 };
 
-function isInItaly(lat: number, lon: number): boolean {
+function isInGreece(lat: number, lon: number): boolean {
   return (
-    lat >= ITALY_BBOX.south &&
-    lat <= ITALY_BBOX.north &&
-    lon >= ITALY_BBOX.west &&
-    lon <= ITALY_BBOX.east
+    lat >= GREECE_BBOX.south &&
+    lat <= GREECE_BBOX.north &&
+    lon >= GREECE_BBOX.west &&
+    lon <= GREECE_BBOX.east
   );
 }
 
@@ -330,7 +330,7 @@ export default function MapView({ registerFocus }: Props) {
         ];
         setUserLocation(coords);
         setGeolocBlocked(false);
-        if (!hasAutoCentered.current && isInItaly(coords[0], coords[1])) {
+        if (!hasAutoCentered.current && isInGreece(coords[0], coords[1])) {
           hasAutoCentered.current = true;
           // Small delay so the map has finished its initial render and
           // isn't fighting our flyTo with its own center transition.
@@ -362,7 +362,7 @@ export default function MapView({ registerFocus }: Props) {
         // Manual button still respects the "only auto-centre in Italy"
         // rule — clicking it from Tel Aviv would otherwise zoom out of
         // the trip area, which isn't useful pre-trip.
-        if (isInItaly(coords[0], coords[1])) {
+        if (isInGreece(coords[0], coords[1])) {
           flyRef.current?.flyToCoords(coords, 13);
         }
       },
@@ -515,8 +515,8 @@ export default function MapView({ registerFocus }: Props) {
 
       <div className="relative card-paper overflow-hidden -mx-4 sm:mx-0 rounded-none sm:rounded-2xl">
         <MapContainer
-          center={[42.95, 11.6]}
-          zoom={8}
+          center={[39.0, 22.6]}
+          zoom={7}
           scrollWheelZoom={true}
           className="h-[70svh] sm:h-[600px] w-full"
         >
