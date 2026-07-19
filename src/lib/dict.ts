@@ -369,6 +369,10 @@ export const DICT = {
     he: "{done} מתוך {total} בוצעו"
   },
   checklist_urgent: { en: "Urgent", he: "דחוף" },
+  checklist_open_tracker: {
+    en: "Open the full task tracker (yacht week + Greece packing) →",
+    he: "לפתוח את מעקב המשימות המלא (שבוע היאכטה + אריזה ליוון) ←"
+  },
 
   /* ---------- Lock gate (bookings section) ---------- */
   lock_prompt: {

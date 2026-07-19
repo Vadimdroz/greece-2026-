@@ -188,6 +188,13 @@ export default function ChecklistSection() {
         </div>
       </div>
 
+      <a
+        href="./tasks.html"
+        className="mb-6 -mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-terracotta-600 hover:text-terracotta-700 underline underline-offset-2"
+      >
+        {t("checklist_open_tracker")}
+      </a>
+
       <AnimatePresence mode="wait">
         <motion.div
           key={tab}
