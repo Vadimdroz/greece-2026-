@@ -15,7 +15,14 @@ export const wineries: Winery[] = [
     website: "https://www.skouras.gr/",
     address: "Argos-Sternas, Malandreni, 21200 Argos, Greece",
     coords: [37.5828, 22.7561],
-    bookingNote: "Email or call ahead for a tasting — small operation, not a drop-in tour bus stop."
+    bookingNote: "Email or call ahead for a tasting — small operation, not a drop-in tour bus stop.",
+    image: "./images/win-skouras.jpg",
+    imageCredit: {
+      author: "ulrichstill",
+      license: "CC BY-SA 3.0 DE",
+      source: "https://commons.wikimedia.org/wiki/File:Nemea_Wine-Olives_Corinthia_Peloponnese.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/"
+    }
   },
   {
     id: "win-semeli",
@@ -27,6 +34,13 @@ export const wineries: Winery[] = [
     website: "https://www.semeliwines.gr/",
     address: "Nemea, 20500, Greece",
     coords: [37.8175, 22.6600],
-    bookingNote: "Book a tasting slot ahead — this is an optional add-on, not on the core plan."
+    bookingNote: "Book a tasting slot ahead — this is an optional add-on, not on the core plan.",
+    image: "./images/win-semeli.jpg",
+    imageCredit: {
+      author: "Zde",
+      license: "CC BY-SA 4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Vine_tree_near_Archeological_site_of_Nemea,_Neme435.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+    }
   }
 ];

@@ -18,7 +18,14 @@ export const attractions: POI[] = [
       "Start before 10:00 — heat and tour-bus crowds both build fast",
       "Uneven stone paths — sturdy shoes over sandals",
       "The stadium is a further climb past the theatre — worth it if the kids still have energy"
-    ]
+    ],
+    image: "./images/delphi-sanctuary.jpg",
+    imageCredit: {
+      author: "Skyring",
+      license: "CC BY-SA 4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Delphi_Temple_of_Apollo.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+    }
   },
   {
     id: "delphi-museum",
@@ -32,7 +39,14 @@ export const attractions: POI[] = [
     coords: [38.4831, 22.4998],
     tags: ["culture"],
     difficulty: "easy",
-    tips: ["Air-conditioned — plan it for the hottest part of the day", "Compact enough for a focused visit with kids, ~45–60 min"]
+    tips: ["Air-conditioned — plan it for the hottest part of the day", "Compact enough for a focused visit with kids, ~45–60 min"],
+    image: "./images/delphi-museum.jpg",
+    imageCredit: {
+      author: "Ricardo André Frantz (Tetraktys)",
+      license: "CC BY-SA 2.5",
+      source: "https://commons.wikimedia.org/wiki/File:Museuarqueologicodelfos.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/2.5"
+    }
   },
   {
     id: "delphi-tholos",
@@ -45,7 +59,14 @@ export const attractions: POI[] = [
     address: "Sanctuary of Athena Pronaia, 33054 Delfoi, Greece",
     coords: [38.4795, 22.5062],
     tags: ["culture", "view"],
-    difficulty: "easy"
+    difficulty: "easy",
+    image: "./images/delphi-tholos.jpg",
+    imageCredit: {
+      author: "Kufoleto, Antonio De Lorenzo and Marina Ventayol",
+      license: "CC BY 3.0",
+      source: "https://commons.wikimedia.org/wiki/File:Delphi_tholos_cazzul.JPG",
+      licenseUrl: "https://creativecommons.org/licenses/by/3.0"
+    }
   },
 
   // ---------- LAKE PLASTIRAS ----------
@@ -67,7 +88,14 @@ export const attractions: POI[] = [
       "Bring swimsuits under your clothes, a full dry change, and towels for the ride back",
       "Old sports shoes or neoprene booties beat sandals",
       "Suitable for kids Sophia and Thomas's ages, but confirm the operator's minimum age at booking"
-    ]
+    ],
+    image: "./images/aliakmonas-rafting.jpg",
+    imageCredit: {
+      author: "Unsplash",
+      license: "Unsplash License",
+      source: "https://unsplash.com/photos/photo-1599443380179-33737c17ca81",
+      licenseUrl: "https://unsplash.com/license"
+    }
   },
   {
     id: "plastiras-horses",
@@ -81,7 +109,14 @@ export const attractions: POI[] = [
     coords: [39.3667, 21.6833],
     tags: ["nature", "family"],
     difficulty: "easy",
-    tips: ["Confirm a day ahead — small operators, limited horses", "Closed shoes, long trousers if you have them"]
+    tips: ["Confirm a day ahead — small operators, limited horses", "Closed shoes, long trousers if you have them"],
+    image: "./images/plastiras-horses.jpg",
+    imageCredit: {
+      author: "Αλεξανδρής Αλέξης",
+      license: "CC BY-SA 4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Forest_Lake_Plastiras.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+    }
   },
   {
     id: "plastiras-archery",
@@ -94,7 +129,13 @@ export const attractions: POI[] = [
     address: "Lake Plastiras area, Karditsa, Greece",
     coords: [39.3650, 21.6900],
     tags: ["family"],
-    difficulty: "easy"
+    difficulty: "easy",
+    image: "./images/plastiras-archery.jpg",
+    imageCredit: {
+      author: "Lance Cpl. Jackeline Perez Rivera, U.S. Marine Corps",
+      license: "Public Domain",
+      source: "https://commons.wikimedia.org/wiki/File:Kids_take_aim_with_after_school_archery_program_120308-M-IY869-125.jpg"
+    }
   },
 
   // ---------- TRANSIT ----------
@@ -110,7 +151,14 @@ export const attractions: POI[] = [
     coords: [39.7217, 21.6306],
     tags: ["view", "culture"],
     difficulty: "easy",
-    tips: ["Pull off at the main viewpoint road above Kalambaka for photos", "Modest dress required if you do go inside a monastery — shoulders and knees covered"]
+    tips: ["Pull off at the main viewpoint road above Kalambaka for photos", "Modest dress required if you do go inside a monastery — shoulders and knees covered"],
+    image: "./images/meteora-viewpoint.jpg",
+    imageCredit: {
+      author: "Stathis floros",
+      license: "CC BY-SA 4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Meteora%27s_monastery_2.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+    }
   },
   {
     id: "waterland",
@@ -124,7 +172,13 @@ export const attractions: POI[] = [
     coords: [40.4667, 22.9333],
     tags: ["water", "family"],
     difficulty: "easy",
-    tips: ["Swimsuits on under clothes saves a changing-room queue", "Bring your own towels — rentals add up fast"]
+    tips: ["Swimsuits on under clothes saves a changing-room queue", "Bring your own towels — rentals add up fast"],
+    image: "./images/waterland.jpg",
+    imageCredit: {
+      author: "Pavel Soro London",
+      license: "CC0",
+      source: "https://commons.wikimedia.org/wiki/File:Water_slide_at_H%C3%B4tel_Eden_Andalou_Aquapark_(234137179).jpg"
+    }
   },
   {
     id: "thermopylae",
@@ -144,7 +198,14 @@ export const attractions: POI[] = [
         correctAnswer: "King Leonidas of Sparta",
         distractors: ["King Xerxes", "Alexander the Great", "Pericles"]
       }
-    ]
+    ],
+    image: "./images/thermopylae.jpg",
+    imageCredit: {
+      author: "Pimpinellus",
+      license: "CC BY-SA 4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Leonidas_Statue_01.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+    }
   },
 
   // ---------- THESSALONIKI ----------
@@ -159,7 +220,14 @@ export const attractions: POI[] = [
     address: "Ano Poli, Thessaloniki, Greece",
     coords: [40.6364, 22.9539],
     tags: ["culture", "view"],
-    difficulty: "moderate"
+    difficulty: "moderate",
+    image: "./images/ano-poli.jpg",
+    imageCredit: {
+      author: "XeresNelro",
+      license: "CC BY-SA 4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Thessalonikki,_Macedonia,_Greece779.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+    }
   },
   {
     id: "white-tower",
@@ -172,7 +240,14 @@ export const attractions: POI[] = [
     address: "Leoforos Nikis, Thessaloniki 546 21, Greece",
     coords: [40.6264, 22.9490],
     tags: ["view", "culture"],
-    difficulty: "easy"
+    difficulty: "easy",
+    image: "./images/white-tower.jpg",
+    imageCredit: {
+      author: "CeeGee",
+      license: "CC BY-SA 4.0",
+      source: "https://commons.wikimedia.org/wiki/File:WhiteTowerThessaloniki_(3).JPG",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+    }
   },
 
   // ---------- NAFPLIO ----------
@@ -188,7 +263,14 @@ export const attractions: POI[] = [
     coords: [37.5660, 22.8020],
     tags: ["culture", "view"],
     difficulty: "challenging",
-    tips: ["The 900 steps are a real climb — skip them on a light last day with young kids", "Old town views of the fortress are worth it on their own"]
+    tips: ["The 900 steps are a real climb — skip them on a light last day with young kids", "Old town views of the fortress are worth it on their own"],
+    image: "./images/palamidi-view.jpg",
+    imageCredit: {
+      author: "Brastite",
+      license: "CC BY-SA 3.0",
+      source: "https://commons.wikimedia.org/wiki/File:Palamidi_fortress_(Nafplio,_Greece).jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0"
+    }
   }
 ];
 

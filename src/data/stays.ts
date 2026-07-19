@@ -21,7 +21,14 @@ export const stays: Stay[] = [
     ],
     warnings: [
       "PENDING DECISION — duplicate booking with Acropole Delphi City Hotel, same dates. Cancel one before 12 Aug."
-    ]
+    ],
+    image: "./images/stay-delphi-amalia.jpg",
+    imageCredit: {
+      author: "Angela Monika Arnold, Berlin",
+      license: "CC BY 3.0",
+      source: "https://commons.wikimedia.org/wiki/File:GR_08-04-23_Delphi_Hauptstrasse.JPG",
+      licenseUrl: "https://creativecommons.org/licenses/by/3.0"
+    }
   },
   {
     id: "stay-delphi-acropole",
@@ -42,7 +49,14 @@ export const stays: Stay[] = [
     ],
     warnings: [
       "PENDING DECISION — duplicate booking with Amalia Hotel Delphi, same dates."
-    ]
+    ],
+    image: "./images/stay-delphi-acropole.jpg",
+    imageCredit: {
+      author: "Angela Monika Arnold, Berlin",
+      license: "CC BY 3.0",
+      source: "https://commons.wikimedia.org/wiki/File:GR_08-04-24_Delphi_Hauptstrasse.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by/3.0"
+    }
   },
   {
     id: "stay-plastiras",
@@ -61,7 +75,14 @@ export const stays: Stay[] = [
       "Booking.com confirmation 5911663775, PIN 1975",
       "Free cancellation ended 26 July 2026 — locked in",
       "Base for the rafting, horse riding, and archery days"
-    ]
+    ],
+    image: "./images/stay-plastiras.jpg",
+    imageCredit: {
+      author: "SXRomeo",
+      license: "CC BY-SA 4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Lake_Plastiras.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+    }
   },
   {
     id: "stay-thessaloniki-september",
@@ -83,7 +104,14 @@ export const stays: Stay[] = [
     ],
     warnings: [
       "PENDING DECISION — duplicate booking with City Hotel Thessaloniki, same dates. Cancel one before 18 Aug."
-    ]
+    ],
+    image: "./images/stay-thessaloniki-september.jpg",
+    imageCredit: {
+      author: "Unsplash",
+      license: "Unsplash License",
+      source: "https://unsplash.com/photos/photo-1763717630658-d8fa5fa754e9",
+      licenseUrl: "https://unsplash.com/license"
+    }
   },
   {
     id: "stay-thessaloniki-city",
@@ -105,7 +133,14 @@ export const stays: Stay[] = [
     warnings: [
       "PENDING DECISION — duplicate booking with September Hotel Thessaloniki, same dates.",
       "Booked for 2 adults + 1 child only — confirm occupancy before keeping this one over the other"
-    ]
+    ],
+    image: "./images/stay-thessaloniki-city.jpg",
+    imageCredit: {
+      author: "Unsplash",
+      license: "Unsplash License",
+      source: "https://unsplash.com/photos/a-modern-hotel-room-with-elegant-furnishings-Qvn9nTldQgc",
+      licenseUrl: "https://unsplash.com/license"
+    }
   },
   {
     id: "stay-nafplio",
@@ -128,7 +163,14 @@ export const stays: Stay[] = [
     ],
     warnings: [
       "PENDING DECISION — duplicate booking with Philia Boutique Hotel, Athens, same night (22–23 Aug)."
-    ]
+    ],
+    image: "./images/stay-nafplio.jpg",
+    imageCredit: {
+      author: "Nikolaos Kyriakakis",
+      license: "CC BY-SA 4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Neoclassical_buildings_in_Nafplion.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+    }
   },
   {
     id: "stay-athens-philia",
@@ -150,6 +192,13 @@ export const stays: Stay[] = [
     ],
     warnings: [
       "PENDING DECISION — duplicate booking with Traditional house of 1898, Nafplio, same night."
-    ]
+    ],
+    image: "./images/stay-athens-philia.jpg",
+    imageCredit: {
+      author: "Pavlos1988",
+      license: "CC BY-SA 4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Psyrri,_Athens.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+    }
   }
 ];
