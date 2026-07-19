@@ -2,7 +2,7 @@ import { Play, Pause, Loader2 } from "lucide-react";
 import { useT } from "../lib/dict";
 import { useLang } from "../lib/i18n";
 import { resolveAudioUrl, resolveAttractionListenUrls } from "../lib/audioUrl";
-import { usePageAudio } from "../lib/usePageAudio";
+import { useAudioPlayer } from "../lib/audioPlayer";
 
 type Variant = "default" | "compact";
 
@@ -17,6 +17,9 @@ interface Props {
    *  Used for one-off audio tracks that aren't part of the EN/HE dict system
    *  (e.g. the kids' Russian narration, which is offered regardless of app language). */
   text?: string;
+  /** Shown in the persistent now-playing bar while this track is active.
+   *  Falls back to `label`, then the dict's generic "Listen" copy. */
+  title?: string;
   variant?: Variant;
 }
 
@@ -25,10 +28,12 @@ export default function ListenButton({
   audioAssetPath,
   label,
   text,
+  title,
   variant = "default"
 }: Props) {
   const t = useT();
   const { lang } = useLang();
+  const player = useAudioPlayer();
 
   let primary: string | null = null;
   let fallback: string | null = null;
@@ -40,14 +45,21 @@ export default function ListenButton({
     fallback = r.fallback;
   }
 
-  const { state, toggle } = usePageAudio(
-    primary,
-    fallback ? { fallbackUrl: fallback } : undefined
-  );
-
   if (!primary) {
     return null;
   }
+
+  const isThisTrack = player.track?.url === primary;
+  const state = isThisTrack ? player.state : "idle";
+
+  const handleToggle = (e: React.SyntheticEvent) => {
+    e.stopPropagation();
+    player.toggle({
+      url: primary,
+      fallbackUrl: fallback,
+      title: title ?? label ?? t("listen_play")
+    });
+  };
 
   const aria =
     label ?? (state === "playing" ? t("listen_pause") : t("listen_play"));
@@ -56,7 +68,7 @@ export default function ListenButton({
     return (
       <button
         type="button"
-        onClick={toggle}
+        onClick={handleToggle}
         aria-label={aria}
         title={aria}
         className={`inline-flex items-center justify-center w-7 h-7 rounded-full transition-colors ${
@@ -79,7 +91,7 @@ export default function ListenButton({
   return (
     <button
       type="button"
-      onClick={toggle}
+      onClick={handleToggle}
       aria-label={aria}
       title={aria}
       className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] uppercase tracking-[0.16em] font-medium transition-colors ${

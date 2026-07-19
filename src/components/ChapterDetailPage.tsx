@@ -1053,13 +1053,14 @@ function ActivityRow({
                       Audio is pre-generated as a static asset, so no
                       runtime API key or call is needed. */}
                   <div className="mt-3 flex flex-wrap gap-2">
-                    <ListenButton attractionId={att.id} />
+                    <ListenButton attractionId={att.id} title={att.name} />
                     {/* Extra track for the kids, offered regardless of app
                         language — see scripts/fetch-attraction-audio-ru-kids.mjs. */}
                     <ListenButton
                       audioAssetPath={`attractions/${att.id}.ru-kids`}
                       label="Russian narration for kids"
                       text="🇷🇺 Детям"
+                      title={`${att.name} · для детей`}
                     />
                   </div>
                   {(att.openingNote || att.bookingNote) && (

@@ -219,13 +219,14 @@ export default function AttractionCard({ poi: rawPoi }: { poi: POI }) {
                   scripts/fetch-attraction-audio.mjs and served as a
                   static asset — no runtime API calls or keys. */}
               <div className="mt-3 flex flex-wrap gap-2">
-                <ListenButton attractionId={poi.id} />
+                <ListenButton attractionId={poi.id} title={poi.name} />
                 {/* Extra track for the kids, offered regardless of app
                     language — see scripts/fetch-attraction-audio-ru-kids.mjs. */}
                 <ListenButton
                   audioAssetPath={`attractions/${poi.id}.ru-kids`}
                   label="Russian narration for kids"
                   text="🇷🇺 Детям"
+                  title={`${poi.name} · для детей`}
                 />
               </div>
               {(poi.openingNote || poi.bookingNote) && (

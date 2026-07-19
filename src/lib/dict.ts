@@ -217,6 +217,9 @@ export const DICT = {
   listen_play: { en: "Listen", he: "האזן" },
   listen_pause: { en: "Pause", he: "השהה" },
   listen_unavailable: { en: "Audio unavailable", he: "האודיו לא זמין" },
+  player_back_10: { en: "Back 10 seconds", he: "אחורה 10 שניות" },
+  player_forward_10: { en: "Forward 10 seconds", he: "קדימה 10 שניות" },
+  player_close: { en: "Close player", he: "סגור נגן" },
 
   /* ---------- Nikos (the AI tour guide) ---------- */
   gem_open: { en: "Chat with Nikos", he: "שוחחו עם ניקוס" },

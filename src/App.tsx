@@ -18,8 +18,10 @@ import SectionOrnament from "./components/SectionOrnament";
 import ChapterDetailPage from "./components/ChapterDetailPage";
 import InstallPrompt from "./components/InstallPrompt";
 import Gemininio from "./components/Gemininio";
+import NowPlayingBar from "./components/NowPlayingBar";
 import { MapFocusContext } from "./lib/mapContext";
 import { useHashRoute } from "./lib/route";
+import { AudioPlayerProvider } from "./lib/audioPlayer";
 
 export default function App() {
   const focusFnRef = useRef<((id: string) => void) | null>(null);
@@ -33,19 +35,25 @@ export default function App() {
     focusFnRef.current = fn;
   }, []);
 
+  // AudioPlayerProvider + NowPlayingBar wrap BOTH branches below so that
+  // narration playback survives switching between the chapter route and
+  // the main page (the hash router swaps out the whole subtree otherwise,
+  // which would unmount whatever owned the audio element).
   if (route.kind === "chapter") {
     return (
-      <>
+      <AudioPlayerProvider>
         <ChapterDetailPage dayNumber={route.day} />
         {/* The Add-to-Home-Screen coachmark lives at the app root so it
             shows regardless of which page the user landed on. */}
         <InstallPrompt />
         <Gemininio />
-      </>
+        <NowPlayingBar />
+      </AudioPlayerProvider>
     );
   }
 
   return (
+    <AudioPlayerProvider>
     <MapFocusContext.Provider value={{ focusOn }}>
       <Navbar />
       <Hero />
@@ -97,6 +105,8 @@ export default function App() {
       {/* Gemininio occupies the floating-action slot that used to
           host the "scroll to map" FAB — same position, more useful. */}
       <Gemininio />
+      <NowPlayingBar />
     </MapFocusContext.Provider>
+    </AudioPlayerProvider>
   );
 }
