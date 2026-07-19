@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- ?v= bumps when icons change. Full-bleed 512px art + manifest
+         purpose any maskable so Android does not letterbox on white;
+         slight center zoom keeps saturated pixels at the circular mask. -->
+    <link rel="icon" type="image/png" sizes="192x192" href="./icon-greece-192.png?v=2" />
+    <link rel="icon" type="image/png" sizes="512x512" href="./icon-greece.png?v=2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0D47A1" />
+
+    <!-- Installable web app: lets Android Chrome fire `beforeinstallprompt`
+         and gives the saved-to-home-screen launcher a name + icon. -->
+    <link rel="manifest" href="./manifest.webmanifest" />
+
+    <!-- iOS Safari: Apple ignores the manifest, so these meta tags are how
+         we get a clean home-screen icon, a custom short label, and a
+         standalone (chrome-less) launch experience. -->
+    <link rel="apple-touch-icon" href="./icon-greece.png?v=2" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Greece Trip" />
+
+    <title>Greece 2026 — The Drozdovski Road Trip</title>
+    <meta
+      name="description"
+      content="Nine days across mainland Greece, 15–23 August 2026 — Delphi, Lake Plastiras, Thessaloniki and Nafplio. Itinerary, map, stays, attractions and tips for the family road trip."
+    />
+
+    <!-- Canonical — update the GITHUB-USERNAME placeholder once the repo is live -->
+    <link rel="canonical" href="https://GITHUB-USERNAME.github.io/greece-2026/" />
+
+    <!-- Open Graph (WhatsApp, Facebook, iMessage, LinkedIn, Slack) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Greece 2026" />
+    <meta property="og:url" content="https://GITHUB-USERNAME.github.io/greece-2026/" />
+    <meta property="og:title" content="Greece 2026 — The Drozdovski Road Trip" />
+    <meta
+      property="og:description"
+      content="Nine days across mainland Greece, 15–23 August 2026. Itinerary, map, stays and tips for the family road trip."
+    />
+    <meta property="og:image" content="https://GITHUB-USERNAME.github.io/greece-2026/icon-greece.png?v=2" />
+    <meta property="og:image:secure_url" content="https://GITHUB-USERNAME.github.io/greece-2026/icon-greece.png?v=2" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="Greece 2026 trip icon — a stylized Doric column on blue." />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="he_IL" />
+
+    <!-- Twitter / X (also used as a fallback by some clients) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Greece 2026 — The Drozdovski Road Trip" />
+    <meta
+      name="twitter:description"
+      content="Nine days across mainland Greece, 15–23 August 2026. Itinerary, map, stays and tips for the family road trip."
+    />
+    <meta name="twitter:image" content="https://GITHUB-USERNAME.github.io/greece-2026/icon-greece.png?v=2" />
+    <meta name="twitter:image:alt" content="Greece 2026 trip icon — a stylized Doric column on blue." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Rubik:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
