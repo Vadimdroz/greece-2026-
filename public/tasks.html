@@ -68,7 +68,7 @@
   .badge.soon{background:var(--amber-050); color:var(--amber-600);}
   .badge.standard{background:var(--blue-050); color:var(--blue-600);}
 
-  ul.tasks{list-style:none; margin:0; padding:0; border-top:1px solid var(--line);}
+  ul.tasks{list-style:none; margin:14px 0 0; padding:0; border-top:1px solid var(--line);}
   li.task{
     display:flex; gap:12px; padding:13px 2px; border-bottom:1px solid var(--line);
     align-items:flex-start;
@@ -170,7 +170,8 @@ const DATA = [
   {
     id: "pack-yacht",
     title: "Packing — Yacht week",
-    sub: "The week before Greece. Sun protection is the theme.",
+    sub: "9–15 Aug — the week right before Greece. Sun protection is the theme.",
+    callout: "Same-day handoff: the yacht ends and the Greece car pickup (Athens Airport, 13:00) both fall on 15 Aug. Confirm the disembarkation time and location leave enough of a buffer — and that the booster seats travel with you off the boat, not in a bag headed home.",
     tasks: [
       { id:"py1", title:"UPF sun shirts for everyone", detail:"Quick-dry, vented — for adults and kids both. Light colors (white/beige/light blue) reflect heat best on deck." },
       { id:"py2", title:"Light, breathable pants or shorts", detail:"UPF-rated or linen-blend — avoid heavy cotton, which stays wet and heavy once splashed." },
@@ -228,6 +229,13 @@ function render(){
     sub.className = "group-sub";
     sub.textContent = group.sub;
     section.appendChild(sub);
+
+    if (group.callout) {
+      const call = document.createElement("div");
+      call.className = "callout";
+      call.textContent = group.callout;
+      section.appendChild(call);
+    }
 
     const ul = document.createElement("ul");
     ul.className = "tasks";
