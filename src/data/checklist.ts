@@ -42,6 +42,16 @@ export const bookingChecklist: ChecklistItem[] = [
     link: "https://mavri-thalassa.gr/en/"
   },
   {
+    id: "book-delphi-dinner",
+    text: "Pick and book a Delphi dinner spot (15–16 Aug)",
+    detail: "No reservation strictly needed — the village is small with several gorge-view tavernas — but worth picking one and confirming it's open, especially for arrival night."
+  },
+  {
+    id: "book-nafplio-dinner",
+    text: "Pick and book a Nafplio last-night dinner (22 Aug)",
+    detail: "Old town has plenty of options, but worth booking ahead if you want a specific waterfront spot on an August Saturday night."
+  },
+  {
     id: "book-waterland-tickets",
     text: "Waterland Water Park tickets",
     detail: "Check whether buying online ahead is cheaper than at the gate for 20 Aug."
