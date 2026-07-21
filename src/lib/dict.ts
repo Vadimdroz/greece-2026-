@@ -362,20 +362,27 @@ export const DICT = {
   checklist_eyebrow: { en: "Before we fly", he: "לפני הטיסה" },
   checklist_title: { en: "Pre-trip checklist", he: "צ'קליסט לפני הטיול" },
   checklist_kicker: {
-    en: "Two lists: book it now, pack it later",
-    he: "שתי רשימות: להזמין עכשיו, לארוז אחר כך"
+    en: "Everything to sort before we fly — bookings, packing and admin, in one place",
+    he: "כל מה שצריך לסדר לפני הטיסה — הזמנות, אריזה וסידורים, במקום אחד"
   },
-  checklist_booking: { en: "Book ahead", he: "להזמין מראש" },
-  checklist_packing: { en: "Pack the bag", he: "לארוז את התיק" },
   checklist_progress: {
     en: "{done} of {total} done",
     he: "{done} מתוך {total} בוצעו"
   },
   checklist_urgent: { en: "Urgent", he: "דחוף" },
-  checklist_open_tracker: {
-    en: "Open the full task tracker (yacht week + Greece packing) →",
-    he: "לפתוח את מעקב המשימות המלא (שבוע היאכטה + אריזה ליוון) ←"
-  },
+  /* Category chips */
+  checklist_cat_hotels: { en: "Hotels", he: "מלונות" },
+  checklist_cat_restaurants: { en: "Restaurants", he: "מסעדות" },
+  checklist_cat_attractions: { en: "Parks & Attractions", he: "פארקים ואטרקציות" },
+  checklist_cat_car: { en: "Car hire", he: "השכרת רכב" },
+  checklist_cat_packing: { en: "Packing", he: "אריזה" },
+  checklist_cat_logistics: { en: "Pre-trip logistics", he: "לוגיסטיקה לפני הטיול" },
+  /* Due-date pill */
+  checklist_due_by: { en: "By {date}", he: "עד {date}" },
+  checklist_overdue: { en: "Overdue — {date}", he: "באיחור — {date}" },
+  /* Place links */
+  checklist_map: { en: "Map", he: "מפה" },
+  checklist_website: { en: "Website", he: "אתר" },
 
   /* ---------- Lock gate (bookings section) ---------- */
   lock_prompt: {
