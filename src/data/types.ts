@@ -339,12 +339,32 @@ export interface Quiz {
  *    when the kid wants to keep going and there's wifi handy. */
 export type QuizMode = "offline" | "live";
 
+/** The sub-sections the Lists screen is split into, surfaced as chips.
+ *  Order here is the order the chips render in. */
+export type ChecklistCategory =
+  | "hotels"
+  | "restaurants"
+  | "attractions"
+  | "car"
+  | "packing"
+  | "logistics";
+
 export interface ChecklistItem {
   id: string;
+  /** Which chip / sub-section this task lives under. */
+  category: ChecklistCategory;
   text: string;
   detail?: string;
   link?: string;
   urgent?: boolean;
+  /** Recommended "get this done by" date, ISO `YYYY-MM-DD`. The UI shows
+   *  it as a small due-date pill and turns it red once the date is past. */
+  dueBy?: string;
+  /** Google Maps link for place-based tasks (hotels, restaurants,
+   *  attractions) so the family can pull up directions in one tap. */
+  mapsUrl?: string;
+  /** Official website for the venue behind a place-based task. */
+  website?: string;
   /** Pre-checked by default (e.g. an already-booked reservation). The user
    *  can still toggle it; their choice is remembered per device. */
   done?: boolean;
