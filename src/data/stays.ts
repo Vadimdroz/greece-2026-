@@ -86,23 +86,26 @@ export const stays: Stay[] = [
   },
   {
     id: "stay-pelion",
-    name: "Agios Ioannis, Pelion — NOT YET BOOKED",
+    name: "Faros, Milopotamos",
     category: "stay",
     region: "transit",
-    shortDescription: "NEW — needs a real booking, unlike everything else on this trip",
+    shortDescription: "Confirmed — hillside hideaway above Mylopotamos beach",
     description:
-      "New addition, swapped in for a second Thessaloniki night. Agios Ioannis is a beach village on Pelion's east coast, walkable, with several family-run beachfront hotels. Real options worth booking: Kelly Beach Hotel (new, beachfront, modern), Hotel Evripides (seafront, family rooms), or Anesis Hotel (traditional family hotel on the shore).",
-    address: "Agios Ioannis, Pelion, Magnesia, Greece",
-    coords: [39.3608, 23.2242],
+      "A small, family-run hillside hotel above Mylopotamos beach, one of East Pelion's most beautiful. Rated 9.8 across hundreds of reviews — home-cooked meals from the owners' own farm, sea views, and a genuinely secluded feel. Two rooms booked. Note: cash-only property, and the access road is rough (manageable, but not a smooth drive-up) — worth knowing before arrival.",
+    address: "Pilio, Milopotamos, 37012, Greece",
+    coords: [39.3520, 23.1050],
     checkIn: "2026-08-20",
     checkOut: "2026-08-21",
     nights: 1,
     highlights: [
-      "Not booked — this is the one gap in an otherwise fully-booked (if double-booked) trip",
-      "Kelly Beach Hotel, Hotel Evripides, and Anesis Hotel are all real, well-reviewed, family-friendly options right on or near Agios Ioannis beach"
+      "Booking.com confirmation 5209377665, PIN 7030",
+      "2 rooms, total US$189",
+      "9.8 rating — home-cooked farm-to-table meals, sea-view rooms, quiet hillside setting",
+      "Message the property ahead about check-in/out times and the access road"
     ],
     warnings: [
-      "NOT BOOKED — needs action before the trip. Book soon; this is peak August."
+      "Cash only — no cards accepted on site",
+      "Access road is rough — fine for any car per reviews, but not paved smooth; drive carefully with the family"
     ]
   },
   {
