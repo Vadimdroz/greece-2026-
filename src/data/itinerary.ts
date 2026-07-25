@@ -322,7 +322,14 @@ export const itinerary: Day[] = [
         title: "White Tower & the waterfront promenade",
         description: "Thessaloniki's landmark, right on the seafront — an easy, flat walk after the Ano Poli climb, with plenty of spots to stop for a frappé.",
         attractionId: "white-tower",
-        tag: "view",
+        tag: "view"
+      },
+      {
+        time: "14:30",
+        title: "Pirate ship cruise on the Thermaic Gulf",
+        description:
+          "Several pirate-themed boats (Black Pearl, Arabella, and a few smaller wooden ones) depart right from the White Tower every ~90 minutes, year-round. A 20–30 minute loop around the bay with a pirate character on board — free to ride, you just pay for a drink once aboard. No booking needed, just show up at the dock.",
+        tag: "family",
         rideToNext: { duration: "20 min", note: "to Kalamaria for dinner" }
       },
       {
@@ -335,7 +342,8 @@ export const itinerary: Day[] = [
     ],
     dayTips: [
       "Reserve Mavri Thalassa by phone (+30 231 093 2542) or online — same-day online bookings close at 15:00",
-      "Ano Poli in the morning, waterfront in the heat of the day — the order matters for shade"
+      "Ano Poli in the morning, waterfront in the heat of the day — the order matters for shade",
+      "The pirate boats run every ~90 min with no booking — no need to plan the exact time, just walk up when you're ready"
     ],
     restaurants: ["rest-mavri-thalassa"],
     drinkOfTheDay: {
