@@ -25,13 +25,23 @@ export const checklist: ChecklistItem[] = [
   {
     id: "resolve-thessaloniki-hotel",
     category: "hotels",
-    text: "Pick one Thessaloniki hotel, cancel the other",
+    text: "Pick one Thessaloniki hotel, cancel the other, and fix the check-in date",
     detail:
-      "September Hotel (conf. 5559705389) vs. City Hotel Thessaloniki (conf. 5066676607, booked for 2 adults + 1 child only — check occupancy). Both booked 20–22 Aug, free cancel until 18 Aug.",
+      "September Hotel (conf. 5559705389) vs. City Hotel Thessaloniki (conf. 5066676607, booked for 2 adults + 1 child only — check occupancy). Both currently booked 20–22 Aug, free cancel until 18 Aug — but the plan now arrives 21 Aug (Pelion night added before it), so whichever you keep needs its check-in moved to 21 Aug (1 night), or you'll pay for an unused first night.",
     urgent: true,
     dueBy: "2026-08-18",
     mapsUrl: maps("September Hotel Thessaloniki"),
     website: "https://septemberhotel.reserve-online.net/"
+  },
+  {
+    id: "book-pelion-hotel",
+    category: "hotels",
+    text: "Book a Pelion hotel (Agios Ioannis) — new, 20–21 Aug",
+    detail:
+      "Not booked yet. Real options: Kelly Beach Hotel (beachfront, modern), Hotel Evripides, or Anesis Hotel — all family-run, on or near Agios Ioannis beach.",
+    urgent: true,
+    dueBy: "2026-08-08",
+    mapsUrl: maps("Agios Ioannis Pelion Greece hotels")
   },
   {
     id: "resolve-last-night",
@@ -98,12 +108,22 @@ export const checklist: ChecklistItem[] = [
   {
     id: "book-waterland-tickets",
     category: "attractions",
-    text: "Waterland Water Park tickets",
+    text: "Waterland Water Park tickets (22 Aug morning)",
     detail:
-      "Check whether buying online ahead is cheaper than at the gate for 20 Aug.",
-    dueBy: "2026-08-19",
+      "Peraia, near Thessaloniki — now the first stop on Day 8, before Thermopylae/Nafplio. Check whether buying online ahead is cheaper than at the gate.",
+    dueBy: "2026-08-21",
     mapsUrl: maps("Waterland Water Park Tagarades Thessaloniki"),
     website: "https://www.waterland.gr/en/"
+  },
+  {
+    id: "book-pelion-boat-trip",
+    category: "attractions",
+    text: "Book the Pelion Scout \"Mamma Mia\" boat trip (21 Aug morning)",
+    detail:
+      "Agios Ioannis, 10:00 departure. Small boats — max 11 guests — book ahead. Minimum age 4, easy difficulty, fine for both kids.",
+    dueBy: "2026-08-15",
+    mapsUrl: maps("Agios Ioannis port Pelion Greece"),
+    website: "https://pelionscout.com/daily-activities-tours-pelion-greece/boat-trip-mamma-mia/"
   },
 
   /* ---------------- Car hire ---------------- */
@@ -121,11 +141,61 @@ export const checklist: ChecklistItem[] = [
     category: "car",
     text: "Confirm both booster/child seats are in the car",
     detail:
-      "Mandatory under Greek law for under-12 or under-150cm. €350 fine if missing. Check at the Record Go desk before leaving the lot on 15 Aug.",
+      "Mandatory under Greek law for under-12 or under-150cm. €350 fine if missing. Check at the Record Go desk before leaving the lot on 15 Aug. Same-day handoff risk: the yacht week ends 15 Aug, the same day as this car pickup — make sure the booster seats come off the boat with you, not into a bag headed home.",
+    urgent: true,
     dueBy: "2026-08-15"
   },
 
   /* ---------------- Packing ---------------- */
+  {
+    id: "yacht-sun-shirts",
+    category: "packing",
+    text: "Yacht week: UPF sun shirts for everyone",
+    detail:
+      "9–15 Aug, before Greece. Quick-dry, vented, light colors (white/beige/light blue) reflect heat best on deck."
+  },
+  {
+    id: "yacht-light-pants",
+    category: "packing",
+    text: "Yacht week: light, breathable pants or shorts",
+    detail: "UPF-rated or linen-blend — heavy cotton stays wet and heavy once splashed."
+  },
+  {
+    id: "yacht-hats-sunglasses",
+    category: "packing",
+    text: "Yacht week: wide-brim hats + polarized sunglasses (adults + kids)",
+    detail: "A hat that won't blow off in wind on deck is worth the extra cost."
+  },
+  {
+    id: "yacht-sunscreen",
+    category: "packing",
+    text: "Yacht week: reef-safe, high-SPF sunscreen — a big bottle",
+    detail: "You'll go through more than expected on a week on the water."
+  },
+  {
+    id: "yacht-rashguards",
+    category: "packing",
+    text: "Yacht week: rash guards / UPF swimwear for the kids",
+    detail: "For anyone in and out of the water repeatedly."
+  },
+  {
+    id: "yacht-deck-shoes",
+    category: "packing",
+    text: "Yacht week: non-slip deck shoes or water shoes",
+    detail: "For everyone — boat decks get slippery wet."
+  },
+  {
+    id: "yacht-motion-sickness",
+    category: "packing",
+    text: "Yacht week: motion sickness remedy, just in case",
+    detail: "Especially worth having for the kids on the first day or two."
+  },
+  {
+    id: "yacht-dry-bag",
+    category: "packing",
+    text: "Yacht week: dry bag for phones/electronics",
+    detail: "Keeps devices safe from spray without leaving them below deck all week."
+  },
   {
     id: "water-shoes",
     category: "packing",
