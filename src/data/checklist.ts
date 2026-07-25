@@ -32,6 +32,11 @@ export const bookingChecklist: ChecklistItem[] = [
     link: "https://pelionscout.com/daily-activities-tours-pelion-greece/boat-trip-mamma-mia/"
   },
   {
+    id: "book-waterland-tickets",
+    text: "Waterland Water Park tickets (22 Aug morning)",
+    detail: "Peraia, near Thessaloniki — now the first stop on Day 8, before Thermopylae/Nafplio. Check whether buying online ahead is cheaper than at the gate."
+  },
+  {
     id: "resolve-last-night",
     text: "Nafplio or Athens for the last night?",
     detail: "Traditional house of 1898, Nafplio (conf. 5347700468, free cancel until 7 Aug) vs. Philia Boutique Hotel, Athens (conf. 5911625902, free cancel until 14 Aug). Both booked for 22–23 Aug.",

@@ -352,7 +352,7 @@ export const itinerary: Day[] = [
     ],
     driveNotes: "Agios Ioannis → Thessaloniki ≈ 2 h",
     dayTips: [
-      "Ano Poli and its Byzantine walls are dropped from this compressed day — if you want them, they're a doable add before checkout tomorrow morning instead",
+      "Ano Poli and its Byzantine walls are dropped from the plan entirely to make room for Waterland the next morning — it's the one trade-off of fitting everything in",
       "Book the Pelion Scout boat trip ahead — max 11 guests per departure",
       "Reserve Mavri Thalassa by phone (+30 231 093 2542) or online — same-day online bookings close at 15:00",
       "This is now a 1-night Thessaloniki stay, not 2 — update whichever hotel booking you keep"
@@ -369,23 +369,24 @@ export const itinerary: Day[] = [
     dayNumber: 8,
     date: "2026-08-22",
     weekday: "Saturday",
-    departureTime: "09:00",
-    rideToFirst: { duration: "2 h 30", note: "Thessaloniki → Thermopylae" },
+    departureTime: "08:30",
+    rideToFirst: { duration: "30 min", note: "Thessaloniki → Waterland, Peraia" },
     region: "south",
     base: "Nafplio",
-    title: "Thermopylae, then south to Nafplio",
-    subtitle: "History stop, then the old town by the sea",
+    title: "Waterland, Thermopylae, then south to Nafplio",
+    subtitle: "Water park morning, history stop, then the old town by the sea",
     activities: [
       {
-        time: "08:30",
-        title: "Ano Poli (Upper Town) & the Byzantine walls",
-        description: "Steep, atmospheric old-town streets above the modern city, with views over the Thermaic Gulf. Comfortable shoes — it's uphill. Optional: only if you're up early enough before checkout to fit it in.",
-        attractionId: "ano-poli",
-        tag: "culture",
-        optional: true
+        time: "09:00",
+        title: "Waterland Water Park",
+        description:
+          "Slides, a wave pool, a lazy/crazy river, and a kids' area, in Peraia — on your way south out of Thessaloniki, not a detour. Reviews call it solid and clean rather than spectacular: expect a good half-day, not a full one. Free shuttle exists from central Thessaloniki if you ever needed it, but you'll drive straight there.",
+        attractionId: "waterland",
+        tag: "water",
+        rideToNext: { duration: "2 h 15", note: "Waterland → Thermopylae" }
       },
       {
-        time: "11:30",
+        time: "12:00",
         title: "Thermopylae — Leonidas Monument",
         description:
           "A short, worthwhile roadside stop at the site of the 480 BC battle — the Leonidas statue and the burial mound (Kolonos Hill) are a 20–30 minute visit, good for stretching legs mid-drive.",
@@ -407,9 +408,11 @@ export const itinerary: Day[] = [
         optional: true
       }
     ],
-    driveNotes: "Thessaloniki → Thermopylae ≈ 2 h 30 · Thermopylae → Nafplio ≈ 2 h 45",
+    driveNotes: "Thessaloniki → Waterland ≈ 30 min · Waterland → Thermopylae ≈ 2 h 15 · Thermopylae → Nafplio ≈ 2 h 45",
     dayTips: [
-      "Long drive day — Thermopylae is a short stretch-the-legs stop, not a destination",
+      "Long day — Waterland in the morning, then a real driving stretch. Keep the park visit to 2.5–3 hours to still land in Nafplio at a reasonable hour",
+      "Bring swimsuits already on under clothes to save a changing-room queue",
+      "Thermopylae is a short stretch-the-legs stop, not a destination",
       "Nafplio vs. Athens for tonight is still an open double-booking — see the flag on the Tickets card",
       "If you do end up in Athens instead, swap tonight's plan for a light Plaka wander"
     ],
