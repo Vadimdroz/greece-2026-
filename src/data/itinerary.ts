@@ -273,9 +273,9 @@ export const itinerary: Day[] = [
     departureTime: "09:00",
     rideToFirst: { duration: "1 h 30", note: "Lake Plastiras → Meteora" },
     region: "transit",
-    base: "Thessaloniki",
-    title: "Meteora, Waterland, and on to Thessaloniki",
-    subtitle: "A long but varied driving day",
+    base: "Pelion (Agios Ioannis)",
+    title: "Meteora, then on to Pelion",
+    subtitle: "Swapped in for a second Thessaloniki night — see the trip notes",
     activities: [
       {
         time: "10:30",
@@ -284,59 +284,75 @@ export const itinerary: Day[] = [
           "The monasteries perched on sandstone pillars are worth the stop even without going inside one — pull off at the main viewpoints (Agios Nikolaos Anapafsas / the road above Kalambaka) for photos. Not a full monastery visit today — that would need its own half-day.",
         attractionId: "meteora-viewpoint",
         tag: "view",
-        rideToNext: { duration: "2 h 45", note: "Meteora → Waterland, near Thessaloniki" }
-      },
-      {
-        time: "Afternoon",
-        title: "Waterland Water Park",
-        description: "Big slides, wave pool, and kids' areas — a good way to burn off car-time energy before checking into Thessaloniki.",
-        attractionId: "waterland",
-        tag: "water",
-        rideToNext: { duration: "30 min", note: "to central Thessaloniki" }
+        rideToNext: { duration: "1 h 45", note: "Meteora → Pelion (Agios Ioannis)" }
       },
       {
         time: "Evening",
-        title: "Check in — Thessaloniki",
+        title: "Check in — Pelion (Agios Ioannis)",
         description:
-          "You have two hotels booked for these dates (September Hotel and City Hotel Thessaloniki, both 20–22 Aug) — pick one before check-in and cancel the other (both cancel free until 18 Aug 23:59)."
+          "Not booked yet — this leg is new. Agios Ioannis is a beach village on Pelion's east coast, good real options include Kelly Beach Hotel (beachfront, modern), Hotel Evripides, or Anesis Hotel (all family-run, on or near the beach).",
+        attractionId: "pelion-agios-ioannis",
+        tag: "nature"
+      },
+      {
+        time: "Night",
+        title: "Beach evening, easy dinner",
+        description: "After two driving stretches, an unstructured evening on the beach or a seafront taverna in Agios Ioannis is the right pace.",
+        tag: "food",
+        optional: true
       }
     ],
-    driveNotes: "Plastiras → Meteora ≈ 1 h 30 · Meteora → Thessaloniki area ≈ 2 h 45 (via Waterland)",
+    driveNotes: "Plastiras → Meteora ≈ 1 h 30 · Meteora → Pelion (Agios Ioannis) ≈ 1 h 45",
     dayTips: [
-      "Long day — keep the Meteora stop to photos and one short walk, not a full monastery tour",
-      "Bring swimsuits already on under clothes for Waterland to save a changing-room queue",
-      "Decide the Thessaloniki hotel before you're both tired and standing at a check-in desk"
+      "This whole day replaces the old direct Plastiras → Thessaloniki routing — Pelion sits almost exactly between Meteora and Thermopylae, so this is actually a more efficient route than the original plan, not a detour",
+      "Book a Pelion hotel — nothing is confirmed here yet, unlike every other stop on this trip",
+      "Keep the Meteora stop to photos and one short walk, not a full monastery tour"
     ],
     drinkOfTheDay: {
-      name: "Ouzo",
-      type: "aperitif",
-      pairing: "The classic anise spirit — save it for arrival in Thessaloniki, Greece's unofficial food capital, poured alongside a first round of mezedes.",
-      servingNote: "With water and ice, turns cloudy (louche) — sip slow with small plates"
+      name: "Tsipouro (Pelion-style)",
+      type: "digestif",
+      pairing: "Pelion is one of tsipouro's home regions — a seafront taverna in Agios Ioannis is a good place to try a local producer's bottle with fresh-caught fish.",
+      servingNote: "Small chilled glass, with a meze plate"
     }
   },
   {
     dayNumber: 7,
     date: "2026-08-21",
     weekday: "Friday",
-    departureTime: "09:30",
-    region: "south",
+    departureTime: "10:00",
+    region: "transit",
     base: "Thessaloniki",
-    title: "Thessaloniki: old town, waterfront, seafood",
-    subtitle: "Priority dinner tonight — Mavri Thalassa",
+    title: "Pelion sea caves, then Thessaloniki",
+    subtitle: "Boat trip in the morning, White Tower and Mavri Thalassa by evening",
     activities: [
       {
-        time: "09:30",
-        title: "Ano Poli (Upper Town) & the Byzantine walls",
-        description: "Steep, atmospheric old-town streets above the modern city, with views over the Thermaic Gulf. Comfortable shoes — it's uphill.",
-        attractionId: "ano-poli",
-        tag: "culture"
+        time: "10:00",
+        title: "\"Mamma Mia\" boat trip — Pelion Scout",
+        description:
+          "A 2–3 hour family boat trip from Agios Ioannis (or Chorefto): Fakistra beach and its sea cave, the postcard harbor of Damouchari, Mylopotamos beach, and a swim stop at Limnionas. Easy difficulty, minimum age 4 — fits Sophia. Max 11 guests per boat, departures at 10:00 / 13:00 / 16:00.",
+        attractionId: "pelion-boat-trip",
+        tag: "water",
+        rideToNext: { duration: "2 h", note: "Agios Ioannis → Thessaloniki" }
       },
       {
-        time: "12:30",
-        title: "White Tower & the waterfront promenade",
-        description: "Thessaloniki's landmark, right on the seafront — an easy, flat walk after the Ano Poli climb, with plenty of spots to stop for a frappé.",
+        time: "14:00",
+        title: "Drive to Thessaloniki",
+        description: "A straightforward run up the coast — grab lunch on the way or in the car, since the afternoon in Thessaloniki is short."
+      },
+      {
+        time: "16:00",
+        title: "Check in — Thessaloniki, then White Tower",
+        description:
+          "You have two hotels booked for these dates (September Hotel and City Hotel Thessaloniki), both currently for 20–22 Aug — since this plan now arrives the 21st, whichever you keep needs its check-in date moved to match (or you'll pay for an unused first night). Once settled, it's a short walk to the White Tower and waterfront.",
         attractionId: "white-tower",
-        tag: "view",
+        tag: "view"
+      },
+      {
+        time: "18:00",
+        title: "Pirate ship cruise on the Thermaic Gulf",
+        description:
+          "Several pirate-themed boats depart right from the White Tower every ~90 minutes. A 20–30 minute loop around the bay — free to ride, just pay for a drink once aboard. No booking needed.",
+        tag: "family",
         rideToNext: { duration: "20 min", note: "to Kalamaria for dinner" }
       },
       {
@@ -347,9 +363,12 @@ export const itinerary: Day[] = [
         tag: "food"
       }
     ],
+    driveNotes: "Agios Ioannis → Thessaloniki ≈ 2 h",
     dayTips: [
+      "Ano Poli and its Byzantine walls are dropped from the plan entirely to make room for Waterland the next morning — it's the one trade-off of fitting everything in",
+      "Book the Pelion Scout boat trip ahead — max 11 guests per departure",
       "Reserve Mavri Thalassa by phone (+30 231 093 2542) or online — same-day online bookings close at 15:00",
-      "Ano Poli in the morning, waterfront in the heat of the day — the order matters for shade"
+      "This is now a 1-night Thessaloniki stay, not 2 — update whichever hotel booking you keep"
     ],
     restaurants: ["rest-mavri-thalassa"],
     drinkOfTheDay: {
@@ -363,15 +382,24 @@ export const itinerary: Day[] = [
     dayNumber: 8,
     date: "2026-08-22",
     weekday: "Saturday",
-    departureTime: "09:00",
-    rideToFirst: { duration: "2 h 30", note: "Thessaloniki → Thermopylae" },
+    departureTime: "08:30",
+    rideToFirst: { duration: "30 min", note: "Thessaloniki → Waterland, Peraia" },
     region: "south",
     base: "Nafplio",
-    title: "Thermopylae, then south to Nafplio",
-    subtitle: "History stop, then the old town by the sea",
+    title: "Waterland, Thermopylae, then south to Nafplio",
+    subtitle: "Water park morning, history stop, then the old town by the sea",
     activities: [
       {
-        time: "11:30",
+        time: "09:00",
+        title: "Waterland Water Park",
+        description:
+          "Slides, a wave pool, a lazy/crazy river, and a kids' area, in Peraia — on your way south out of Thessaloniki, not a detour. Reviews call it solid and clean rather than spectacular: expect a good half-day, not a full one. Free shuttle exists from central Thessaloniki if you ever needed it, but you'll drive straight there.",
+        attractionId: "waterland",
+        tag: "water",
+        rideToNext: { duration: "2 h 15", note: "Waterland → Thermopylae" }
+      },
+      {
+        time: "12:00",
         title: "Thermopylae — Leonidas Monument",
         description:
           "A short, worthwhile roadside stop at the site of the 480 BC battle — the Leonidas statue and the burial mound (Kolonos Hill) are a 20–30 minute visit, good for stretching legs mid-drive.",
@@ -393,9 +421,11 @@ export const itinerary: Day[] = [
         optional: true
       }
     ],
-    driveNotes: "Thessaloniki → Thermopylae ≈ 2 h 30 · Thermopylae → Nafplio ≈ 2 h 45",
+    driveNotes: "Thessaloniki → Waterland ≈ 30 min · Waterland → Thermopylae ≈ 2 h 15 · Thermopylae → Nafplio ≈ 2 h 45",
     dayTips: [
-      "Long drive day — Thermopylae is a short stretch-the-legs stop, not a destination",
+      "Long day — Waterland in the morning, then a real driving stretch. Keep the park visit to 2.5–3 hours to still land in Nafplio at a reasonable hour",
+      "Bring swimsuits already on under clothes to save a changing-room queue",
+      "Thermopylae is a short stretch-the-legs stop, not a destination",
       "Nafplio vs. Athens for tonight is still an open double-booking — see the flag on the Tickets card",
       "If you do end up in Athens instead, swap tonight's plan for a light Plaka wander"
     ],

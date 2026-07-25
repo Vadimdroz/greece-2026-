@@ -19,7 +19,7 @@ const PIN_KEY = "tuscany-unlock-v1";
  * leaks only *that a day has a ticket*, never any booking detail. Keep in
  * sync with the encrypted packet's dayNumbers.
  */
-export const BOOKED_DAY_NUMBERS = new Set<number>([1, 3, 4, 6, 7, 8, 9]);
+export const BOOKED_DAY_NUMBERS = new Set<number>([1, 3, 4, 7, 8, 9]);
 
 interface BookingsCtx {
   /** Decrypted packet, or null while still locked. */

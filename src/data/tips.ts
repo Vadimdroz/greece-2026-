@@ -16,6 +16,13 @@ export const tips: Tip[] = [
     severity: "critical"
   },
   {
+    id: "pelion-added",
+    title: "Pelion swapped in for a second Thessaloniki night — two things to fix",
+    body:
+      "Day 6 now goes Meteora → Pelion (Agios Ioannis) instead of straight to Thessaloniki, and Thessaloniki drops to 1 night (21–22 Aug). This needs a Pelion hotel booked (nothing is reserved there yet) and the Thessaloniki hotel you keep needs its check-in date moved from 20 to 21 Aug — otherwise you're paying for a night you won't use.",
+    severity: "critical"
+  },
+  {
     id: "rental-insurance",
     title: "Decline Record Go's own insurance at the desk",
     body:
