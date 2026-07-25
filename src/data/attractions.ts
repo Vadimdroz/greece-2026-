@@ -256,14 +256,14 @@ export const attractions: POI[] = [
     name: "Agios Ioannis, Pelion",
     category: "attraction",
     region: "transit",
-    shortDescription: "Beach village on Pelion's east coast — new overnight stop",
+    shortDescription: "Beach village on Pelion's east coast — where the boat trip departs",
     description:
-      "A small resort village on Pelion's east coast, with a long beach and a handful of family-run hotels right on or near the sand. Base for the boat trip the next morning. Not booked yet — options worth a look include Kelly Beach Hotel (beachfront, modern), Hotel Evripides, or Anesis Hotel.",
+      "A small resort village on Pelion's east coast, with a long beach and a small port. The Pelion Scout boat trip departs from here — a short 15–20 minute drive from Faros, the family's hotel in nearby Milopotamos.",
     address: "Agios Ioannis, Pelion, Magnesia, Greece",
     coords: [39.3608, 23.2242],
     tags: ["nature", "family"],
     difficulty: "easy",
-    tips: ["Book a hotel here soon — this leg was only just added to the plan", "The village is walkable — everything is close to the beach strip"]
+    tips: ["Leave Faros by 09:30 for the 10:00 boat departure — the drive is short but Pelion's roads wind", "The village is walkable — everything is close to the beach strip"]
   },
   {
     id: "pelion-boat-trip",

@@ -36,12 +36,11 @@ export const checklist: ChecklistItem[] = [
   {
     id: "book-pelion-hotel",
     category: "hotels",
-    text: "Book a Pelion hotel (Agios Ioannis) — new, 20–21 Aug",
+    text: "Pelion hotel booked — Faros, Milopotamos (20–21 Aug)",
     detail:
-      "Not booked yet. Real options: Kelly Beach Hotel (beachfront, modern), Hotel Evripides, or Anesis Hotel — all family-run, on or near Agios Ioannis beach.",
-    urgent: true,
-    dueBy: "2026-08-08",
-    mapsUrl: maps("Agios Ioannis Pelion Greece hotels")
+      "Confirmed: Booking.com conf. 5209377665, PIN 7030, 2 rooms, US$189 total. Cash-only property with a rough access road — message them ahead about check-in and directions.",
+    done: true,
+    mapsUrl: maps("Faros Milopotamos Pelion Greece")
   },
   {
     id: "resolve-last-night",

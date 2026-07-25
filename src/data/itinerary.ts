@@ -288,10 +288,9 @@ export const itinerary: Day[] = [
       },
       {
         time: "Evening",
-        title: "Check in — Pelion (Agios Ioannis)",
+        title: "Check in — Faros, Milopotamos",
         description:
-          "Not booked yet — this leg is new. Agios Ioannis is a beach village on Pelion's east coast, good real options include Kelly Beach Hotel (beachfront, modern), Hotel Evripides, or Anesis Hotel (all family-run, on or near the beach).",
-        attractionId: "pelion-agios-ioannis",
+          "Booked: Booking.com confirmation 5209377665, PIN 7030, 2 rooms. A small hillside hotel above Mylopotamos beach, rated 9.8 — home-cooked meals, sea views, genuinely secluded. Cash only, and the access road is rough (fine for any car, just not a smooth drive-up) — message the property ahead about check-in and directions.",
         tag: "nature"
       },
       {
@@ -305,7 +304,7 @@ export const itinerary: Day[] = [
     driveNotes: "Plastiras → Meteora ≈ 1 h 30 · Meteora → Pelion (Agios Ioannis) ≈ 1 h 45",
     dayTips: [
       "This whole day replaces the old direct Plastiras → Thessaloniki routing — Pelion sits almost exactly between Meteora and Thermopylae, so this is actually a more efficient route than the original plan, not a detour",
-      "Book a Pelion hotel — nothing is confirmed here yet, unlike every other stop on this trip",
+      "Faros is cash-only and down a rough access road — message the property ahead about check-in time and directions",
       "Keep the Meteora stop to photos and one short walk, not a full monastery tour"
     ],
     drinkOfTheDay: {
@@ -319,12 +318,18 @@ export const itinerary: Day[] = [
     dayNumber: 7,
     date: "2026-08-21",
     weekday: "Friday",
-    departureTime: "10:00",
+    departureTime: "09:30",
     region: "transit",
     base: "Thessaloniki",
     title: "Pelion sea caves, then Thessaloniki",
     subtitle: "Boat trip in the morning, White Tower and Mavri Thalassa by evening",
     activities: [
+      {
+        time: "09:30",
+        title: "Drive to Agios Ioannis",
+        description: "Short drive from Faros in Milopotamos to the Agios Ioannis port for the boat departure — roughly 15–20 minutes.",
+        rideToNext: { duration: "15-20 min", note: "Milopotamos → Agios Ioannis" }
+      },
       {
         time: "10:00",
         title: "\"Mamma Mia\" boat trip — Pelion Scout",
