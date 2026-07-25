@@ -11,8 +11,16 @@ export const checklistHE: Record<string, Partial<Pick<ChecklistItem, "text" | "d
     detail: "Amalia Hotel Delphi (אישור 6091713128, ביטול חינם עד 12.8) מול Acropole Delphi City Hotel (אישור 6091715929). שניהם מוזמנים ל-15-17.8."
   },
   "resolve-thessaloniki-hotel": {
-    text: "לבחור מלון אחד בתסלוניקי, לבטל את השני",
-    detail: "September Hotel (אישור 5559705389) מול City Hotel Thessaloniki (אישור 5066676607, מוזמן ל-2 מבוגרים + ילד 1 בלבד — לבדוק תפוסה). שניהם מוזמנים ל-20-22.8, ביטול חינם עד 18.8."
+    text: "לבחור מלון אחד בתסלוניקי, לבטל את השני, ולתקן את תאריך הצ'ק-אין",
+    detail: "September Hotel (אישור 5559705389) מול City Hotel Thessaloniki (אישור 5066676607, מוזמן ל-2 מבוגרים + ילד 1 בלבד — לבדוק תפוסה). שניהם כרגע מוזמנים ל-20-22.8, ביטול חינם עד 18.8 — אבל התוכנית כעת מגיעה ב-21.8 (נוסף לילה בפליון לפני כן), אז איזה שנשמור צריך שהצ'ק-אין שלו יוזז ל-21.8 (לילה אחד), אחרת משלמים על לילה ראשון שלא ינוצל."
+  },
+  "book-pelion-hotel": {
+    text: "להזמין מלון בפליון (אגיוס יואניס) — חדש, 20-21.8",
+    detail: "עדיין לא מוזמן. אפשרויות אמיתיות: Kelly Beach Hotel (על החוף, מודרני), Hotel Evripides, או Anesis Hotel - כולם מלונות משפחתיים על חוף אגיוס יואניס או קרוב אליו."
+  },
+  "book-pelion-boat-trip": {
+    text: "להזמין את שיט \"Mamma Mia\" של Pelion Scout (בוקר 21.8)",
+    detail: "אגיוס יואניס, יציאה ב-10:00. סירות קטנות - עד 11 אורחים - להזמין מראש. גיל מינימום 4, רמת קושי קלה, מתאים לשני הילדים."
   },
   "resolve-last-night": {
     text: "נאפפליו או אתונה ללילה האחרון?",
@@ -37,10 +45,6 @@ export const checklistHE: Record<string, Partial<Pick<ChecklistItem, "text" | "d
   "book-nafplio-dinner": {
     text: "לבחור ולהזמין ארוחת ערב אחרונה בנאפפליו (22.8)",
     detail: "בעיר העתיקה יש הרבה אפשרויות, אבל שווה להזמין מראש אם רוצים מקום ספציפי על הטיילת בליל שבת באוגוסט."
-  },
-  "book-waterland-tickets": {
-    text: "כרטיסים לפארק המים Waterland",
-    detail: "לבדוק אם קנייה אונליין מראש זולה יותר מאשר בשער עבור 20.8."
   },
   "offline-maps": {
     text: "להוריד מפות Google Maps אופליין למרכז יוון",

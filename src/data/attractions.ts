@@ -175,6 +175,42 @@ export const attractions: POI[] = [
     difficulty: "easy"
   },
 
+  // ---------- PELION ----------
+  {
+    id: "pelion-agios-ioannis",
+    name: "Agios Ioannis, Pelion",
+    category: "attraction",
+    region: "transit",
+    shortDescription: "Beach village on Pelion's east coast — new overnight stop",
+    description:
+      "A small resort village on Pelion's east coast, with a long beach and a handful of family-run hotels right on or near the sand. Base for the boat trip the next morning. Not booked yet — options worth a look include Kelly Beach Hotel (beachfront, modern), Hotel Evripides, or Anesis Hotel.",
+    address: "Agios Ioannis, Pelion, Magnesia, Greece",
+    coords: [39.3608, 23.2242],
+    tags: ["nature", "family"],
+    difficulty: "easy",
+    tips: ["Book a hotel here soon — this leg was only just added to the plan", "The village is walkable — everything is close to the beach strip"]
+  },
+  {
+    id: "pelion-boat-trip",
+    name: "\"Mamma Mia\" boat trip — Pelion Scout",
+    category: "attraction",
+    region: "transit",
+    shortDescription: "Family boat trip to sea caves and hidden beaches",
+    description:
+      "A 2–3 hour boat trip from Agios Ioannis (or Chorefto) along Pelion's east coast: the sea cave and beach at Fakistra, the postcard harbor of Damouchari (a Mamma Mia filming location), Mylopotamos beach, and a swim stop at the harder-to-reach Limnionas. Easy difficulty, minimum age 4, max 11 guests per boat.",
+    website: "https://pelionscout.com/daily-activities-tours-pelion-greece/boat-trip-mamma-mia/",
+    address: "Small port of Agios Ioannis, Pelion, Greece",
+    coords: [39.3608, 23.2242],
+    tags: ["water", "family"],
+    bookingNote: "Book ahead — small boats, max 11 guests. Departures 10:00 / 13:00 / 16:00.",
+    difficulty: "easy",
+    tips: [
+      "Minimum age 4 — fine for both Thomas and Sophia",
+      "Wear swimsuits under clothes, bring sandals/flip-flops rather than closed shoes",
+      "Sunscreen, hats, and sunglasses — most of the trip is out on open water"
+    ]
+  },
+
   // ---------- NAFPLIO ----------
   {
     id: "palamidi-view",

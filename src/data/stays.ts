@@ -64,6 +64,27 @@ export const stays: Stay[] = [
     ]
   },
   {
+    id: "stay-pelion",
+    name: "Agios Ioannis, Pelion — NOT YET BOOKED",
+    category: "stay",
+    region: "transit",
+    shortDescription: "NEW — needs a real booking, unlike everything else on this trip",
+    description:
+      "New addition, swapped in for a second Thessaloniki night. Agios Ioannis is a beach village on Pelion's east coast, walkable, with several family-run beachfront hotels. Real options worth booking: Kelly Beach Hotel (new, beachfront, modern), Hotel Evripides (seafront, family rooms), or Anesis Hotel (traditional family hotel on the shore).",
+    address: "Agios Ioannis, Pelion, Magnesia, Greece",
+    coords: [39.3608, 23.2242],
+    checkIn: "2026-08-20",
+    checkOut: "2026-08-21",
+    nights: 1,
+    highlights: [
+      "Not booked — this is the one gap in an otherwise fully-booked (if double-booked) trip",
+      "Kelly Beach Hotel, Hotel Evripides, and Anesis Hotel are all real, well-reviewed, family-friendly options right on or near Agios Ioannis beach"
+    ],
+    warnings: [
+      "NOT BOOKED — needs action before the trip. Book soon; this is peak August."
+    ]
+  },
+  {
     id: "stay-thessaloniki-september",
     name: "September Hotel Thessaloniki",
     category: "stay",
@@ -82,7 +103,8 @@ export const stays: Stay[] = [
       "Free cancellation until 18 August 2026 23:59"
     ],
     warnings: [
-      "PENDING DECISION — duplicate booking with City Hotel Thessaloniki, same dates. Cancel one before 18 Aug."
+      "PENDING DECISION — duplicate booking with City Hotel Thessaloniki, same dates. Cancel one before 18 Aug.",
+      "ITINERARY MISMATCH — the plan now has you arriving in Thessaloniki on 21 Aug (Pelion was added before it), one day after this booking's check-in. If you keep this hotel, change the check-in date to 21 Aug (1 night) via Booking.com, or you'll pay for an unused first night."
     ]
   },
   {
@@ -104,7 +126,8 @@ export const stays: Stay[] = [
     ],
     warnings: [
       "PENDING DECISION — duplicate booking with September Hotel Thessaloniki, same dates.",
-      "Booked for 2 adults + 1 child only — confirm occupancy before keeping this one over the other"
+      "Booked for 2 adults + 1 child only — confirm occupancy before keeping this one over the other",
+      "ITINERARY MISMATCH — the plan now has you arriving in Thessaloniki on 21 Aug (Pelion was added before it), one day after this booking's check-in. If you keep this hotel, change the check-in date to 21 Aug (1 night) via Booking.com, or you'll pay for an unused first night."
     ]
   },
   {

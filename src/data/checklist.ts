@@ -15,9 +15,21 @@ export const bookingChecklist: ChecklistItem[] = [
   },
   {
     id: "resolve-thessaloniki-hotel",
-    text: "Pick one Thessaloniki hotel, cancel the other",
-    detail: "September Hotel (conf. 5559705389) vs. City Hotel Thessaloniki (conf. 5066676607, booked for 2 adults + 1 child only — check occupancy). Both booked 20–22 Aug, free cancel until 18 Aug.",
+    text: "Pick one Thessaloniki hotel, cancel the other, and fix the check-in date",
+    detail: "September Hotel (conf. 5559705389) vs. City Hotel Thessaloniki (conf. 5066676607, booked for 2 adults + 1 child only — check occupancy). Both currently booked 20–22 Aug, free cancel until 18 Aug — but the plan now arrives 21 Aug (Pelion night added before it), so whichever you keep needs its check-in moved to 21 Aug (1 night), or you'll pay for an unused first night.",
     urgent: true
+  },
+  {
+    id: "book-pelion-hotel",
+    text: "Book a Pelion hotel (Agios Ioannis) — new, 20–21 Aug",
+    detail: "Not booked yet. Real options: Kelly Beach Hotel (beachfront, modern), Hotel Evripides, or Anesis Hotel — all family-run, on or near Agios Ioannis beach.",
+    urgent: true
+  },
+  {
+    id: "book-pelion-boat-trip",
+    text: "Book the Pelion Scout \"Mamma Mia\" boat trip (21 Aug morning)",
+    detail: "Agios Ioannis, 10:00 departure. Small boats — max 11 guests — book ahead. Minimum age 4, easy difficulty, fine for both kids.",
+    link: "https://pelionscout.com/daily-activities-tours-pelion-greece/boat-trip-mamma-mia/"
   },
   {
     id: "resolve-last-night",
@@ -50,11 +62,6 @@ export const bookingChecklist: ChecklistItem[] = [
     id: "book-nafplio-dinner",
     text: "Pick and book a Nafplio last-night dinner (22 Aug)",
     detail: "Old town has plenty of options, but worth booking ahead if you want a specific waterfront spot on an August Saturday night."
-  },
-  {
-    id: "book-waterland-tickets",
-    text: "Waterland Water Park tickets",
-    detail: "Check whether buying online ahead is cheaper than at the gate for 20 Aug."
   },
   {
     id: "offline-maps",
