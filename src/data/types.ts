@@ -104,6 +104,19 @@ export interface POI {
    *  Gemini also reaches for these angles. Omit when the attraction
    *  is a purely practical stop with no story worth the effort. */
   quizFacts?: AttractionQuizFact[];
+  /** Attraction-only (meaningful when `category === "attraction"`):
+   *  the `Stay.id` this is a day trip from and back to. Drives the
+   *  map's "come to life when you click the stay" behavior. Every
+   *  attraction should set exactly one of `dayTripFrom` /
+   *  `enRouteBetween`, never both. */
+  dayTripFrom?: string;
+  /** Attraction-only: the two route-anchor ids (a `Stay.id`, or
+   *  `"ath"` for Athens Airport) this attraction sits between on a
+   *  transition drive — e.g. Thermopylae between the Thessaloniki
+   *  and Nafplio stays. Always shown on the map, unnumbered, on that
+   *  transition's line — unlike `dayTripFrom` spots, there's no
+   *  separate return trip. */
+  enRouteBetween?: [string, string];
 }
 
 export interface Stay extends POI {
@@ -117,6 +130,14 @@ export interface Stay extends POI {
   /** Optional extra photos shown in the stay-card carousel.
    *  When present, the card crossfades through `[image, ...gallery]`. */
   gallery?: string[];
+  /** Whether this is the current pick for its leg's spot on the map's
+   *  numbered route. Defaults to `"primary"` when omitted. Exactly one
+   *  `"primary"` stay should exist per leg — duplicate/undecided
+   *  bookings (see `warnings`) are marked `"alternate"` and excluded
+   *  from the map until the booking is resolved; they still show in
+   *  the Stays section as normal. Flip this flag (and update
+   *  `src/data/route.ts` if the id changes) once a booking is final. */
+  routeStatus?: "primary" | "alternate";
 }
 
 export interface Service extends POI {

@@ -7,6 +7,7 @@ export const attractions: POI[] = [
     name: "Sanctuary of Apollo & Ancient Theatre",
     category: "attraction",
     region: "north",
+    dayTripFrom: "stay-delphi-acropole",
     shortDescription: "The Oracle's temple, theatre, and stadium on the mountainside",
     description:
       "The archaeological heart of Delphi — the Sacred Way climbs past treasuries and the Temple of Apollo (seat of the Oracle) to a well-preserved ancient theatre, and further up, the stadium. Steep in places, uneven ancient stone underfoot, and very little shade — go early.",
@@ -32,6 +33,7 @@ export const attractions: POI[] = [
     name: "Delphi Archaeological Museum",
     category: "attraction",
     region: "north",
+    dayTripFrom: "stay-delphi-acropole",
     shortDescription: "Air-conditioned museum — home of the Charioteer of Delphi",
     description:
       "One of Greece's finest archaeological museums, right below the main site. The bronze Charioteer of Delphi and the Sphinx of Naxos are the highlights — a good, cool midday break after the uphill walk through the sanctuary.",
@@ -53,6 +55,7 @@ export const attractions: POI[] = [
     name: "Tholos at Marmaria",
     category: "attraction",
     region: "north",
+    dayTripFrom: "stay-delphi-acropole",
     shortDescription: "The circular ruin — one of Greece's most photographed sites",
     description:
       "Part of the Sanctuary of Athena Pronaia, a short walk or drive from the main site. The circular Tholos, with three re-erected columns, is one of the most photographed ancient ruins in Greece and usually much quieter than the main sanctuary.",
@@ -75,6 +78,7 @@ export const attractions: POI[] = [
     name: "Aliakmonas River Rafting — Active Nature",
     category: "attraction",
     region: "north",
+    dayTripFrom: "stay-plastiras",
     shortDescription: "Family-friendly grade 1–2 rafting near Grevena",
     description:
       "A 6–7 km stretch of the Aliakmonas — the longest river in Greece — run by Active Nature with certified guides. Grade 1–2 water, suitable for first-time family rafters. On-water time is roughly 1.5–2 hours; the full outing with transport, kitting up, and changing runs 4–5 hours.",
@@ -102,6 +106,7 @@ export const attractions: POI[] = [
     name: "Horse riding, Lake Plastiras",
     category: "attraction",
     region: "north",
+    dayTripFrom: "stay-plastiras",
     shortDescription: "Easy trail riding above the lake, beginner-friendly",
     description:
       "Gentle forested trail rides above Lake Plastiras, run by local stables used to beginners and kids. Ask ahead whether younger riders get a led/lead-rope option.",
@@ -123,6 +128,7 @@ export const attractions: POI[] = [
     name: "Archery, Lake Plastiras",
     category: "attraction",
     region: "north",
+    dayTripFrom: "stay-plastiras",
     shortDescription: "Kid-friendly archery session near the horse riding centre",
     description:
       "A short, structured archery session — a nice complement to the morning horse ride and popular with kids around Thomas's age.",
@@ -144,6 +150,7 @@ export const attractions: POI[] = [
     name: "Meteora — viewpoints",
     category: "attraction",
     region: "transit",
+    enRouteBetween: ["stay-plastiras", "stay-pelion"],
     shortDescription: "Monasteries on sandstone pillars — a photo stop, not a full visit",
     description:
       "The Meteora monasteries, perched on huge sandstone pillars above Kalambaka, are one of Greece's most striking sights even from the road. The plan for this trip is the viewpoint drive-through, not a full monastery visit (which needs its own half-day with dress-code stops).",
@@ -165,6 +172,7 @@ export const attractions: POI[] = [
     name: "Waterland Water Park",
     category: "attraction",
     region: "transit",
+    enRouteBetween: ["stay-thessaloniki-shotel", "stay-kamena-vourla"],
     shortDescription: "Slides, wave pool, and kids' areas near Thessaloniki",
     description:
       "A large water park on the coast near Thessaloniki, with big slides, a wave pool, and dedicated kids' areas — a good energy-burner between the long drive from Plastiras and checking into the city.",
@@ -185,6 +193,7 @@ export const attractions: POI[] = [
     name: "Thermopylae — Leonidas Monument",
     category: "attraction",
     region: "transit",
+    enRouteBetween: ["stay-delphi-acropole", "stay-plastiras"],
     shortDescription: "Roadside stop at the 480 BC battle site",
     description:
       "The site of the famous last stand of Leonidas and the 300 Spartans against the Persian army in 480 BC. The Leonidas statue and the burial mound (Kolonos Hill) make a worthwhile 20–30 minute stop to stretch legs on the long drive south.",
@@ -214,6 +223,7 @@ export const attractions: POI[] = [
     name: "Ano Poli (Upper Town)",
     category: "attraction",
     region: "south",
+    dayTripFrom: "stay-thessaloniki-shotel",
     shortDescription: "Steep, atmospheric old-town streets and Byzantine walls",
     description:
       "Thessaloniki's old town, climbing above the modern city to the Byzantine walls — narrow lanes, old houses, and views over the Thermaic Gulf. Uphill in places; comfortable shoes recommended.",
@@ -234,6 +244,7 @@ export const attractions: POI[] = [
     name: "White Tower & waterfront promenade",
     category: "attraction",
     region: "south",
+    dayTripFrom: "stay-thessaloniki-shotel",
     shortDescription: "Thessaloniki's landmark, right on the seafront",
     description:
       "The White Tower is Thessaloniki's most recognisable landmark, sitting on a long, flat seafront promenade — an easy walk after Ano Poli's climb, with plenty of cafés for a frappé break.",
@@ -256,6 +267,7 @@ export const attractions: POI[] = [
     name: "Agios Ioannis, Pelion",
     category: "attraction",
     region: "transit",
+    enRouteBetween: ["stay-pelion", "stay-thessaloniki-shotel"],
     shortDescription: "Beach village on Pelion's east coast — where the boat trip departs",
     description:
       "A small resort village on Pelion's east coast, with a long beach and a small port. The Pelion Scout boat trip departs from here — a short 15–20 minute drive from Faros, the family's hotel in nearby Milopotamos.",
@@ -270,6 +282,7 @@ export const attractions: POI[] = [
     name: "\"Mamma Mia\" boat trip — Pelion Scout",
     category: "attraction",
     region: "transit",
+    enRouteBetween: ["stay-pelion", "stay-thessaloniki-shotel"],
     shortDescription: "Family boat trip to sea caves and hidden beaches",
     description:
       "A 2–3 hour boat trip from Agios Ioannis (or Chorefto) along Pelion's east coast: the sea cave and beach at Fakistra, the postcard harbor of Damouchari (a Mamma Mia filming location), Mylopotamos beach, and a swim stop at the harder-to-reach Limnionas. Easy difficulty, minimum age 4, max 11 guests per boat.",
@@ -292,6 +305,7 @@ export const attractions: POI[] = [
     name: "Palamidi Fortress (viewpoint)",
     category: "attraction",
     region: "south",
+    dayTripFrom: "stay-nafplio",
     shortDescription: "Venetian fortress above Nafplio — admired from below on this trip",
     description:
       "A vast Venetian fortress on the hill above Nafplio's old town, reached by 900-odd steps or a short drive. On this trip's light last day, the plan is to admire it from the old town and harbour rather than climb it with the kids.",

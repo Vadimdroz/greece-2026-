@@ -32,6 +32,7 @@ export const stays: Stay[] = [
     name: "Amalia Hotel Delphi",
     category: "stay",
     region: "north",
+    routeStatus: "alternate",
     shortDescription: "TO CANCEL — superseded by Acropole",
     description:
       "Classic Double/Twin room, breakfast included. Booked for 2 nights, 15–17 Aug, €467.51 total. Acropole Delphi City Hotel is the one being kept — cancel this one before the free-cancellation deadline.",
@@ -139,6 +140,7 @@ export const stays: Stay[] = [
     name: "September Hotel Thessaloniki",
     category: "stay",
     region: "south",
+    routeStatus: "alternate",
     shortDescription: "TO CANCEL — superseded by S Hotel Boutique",
     description:
       "5* hotel, Junior Suite with Garden View, booked for 2 nights, 20–22 Aug, €674.40 total. S Hotel Boutique Thessaloniki is the one being kept — cancel this before 18 Aug.",
@@ -168,6 +170,7 @@ export const stays: Stay[] = [
     name: "City Hotel Thessaloniki",
     category: "stay",
     region: "south",
+    routeStatus: "alternate",
     shortDescription: "TO CANCEL — superseded by S Hotel Boutique",
     description:
       "Junior Suite Inner View, booked for 2 nights, 20–22 Aug, booked for 2 adults + 1 child only. S Hotel Boutique Thessaloniki is the one being kept — cancel this before 18 Aug.",
@@ -251,6 +254,7 @@ export const stays: Stay[] = [
     name: "Philia Boutique Hotel, Athens",
     category: "stay",
     region: "south",
+    routeStatus: "alternate",
     shortDescription: "PENDING — alternate to the Nafplio last night, in Psyrri, Athens",
     description:
       "Junior Suite with Garden View, 1 night (22–23 Aug), in Psyrri near central Athens. The alternate plan to Nafplio's Traditional house of 1898 for the last night — closer to the airport, but trades away the old-town evening.",
