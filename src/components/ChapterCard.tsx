@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, ArrowLeft, MapPin, Sun, Car, Ticket } from "lucide-react";
 import type { Day, POI } from "../data/types";
 import { getAttraction } from "../data/attractions";
-import { BOOKED_DAY_NUMBERS } from "../lib/bookingsStore";
+import { BOOKED_DAY_NUMBERS } from "../lib/bookingsContext";
 import { getTripState } from "../lib/tripState";
 import { activityIcon } from "../lib/activityIcon";
 import { navigateChapter } from "../lib/route";

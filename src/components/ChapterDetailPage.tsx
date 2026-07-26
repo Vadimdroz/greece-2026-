@@ -31,7 +31,7 @@ import { getAttraction } from "../data/attractions";
 import { getService } from "../data/services";
 import WalletTicket from "./WalletTicket";
 import TicketUnlock from "./TicketUnlock";
-import { useBookingsForDay, BOOKED_DAY_NUMBERS } from "../lib/bookingsStore";
+import { useBookingsForDay, BOOKED_DAY_NUMBERS } from "../lib/bookingsContext";
 import type {
   Day,
   DayActivity,

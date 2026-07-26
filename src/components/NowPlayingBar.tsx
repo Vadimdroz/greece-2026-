@@ -1,5 +1,5 @@
 import { Play, Pause, RotateCcw, RotateCw, X, Loader2 } from "lucide-react";
-import { useAudioPlayer } from "../lib/audioPlayer";
+import { useAudioPlayer } from "../lib/audioPlayerContext";
 import { useT } from "../lib/dict";
 
 function formatTime(seconds: number): string {

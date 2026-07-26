@@ -1,7 +1,7 @@
 import { useCallback, useRef, useState } from "react";
 import type { FormEvent } from "react";
 import { Lock } from "lucide-react";
-import { useBookings } from "../lib/bookingsStore";
+import { useBookings } from "../lib/bookingsContext";
 import { useT } from "../lib/dict";
 
 /**
