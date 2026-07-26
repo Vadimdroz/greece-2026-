@@ -93,6 +93,13 @@ const TARGETS = [
   // ---------- NAFPLIO ----------
   ["palamidi-view.jpg",      { wiki: "Palamidi" }],
 
+  // ---------- PELION ----------
+  // The village the boat trip departs from — real place, real name.
+  ["pelion-agios-ioannis.jpg", { wiki: "Agios_Ioannis,_Pelion" }],
+  // Damouchari's harbor is the boat trip's own headline stop (the
+  // "postcard harbor" / Mamma Mia filming location).
+  ["pelion-boat-trip.jpg",     { wiki: "Damouchari" }],
+
   // ---------- STAYS ----------
   // Both Delphi bookings sit on/near the village's short main street —
   // two different real shots of it (same photographer, different frames)
@@ -109,6 +116,13 @@ const TARGETS = [
   ["stay-nafplio.jpg",        { commons: "File:Neoclassical buildings in Nafplion.jpg" }],
   // Psyrri, Athens — exact match for the neighbourhood the alternate hotel sits in.
   ["stay-athens-philia.jpg",  { commons: "File:Psyrri, Athens.jpg" }],
+  // Om Living Pelion (Agios Dimitrios) has no dedicated CC photo — Mouresi,
+  // the next village over (~2km), is real, same immediate hillside area,
+  // same traditional Pelion stone architecture.
+  ["stay-pelion.jpg",         { wiki: "Mouresi" }],
+  // Mitsis Galini sits right on Kamena Vourla's waterfront — the town's
+  // own lead photo is an honest stand-in (no dedicated CC photo of the resort).
+  ["stay-kamena-vourla.jpg",  { wiki: "Kamena_Vourla" }],
 
   // ---------- DISHES ----------
   ["grilled-octopus.jpg",     { commons: "File:Greek-style grilled octopus with olive oil, lemon, butter and parsley.jpg" }],

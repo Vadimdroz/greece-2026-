@@ -270,12 +270,19 @@ export const attractions: POI[] = [
     enRouteBetween: ["stay-pelion", "stay-thessaloniki-shotel"],
     shortDescription: "Beach village on Pelion's east coast — where the boat trip departs",
     description:
-      "A small resort village on Pelion's east coast, with a long beach and a small port. The Pelion Scout boat trip departs from here — a short 15–20 minute drive from Faros, the family's hotel in nearby Milopotamos.",
+      "A small resort village on Pelion's east coast, with a long beach and a small port. The Pelion Scout boat trip departs from here — just over a kilometer from Om Living Pelion, the family's hotel in nearby Agios Dimitrios.",
     address: "Agios Ioannis, Pelion, Magnesia, Greece",
     coords: [39.3608, 23.2242],
     tags: ["nature", "family"],
     difficulty: "easy",
-    tips: ["Leave Faros by 09:30 for the 10:00 boat departure — the drive is short but Pelion's roads wind", "The village is walkable — everything is close to the beach strip"]
+    tips: ["Leave the hotel by 09:45 for the 10:00 boat departure — it's only a few minutes' drive", "The village is walkable — everything is close to the beach strip"],
+    image: "./images/pelion-agios-ioannis.jpg",
+    imageCredit: {
+      author: "Mboesch",
+      license: "CC BY-SA 4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Pilion-agios-ioannis.JPG",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+    }
   },
   {
     id: "pelion-boat-trip",
@@ -296,7 +303,14 @@ export const attractions: POI[] = [
       "Minimum age 4 — fine for both Thomas and Sophia",
       "Wear swimsuits under clothes, bring sandals/flip-flops rather than closed shoes",
       "Sunscreen, hats, and sunglasses — most of the trip is out on open water"
-    ]
+    ],
+    image: "./images/pelion-boat-trip.jpg",
+    imageCredit: {
+      author: "Eleni Alexiou",
+      license: "CC BY-SA 4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Damouchari_Pelion.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+    }
   },
 
   // ---------- NAFPLIO ----------

@@ -215,6 +215,15 @@ export const itinerary: Day[] = [
         description: "Relaxed return drive — dry off, warm up, and take it slow."
       },
       {
+        time: "Late afternoon",
+        title: "Horse riding, Lake Plastiras",
+        description:
+          "Gentle forested trail rides above the lake, if there's energy left after the river — a taste of the horse-riding day that got cut to make room for Meteora/Pelion/Kamena Vourla. Confirm ahead whether Sophia needs a led/lead-rope option.",
+        attractionId: "plastiras-horses",
+        tag: "family",
+        optional: true
+      },
+      {
         time: "Evening",
         title: "Dinner by the lake",
         description: "Kalyvia Fylaktis or Neochori have a handful of lakeside tavernas — walk until something looks good.",
@@ -225,7 +234,7 @@ export const itinerary: Day[] = [
       "Book confirmation and exact meeting point/time should be reconfirmed with Active Nature a few days before",
       "Sports shoes that can get wet, or neoprene booties, work better than sandals",
       "Personal electronics stay in the car — no dry bags mentioned in the booking",
-      "Last full day at Plastiras this trip — the horse riding/archery day that used to follow was cut to fund the Meteora/Pelion/Kamena Vourla changes"
+      "Last full day at Plastiras this trip — archery was cut entirely, but horse riding is back on as an optional add-on if the rafting doesn't wear everyone out"
     ],
     gear: [
       { item: "Swimsuits under regular clothes", for: "aliakmonas-rafting" },
@@ -246,9 +255,9 @@ export const itinerary: Day[] = [
     departureTime: "09:00",
     rideToFirst: { duration: "1 h 30", note: "Lake Plastiras → Meteora" },
     region: "transit",
-    base: "Pelion (Agios Ioannis)",
+    base: "Pelion (Agios Dimitrios)",
     title: "Meteora, then on to Pelion",
-    subtitle: "Kazarma checkout, a viewpoint stop, then Faros for the night — pending the hotel confirming the date change",
+    subtitle: "Kazarma checkout, a viewpoint stop, then Om Living Pelion for the night",
     activities: [
       {
         time: "10:30",
@@ -261,9 +270,9 @@ export const itinerary: Day[] = [
       },
       {
         time: "Evening",
-        title: "Check in — Faros, Milopotamos",
+        title: "Check in — Om Living Pelion, Agios Dimitrios",
         description:
-          "PENDING: a request is in with Faros to move check-in from Thu 20 Aug to today (Wed 19 Aug), so the night after Kazarma's new checkout isn't left unbooked — waiting to hear back. Once confirmed: Booking.com confirmation 5209377665, PIN 7030, 2 rooms. A small hillside hotel above Mylopotamos beach, rated 9.8 — home-cooked meals, sea views, genuinely secluded. Cash only, and the access road is rough (fine for any car, just not a smooth drive-up) — message the property ahead about directions.",
+          "Ground-floor apartment, booked to replace Faros — Faros couldn't move its check-in to today, so that booking was cancelled and this one took its place. Booking.com confirmation 6584233490, PIN 2645. Contactless check-in — the property sends a door code the day before arrival, so confirm your arrival time with them ahead of time. Just 1 km from Agios Ioannis, where tomorrow's boat trip departs.",
         tag: "nature"
       },
       {
@@ -277,8 +286,7 @@ export const itinerary: Day[] = [
     driveNotes: "Plastiras → Meteora ≈ 1 h 30 · Meteora → Pelion (Agios Ioannis) ≈ 1 h 45",
     dayTips: [
       "This whole day replaces the old horse-riding/archery rest day — Plastiras dropped to 2 nights, and Meteora + Pelion moved up a day to fill the gap Kazarma's shorter stay left open",
-      "Faros still shows a Thu 20 Aug check-in as of this update — if it hasn't moved to Wed 19 Aug by the time you leave Plastiras, call ahead so you're not stuck without a room for the night",
-      "Faros is cash-only and down a rough access road — message the property ahead about check-in time and directions",
+      "Om Living Pelion has no reception — message the property ahead with your expected arrival time so the door code arrives before you do",
       "Keep the Meteora stop to photos and one short walk, not a full monastery tour"
     ],
     drinkOfTheDay: {
@@ -301,8 +309,8 @@ export const itinerary: Day[] = [
       {
         time: "09:30",
         title: "Drive to Agios Ioannis",
-        description: "Short drive from Faros in Milopotamos to the Agios Ioannis port for the boat departure — roughly 15–20 minutes.",
-        rideToNext: { duration: "15-20 min", note: "Milopotamos → Agios Ioannis" }
+        description: "Short hop from Om Living Pelion in Agios Dimitrios to the Agios Ioannis port for the boat departure — roughly 5 minutes, just over a kilometer.",
+        rideToNext: { duration: "5 min", note: "Agios Dimitrios → Agios Ioannis" }
       },
       {
         time: "10:00",
@@ -335,10 +343,10 @@ export const itinerary: Day[] = [
         rideToNext: { duration: "20 min", note: "to Kalamaria for dinner" }
       },
       {
-        time: "20:30",
-        title: "Dinner — Mavri Thalassa (booked)",
+        time: "19:30",
+        title: "Dinner — Mavri Thalassa (confirmed)",
         description:
-          "Seafood destination in Kalamaria, Nik. Plastira 3 — reserve ahead, especially for a Thursday. Open 13:00–01:00 weekends, kitchen closes 23:30. Shellfish-forward menu — this is Irina's night.",
+          "Seafood destination in Kalamaria, Nik. Plastira 3. Table for 4, confirmed for 19:30 — booking reference 39t-2T8rSc20jz1cHv6uyQ, call +30 231 093 2542 to make changes. Open 13:00–01:00 weekends, kitchen closes 23:30. Shellfish-forward menu — this is Irina's night.",
         tag: "food"
       }
     ],
@@ -346,7 +354,7 @@ export const itinerary: Day[] = [
     dayTips: [
       "Ano Poli and its Byzantine walls are dropped from the plan entirely to make room for Waterland the next morning — it's the one trade-off of fitting everything in",
       "Book the Pelion Scout boat trip ahead — max 11 guests per departure",
-      "Reserve Mavri Thalassa by phone (+30 231 093 2542) or online — same-day online bookings close at 15:00",
+      "Mavri Thalassa is confirmed for 19:30, table for 4 — call +30 231 093 2542 if you need to change it",
       "S Hotel Boutique replaces both old Thessaloniki bookings — cancel September Hotel and City Hotel before 18 Aug to avoid confusion or a stray charge"
     ],
     restaurants: ["rest-mavri-thalassa"],

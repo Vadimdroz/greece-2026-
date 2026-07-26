@@ -85,28 +85,35 @@ export const stays: Stay[] = [
   },
   {
     id: "stay-pelion",
-    name: "Faros, Milopotamos",
+    name: "Om Living Pelion",
     category: "stay",
     region: "transit",
-    shortDescription: "PENDING date change — awaiting hotel confirmation",
+    shortDescription: "Confirmed — 1 night, 19–20 Aug, Agios Dimitrios",
     description:
-      "A small, family-run hillside hotel above Mylopotamos beach, one of East Pelion's most beautiful. Rated 9.8 across hundreds of reviews — home-cooked meals from the owners' own farm, sea views, and a genuinely secluded feel. Two rooms booked. A request to move check-in from Thu 20 Aug to Wed 19 Aug is in with the property (Kazarma's new checkout is 19 Aug, so 20 Aug would leave a night unbooked) — still waiting to hear back. Note: cash-only property, and the access road is rough (manageable, but not a smooth drive-up) — worth knowing before arrival.",
-    address: "Pilio, Milopotamos, 37012, Greece",
-    coords: [39.3520, 23.1050],
-    checkIn: "2026-08-20",
-    checkOut: "2026-08-21",
+      "Ground-floor apartment in Agios Dimitrios, a small hillside village just 1 km southwest of Agios Ioannis — a couple of minutes from where the \"Mamma Mia\" boat trip departs. Booked to replace Faros, Milopotamos: Faros couldn't move its check-in from 20 to 19 Aug (needed so the night after Kazarma's new checkout wasn't left unbooked), so that booking was cancelled and this one took its place. Self-catered, reception-free contactless check-in — the property sends a door code the day before arrival.",
+    address: "Agios Dimitrios, Agios Dimitrios, 37012, Greece",
+    coords: [39.3544, 23.2160],
+    checkIn: "2026-08-19",
+    checkOut: "2026-08-20",
     nights: 1,
     highlights: [
-      "Booking.com confirmation 5209377665, PIN 7030",
-      "2 rooms, total €166",
-      "9.8 rating — home-cooked farm-to-table meals, sea-view rooms, quiet hillside setting",
-      "Message the property ahead about check-in/out times and the access road"
+      "Booking.com confirmation 6584233490, PIN 2645",
+      "Apartment, ground floor, 2 adults + 2 children (5 and 8)",
+      "€196.24 total — no meal plan, self-catered",
+      "Free cancellation until 4 August 2026 23:59 — after that, full price if cancelled or no-show",
+      "Host phone +30 231 028 0125 — door code sent one day before arrival"
     ],
     warnings: [
-      "PENDING — awaiting confirmation from the hotel on moving check-in from 20 Aug to 19 Aug. Still shows 20 Aug as of this update; call ahead if it hasn't been confirmed by the time you leave Plastiras.",
-      "Cash only — no cards accepted on site",
-      "Access road is rough — fine for any car per reviews, but not paved smooth; drive carefully with the family"
-    ]
+      "Contactless check-in — no reception. Confirm your arrival time with the property ahead so the door code arrives in time.",
+      "Property doesn't accommodate hen/stag parties; guests under 18 need a parent or guardian to check in"
+    ],
+    image: "./images/stay-pelion.jpg",
+    imageCredit: {
+      author: "Anaximander",
+      license: "CC BY-SA 3.0",
+      source: "https://commons.wikimedia.org/wiki/File:Mouresi_Agia_Triatha.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0"
+    }
   },
   {
     id: "stay-thessaloniki-shotel",
@@ -217,7 +224,14 @@ export const stays: Stay[] = [
     warnings: [
       "Confirm thermal-pool access hours ahead — some spa resorts reserve windows for treatments vs. general guest use",
       "Confirm ahead whether children can use the thermal (not just freshwater) pool — some hot-spring pools have age/temperature restrictions"
-    ]
+    ],
+    image: "./images/stay-kamena-vourla.jpg",
+    imageCredit: {
+      author: "Tns",
+      license: "CC BY-SA 3.0",
+      source: "https://commons.wikimedia.org/wiki/File:Καμένα_Βούρλα.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0"
+    }
   },
   {
     id: "stay-nafplio",
