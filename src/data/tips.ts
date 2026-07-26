@@ -19,7 +19,7 @@ export const tips: Tip[] = [
     id: "pelion-added",
     title: "Pelion swapped in for a second Thessaloniki night — one thing left to fix",
     body:
-      "Day 6 now goes Meteora → Pelion (Faros, Milopotamos, booked) instead of straight to Thessaloniki, and Thessaloniki drops to 1 night (21–22 Aug). Faros is booked — the one thing still open is that whichever Thessaloniki hotel you keep is booked for check-in 20 Aug, and needs that date moved to 21 Aug, or you're paying for a night you won't use.",
+      "Day 6 now goes Meteora → Pelion (Om Living Pelion, booked) instead of straight to Thessaloniki, and Thessaloniki drops to 1 night (21–22 Aug). Pelion is booked — the one thing still open is that whichever Thessaloniki hotel you keep is booked for check-in 20 Aug, and needs that date moved to 21 Aug, or you're paying for a night you won't use.",
     severity: "warning"
   },
   {

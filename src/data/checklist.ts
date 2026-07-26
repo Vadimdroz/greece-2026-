@@ -36,12 +36,11 @@ export const checklist: ChecklistItem[] = [
   {
     id: "book-pelion-hotel",
     category: "hotels",
-    text: "Pelion hotel — Faros, Milopotamos, date change pending",
+    text: "Pelion hotel booked — Om Living Pelion (19–20 Aug)",
     detail:
-      "Booked (conf. 5209377665, PIN 7030, 2 rooms, €166 total) but currently still checks in Thu 20 Aug. A request is in with the property to move it to Wed 19 Aug, matching Kazarma's new checkout — waiting to hear back. Without the change, the night of 19 Aug has no hotel booked.",
-    urgent: true,
-    dueBy: "2026-08-15",
-    mapsUrl: maps("Faros Milopotamos Pelion Greece")
+      "Confirmed: Booking.com conf. 6584233490, PIN 2645, apartment, €196.24 total. Replaces the original Faros booking, which couldn't move its check-in from 20 to 19 Aug — that booking was cancelled and this one took its place. 1 km from Agios Ioannis, where the boat trip departs.",
+    done: true,
+    mapsUrl: maps("Om Living Pelion Agios Dimitrios Greece")
   },
   {
     id: "book-kamena-vourla-hotel",
@@ -67,10 +66,10 @@ export const checklist: ChecklistItem[] = [
   {
     id: "book-mavri-thalassa",
     category: "restaurants",
-    text: "Reserve Mavri Thalassa (20 Aug dinner)",
+    text: "Mavri Thalassa confirmed — 20 Aug, 19:30, table for 4",
     detail:
-      "Kalamaria, Thessaloniki. Reserve by phone (+30 231 093 2542) or online — same-day online bookings close 15:00. Especially important for a Thursday night.",
-    dueBy: "2026-08-20",
+      "Kalamaria, Thessaloniki. Booking reference 39t-2T8rSc20jz1cHv6uyQ. Call +30 231 093 2542 to make changes.",
+    done: true,
     mapsUrl: maps("Mavri Thalassa Kalamaria Thessaloniki"),
     website: "https://mavri-thalassa.gr/en/"
   },
