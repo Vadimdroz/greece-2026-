@@ -526,74 +526,82 @@ export default function MapView({ registerFocus }: Props) {
       kicker={t("map_kicker")}
       intro={t("map_intro")}
     >
-      <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-        <div className="-mx-4 sm:mx-0 px-4 sm:px-0 overflow-x-auto scrollbar-hide flex-1 min-w-0">
-          <div className="flex gap-2 min-w-max sm:min-w-0 sm:flex-wrap">
-            {SECONDARY_CATS.map(
-              c => {
-                const cfg = CATEGORY_CONFIG[c];
-                const on = activeCats.has(c);
-                const Icon = cfg.Icon;
-                return (
-                  <button
-                    key={c}
-                    onClick={() => toggle(c)}
-                    className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-2 text-xs font-medium transition-all whitespace-nowrap min-h-9 ${
-                      on
-                        ? "text-cream-50 shadow-sm"
-                        : "bg-cream-50 text-ink-700 border-cream-300 opacity-60 hover:opacity-100 active:opacity-100"
+      {/* Secondary-layer chips — full-bleed horizontal scroll on mobile,
+          same pattern used everywhere else in the app (AttractionsGrid,
+          ServicesSection, etc.). Kept on its own row: the `-mx-4` bleed
+          this relies on only behaves correctly when the scroller is the
+          sole content of its row — sharing a row with the Route/
+          Attractions chips below caused it to visually overlap them on
+          mobile, since the negative margin extends past its flex-
+          allocated width. */}
+      <div className="-mx-4 sm:mx-0 px-4 sm:px-0 overflow-x-auto scrollbar-hide mb-3">
+        <div className="flex gap-2 min-w-max sm:min-w-0 sm:flex-wrap">
+          {SECONDARY_CATS.map(
+            c => {
+              const cfg = CATEGORY_CONFIG[c];
+              const on = activeCats.has(c);
+              const Icon = cfg.Icon;
+              return (
+                <button
+                  key={c}
+                  onClick={() => toggle(c)}
+                  className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-2 text-xs font-medium transition-all whitespace-nowrap min-h-9 ${
+                    on
+                      ? "text-cream-50 shadow-sm"
+                      : "bg-cream-50 text-ink-700 border-cream-300 opacity-60 hover:opacity-100 active:opacity-100"
+                  }`}
+                  style={
+                    on ? { backgroundColor: cfg.color, borderColor: cfg.color } : undefined
+                  }
+                >
+                  <Icon size={13} />
+                  {t(cfg.labelKey)}
+                  <span
+                    className={`text-[10px] ${
+                      on ? "text-cream-200" : "text-ink-700/60"
                     }`}
-                    style={
-                      on ? { backgroundColor: cfg.color, borderColor: cfg.color } : undefined
-                    }
                   >
-                    <Icon size={13} />
-                    {t(cfg.labelKey)}
-                    <span
-                      className={`text-[10px] ${
-                        on ? "text-cream-200" : "text-ink-700/60"
-                      }`}
-                    >
-                      {allPOIs.filter(p => p.category === c).length}
-                    </span>
-                  </button>
-                );
-              }
-            )}
-          </div>
+                    {allPOIs.filter(p => p.category === c).length}
+                  </span>
+                </button>
+              );
+            }
+          )}
         </div>
+      </div>
 
-        {/* The two primary map chips — Route (red, the between-stay
-            lines) and Attractions (green, every attraction marker).
-            Colored so the chips double as their own legend. */}
-        <div className="flex gap-2 shrink-0">
-          <button
-            onClick={() => setShowRoute(s => !s)}
-            aria-pressed={showRoute}
-            className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-2 text-xs font-medium transition-all whitespace-nowrap min-h-9 ${
-              showRoute
-                ? "text-cream-50 shadow-sm"
-                : "bg-cream-50 text-ink-700 border-cream-300 opacity-60 hover:opacity-100 active:opacity-100"
-            }`}
-            style={showRoute ? { backgroundColor: TRANSITION_COLOR, borderColor: TRANSITION_COLOR } : undefined}
-          >
-            <Route size={13} />
-            {t("map_chip_route")}
-          </button>
-          <button
-            onClick={() => setShowAttractions(s => !s)}
-            aria-pressed={showAttractions}
-            className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-2 text-xs font-medium transition-all whitespace-nowrap min-h-9 ${
-              showAttractions
-                ? "text-cream-50 shadow-sm"
-                : "bg-cream-50 text-ink-700 border-cream-300 opacity-60 hover:opacity-100 active:opacity-100"
-            }`}
-            style={showAttractions ? { backgroundColor: ATTRACTION_COLOR, borderColor: ATTRACTION_COLOR } : undefined}
-          >
-            <Star size={13} />
-            {t("map_chip_attractions")}
-          </button>
-        </div>
+      {/* The two primary map chips — Route (red, the between-stay
+          lines) and Attractions (green, every attraction marker).
+          Colored so the chips double as their own legend. Own row,
+          right-aligned, so they never compete for space with the
+          scrollable row above. */}
+      <div className="flex justify-end gap-2 mb-3">
+        <button
+          onClick={() => setShowRoute(s => !s)}
+          aria-pressed={showRoute}
+          className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-2 text-xs font-medium transition-all whitespace-nowrap min-h-9 ${
+            showRoute
+              ? "text-cream-50 shadow-sm"
+              : "bg-cream-50 text-ink-700 border-cream-300 opacity-60 hover:opacity-100 active:opacity-100"
+          }`}
+          style={showRoute ? { backgroundColor: TRANSITION_COLOR, borderColor: TRANSITION_COLOR } : undefined}
+        >
+          <Route size={13} />
+          {t("map_chip_route")}
+        </button>
+        <button
+          onClick={() => setShowAttractions(s => !s)}
+          aria-pressed={showAttractions}
+          className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-2 text-xs font-medium transition-all whitespace-nowrap min-h-9 ${
+            showAttractions
+              ? "text-cream-50 shadow-sm"
+              : "bg-cream-50 text-ink-700 border-cream-300 opacity-60 hover:opacity-100 active:opacity-100"
+          }`}
+          style={showAttractions ? { backgroundColor: ATTRACTION_COLOR, borderColor: ATTRACTION_COLOR } : undefined}
+        >
+          <Star size={13} />
+          {t("map_chip_attractions")}
+        </button>
       </div>
 
       {/* Selection state — only shown once a stop is selected, since the

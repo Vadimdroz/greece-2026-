@@ -894,10 +894,20 @@ rules above.
 A horizontal-scrolling row of chips above the map, one per secondary
 category (restaurants, wineries, supermarkets, gas), each showing a
 count and toggling its layer. **All off by default** — the default
-view is the route, undistracted. Lay this row out with the two primary
-chips (Route, Attractions — see above) right-aligned in the same row,
-so the scrollable secondary chips and the two fixed primary toggles
-don't compete for space.
+view is the route, undistracted.
+
+Give this row the standard full-bleed mobile-scroll treatment used
+everywhere else in the app (`-mx-4 sm:mx-0 px-4 sm:px-0 overflow-x-auto
+scrollbar-hide` — see AttractionsGrid, ServicesSection, etc. for the
+same pattern) — and give it **its own row**. Don't put the two primary
+chips (Route, Attractions — see above) in that same flex row even
+right-aligned: the `-mx-4` negative margin only behaves correctly when
+the scroller is the sole content of its row. Share the row with a
+sibling and the scroller bleeds past its flex-allocated width, visibly
+overlapping the sibling on mobile (where the bleed is active — it's
+a no-op at `sm:` and up, which is why this can slip past a desktop-only
+check). Put Route/Attractions on their own `flex justify-end` row
+right below instead.
 
 ### Floating buttons
 
