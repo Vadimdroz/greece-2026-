@@ -127,25 +127,40 @@ export const itinerary: Day[] = [
     dayNumber: 3,
     date: "2026-08-17",
     weekday: "Monday",
-    departureTime: "10:00",
-    rideToFirst: { duration: "2 h 45", note: "Delphi → Lake Plastiras, via Karditsa" },
+    departureTime: "09:30",
+    rideToFirst: { duration: "1 h 10", note: "Delphi → Thermopylae, via Amfissa/Lamia" },
     region: "north",
     base: "Lake Plastiras",
-    title: "Into the mountains: Lake Plastiras",
-    subtitle: "Scenic drive, check into Kazarma Hotel",
+    title: "Thermopylae, then into the mountains: Lake Plastiras",
+    subtitle: "History stop on the way, then a scenic drive and check-in at Kazarma Hotel",
     activities: [
       {
-        time: "10:00",
-        title: "Drive Delphi → Lake Plastiras",
+        time: "09:30",
+        title: "Drive Delphi → Thermopylae",
         description:
-          "Winding mountain road via Amfissa and Karditsa — one of the best scenic drives of the trip. Stop whenever a viewpoint looks good; there's no rush today.",
-        rideToNext: { duration: "15 min", note: "around the lake to Kalyvia Fylaktis" }
+          "Thermopylae sits right on the standard road toward Karditsa via Lamia, so this is barely a detour — same route you'd drive anyway.",
+        rideToNext: { duration: "5 min", note: "roadside stop" }
+      },
+      {
+        time: "10:40",
+        title: "Thermopylae — Leonidas Monument",
+        description:
+          "A short, worthwhile roadside stop at the site of the 480 BC battle — the Leonidas statue and the burial mound (Kolonos Hill) are a 20–30 minute visit, good for stretching legs mid-drive.",
+        attractionId: "thermopylae",
+        tag: "culture",
+        rideToNext: { duration: "1 h 25", note: "Thermopylae → Kalyvia Fylaktis, via Karditsa" }
+      },
+      {
+        time: "11:30",
+        title: "Drive Thermopylae → Lake Plastiras",
+        description:
+          "Winding mountain road via Karditsa — one of the best scenic drives of the trip. Stop whenever a viewpoint looks good."
       },
       {
         time: "15:00",
         title: "Check in — Kazarma Hotel, Kalyvia Fylaktis",
         description:
-          "Superior Double/Twin room with lake view, 3 nights (17–20 Aug). Confirmation #5911663775, PIN 1975. Free cancellation ended 26 July, so this one's locked in — no double-booking here."
+          "Superior Double/Twin room with lake view, 2 nights (17–19 Aug). Confirmation #5911663775, PIN 1975 — modified 26 July to drop the 3rd night, €428 total."
       },
       {
         time: "Evening",
@@ -154,11 +169,12 @@ export const itinerary: Day[] = [
         tag: "nature"
       }
     ],
-    driveNotes: "Delphi → Kalyvia Fylaktis ≈ 2 h 45 via Amfissa/Karditsa",
+    driveNotes: "Delphi → Thermopylae ≈ 1 h 10 · Thermopylae → Kalyvia Fylaktis ≈ 1 h 25 via Karditsa",
     dayTips: [
+      "Thermopylae used to be a Day 8 stop, wedged into the Thessaloniki → Nafplio marathon — moving it here costs almost no extra driving and turns that day into two sane ones instead",
       "Offline maps essential here — signal drops in the mountain passes",
       "Fill the tank before leaving Delphi; fuel stations thin out in the mountains",
-      "This is the one leg with no hotel double-booking — nothing to resolve here"
+      "Kazarma is down to 2 nights now, not 3 — Plastiras Day 5 (horses/archery) was cut to make room for the Meteora/Pelion/Kamena Vourla changes"
     ],
     drinkOfTheDay: {
       name: "Tsipouro",
@@ -208,7 +224,8 @@ export const itinerary: Day[] = [
     dayTips: [
       "Book confirmation and exact meeting point/time should be reconfirmed with Active Nature a few days before",
       "Sports shoes that can get wet, or neoprene booties, work better than sandals",
-      "Personal electronics stay in the car — no dry bags mentioned in the booking"
+      "Personal electronics stay in the car — no dry bags mentioned in the booking",
+      "Last full day at Plastiras this trip — the horse riding/archery day that used to follow was cut to fund the Meteora/Pelion/Kamena Vourla changes"
     ],
     gear: [
       { item: "Swimsuits under regular clothes", for: "aliakmonas-rafting" },
@@ -226,56 +243,12 @@ export const itinerary: Day[] = [
     dayNumber: 5,
     date: "2026-08-19",
     weekday: "Wednesday",
-    departureTime: "10:00",
-    region: "north",
-    base: "Lake Plastiras",
-    title: "Horses, archery, and the lake at its own pace",
-    subtitle: "A slower day before the drive to Thessaloniki",
-    activities: [
-      {
-        time: "10:30",
-        title: "Horse riding at Lake Plastiras",
-        description:
-          "Easy trail riding suitable for beginners and kids, along forested paths above the lake. Confirm ahead whether Sophia (5.5) needs a led/lead-rope option.",
-        attractionId: "plastiras-horses",
-        tag: "family"
-      },
-      {
-        time: "13:00",
-        title: "Archery session",
-        description: "Same activity centre area — a good complement to the morning ride, and popular with kids Thomas's age.",
-        attractionId: "plastiras-archery",
-        tag: "family"
-      },
-      {
-        time: "Afternoon",
-        title: "Free time — lake circuit or village wander",
-        description: "Neochori, Kalyvia Pezoulas, or just sit by the water. No fixed plan — use it as a rest day before tomorrow's long drive.",
-        tag: "nature",
-        optional: true
-      }
-    ],
-    dayTips: [
-      "Confirm both the horse riding and archery bookings a day ahead — small operators, availability can shift",
-      "Pack light layers; the lake's altitude (~750 m) keeps mornings cooler than the coast"
-    ],
-    drinkOfTheDay: {
-      name: "Greek mountain tea",
-      type: "other",
-      pairing: "Sideritis, gathered from the surrounding hills — a gentle, honeyed herbal tea that fits Plastiras' quiet, alpine character better than anything stronger.",
-      servingNote: "Hot, with a spoon of honey, at a lakeside café"
-    }
-  },
-  {
-    dayNumber: 6,
-    date: "2026-08-20",
-    weekday: "Thursday",
     departureTime: "09:00",
     rideToFirst: { duration: "1 h 30", note: "Lake Plastiras → Meteora" },
     region: "transit",
     base: "Pelion (Agios Ioannis)",
     title: "Meteora, then on to Pelion",
-    subtitle: "Swapped in for a second Thessaloniki night — see the trip notes",
+    subtitle: "Kazarma checkout, a viewpoint stop, then Faros for the night — pending the hotel confirming the date change",
     activities: [
       {
         time: "10:30",
@@ -290,7 +263,7 @@ export const itinerary: Day[] = [
         time: "Evening",
         title: "Check in — Faros, Milopotamos",
         description:
-          "Booked: Booking.com confirmation 5209377665, PIN 7030, 2 rooms. A small hillside hotel above Mylopotamos beach, rated 9.8 — home-cooked meals, sea views, genuinely secluded. Cash only, and the access road is rough (fine for any car, just not a smooth drive-up) — message the property ahead about check-in and directions.",
+          "PENDING: a request is in with Faros to move check-in from Thu 20 Aug to today (Wed 19 Aug), so the night after Kazarma's new checkout isn't left unbooked — waiting to hear back. Once confirmed: Booking.com confirmation 5209377665, PIN 7030, 2 rooms. A small hillside hotel above Mylopotamos beach, rated 9.8 — home-cooked meals, sea views, genuinely secluded. Cash only, and the access road is rough (fine for any car, just not a smooth drive-up) — message the property ahead about directions.",
         tag: "nature"
       },
       {
@@ -303,7 +276,8 @@ export const itinerary: Day[] = [
     ],
     driveNotes: "Plastiras → Meteora ≈ 1 h 30 · Meteora → Pelion (Agios Ioannis) ≈ 1 h 45",
     dayTips: [
-      "This whole day replaces the old direct Plastiras → Thessaloniki routing — Pelion sits almost exactly between Meteora and Thermopylae, so this is actually a more efficient route than the original plan, not a detour",
+      "This whole day replaces the old horse-riding/archery rest day — Plastiras dropped to 2 nights, and Meteora + Pelion moved up a day to fill the gap Kazarma's shorter stay left open",
+      "Faros still shows a Thu 20 Aug check-in as of this update — if it hasn't moved to Wed 19 Aug by the time you leave Plastiras, call ahead so you're not stuck without a room for the night",
       "Faros is cash-only and down a rough access road — message the property ahead about check-in time and directions",
       "Keep the Meteora stop to photos and one short walk, not a full monastery tour"
     ],
@@ -315,9 +289,9 @@ export const itinerary: Day[] = [
     }
   },
   {
-    dayNumber: 7,
-    date: "2026-08-21",
-    weekday: "Friday",
+    dayNumber: 6,
+    date: "2026-08-20",
+    weekday: "Thursday",
     departureTime: "09:30",
     region: "transit",
     base: "Thessaloniki",
@@ -346,9 +320,9 @@ export const itinerary: Day[] = [
       },
       {
         time: "16:00",
-        title: "Check in — Thessaloniki, then White Tower",
+        title: "Check in — S Hotel Boutique Thessaloniki, then White Tower",
         description:
-          "You have two hotels booked for these dates (September Hotel and City Hotel Thessaloniki), both currently for 20–22 Aug — since this plan now arrives the 21st, whichever you keep needs its check-in date moved to match (or you'll pay for an unused first night). Once settled, it's a short walk to the White Tower and waterfront.",
+          "Junior Suite, 1 night (20–21 Aug). Confirmation #5365254420, PIN 9179, €272.21 — booked to replace the old September Hotel / City Hotel double-booking, which should both be cancelled (free until 18 Aug). Once settled, it's a short walk to the White Tower and waterfront.",
         attractionId: "white-tower",
         tag: "view"
       },
@@ -364,7 +338,7 @@ export const itinerary: Day[] = [
         time: "20:30",
         title: "Dinner — Mavri Thalassa (booked)",
         description:
-          "Seafood destination in Kalamaria, Nik. Plastira 3 — reserve ahead, especially for a Friday. Open 13:00–01:00 weekends, kitchen closes 23:30. Shellfish-forward menu — this is Irina's night.",
+          "Seafood destination in Kalamaria, Nik. Plastira 3 — reserve ahead, especially for a Thursday. Open 13:00–01:00 weekends, kitchen closes 23:30. Shellfish-forward menu — this is Irina's night.",
         tag: "food"
       }
     ],
@@ -373,7 +347,7 @@ export const itinerary: Day[] = [
       "Ano Poli and its Byzantine walls are dropped from the plan entirely to make room for Waterland the next morning — it's the one trade-off of fitting everything in",
       "Book the Pelion Scout boat trip ahead — max 11 guests per departure",
       "Reserve Mavri Thalassa by phone (+30 231 093 2542) or online — same-day online bookings close at 15:00",
-      "This is now a 1-night Thessaloniki stay, not 2 — update whichever hotel booking you keep"
+      "S Hotel Boutique replaces both old Thessaloniki bookings — cancel September Hotel and City Hotel before 18 Aug to avoid confusion or a stray charge"
     ],
     restaurants: ["rest-mavri-thalassa"],
     drinkOfTheDay: {
@@ -384,15 +358,15 @@ export const itinerary: Day[] = [
     }
   },
   {
-    dayNumber: 8,
-    date: "2026-08-22",
-    weekday: "Saturday",
+    dayNumber: 7,
+    date: "2026-08-21",
+    weekday: "Friday",
     departureTime: "08:30",
     rideToFirst: { duration: "30 min", note: "Thessaloniki → Waterland, Peraia" },
     region: "south",
-    base: "Nafplio",
-    title: "Waterland, Thermopylae, then south to Nafplio",
-    subtitle: "Water park morning, history stop, then the old town by the sea",
+    base: "Kamena Vourla",
+    title: "Waterland, then Kamena Vourla",
+    subtitle: "Water park morning, then a genuine rest night halfway to Nafplio",
     activities: [
       {
         time: "09:00",
@@ -401,36 +375,77 @@ export const itinerary: Day[] = [
           "Slides, a wave pool, a lazy/crazy river, and a kids' area, in Peraia — on your way south out of Thessaloniki, not a detour. Reviews call it solid and clean rather than spectacular: expect a good half-day, not a full one. Free shuttle exists from central Thessaloniki if you ever needed it, but you'll drive straight there.",
         attractionId: "waterland",
         tag: "water",
-        rideToNext: { duration: "2 h 15", note: "Waterland → Thermopylae" }
+        rideToNext: { duration: "3 h 20", note: "Waterland → Kamena Vourla" }
       },
       {
-        time: "12:00",
-        title: "Thermopylae — Leonidas Monument",
+        time: "13:00",
+        title: "Drive to Kamena Vourla",
         description:
-          "A short, worthwhile roadside stop at the site of the 480 BC battle — the Leonidas statue and the burial mound (Kolonos Hill) are a 20–30 minute visit, good for stretching legs mid-drive.",
-        attractionId: "thermopylae",
-        tag: "culture",
-        rideToNext: { duration: "2 h 45", note: "Thermopylae → Nafplio" }
+          "This replaces the old direct run all the way to Nafplio. Kamena Vourla sits almost exactly halfway on the Thessaloniki–Nafplio road, and splitting the drive here means tomorrow lands in Nafplio at midday instead of after a 5–6 hour slog.",
+        rideToNext: { duration: "5 min", note: "hotel check-in" }
       },
       {
         time: "Evening",
+        title: "Check in — Mitsis Galini Wellness Spa Resort",
+        description:
+          "1 night (21–22 Aug), 2 rooms, breakfast + dinner included. Confirmation #6652799478, PIN 4393, €444 total. The resort's outdoor thermal pool draws on Kamena Vourla's natural radioactive/radon springs — same source as the town's free public baths, just with loungers and changing rooms attached. Free cancellation ended 13 Aug. Plan is a genuine rest night here — no excursions.",
+        tag: "nature"
+      }
+    ],
+    driveNotes: "Thessaloniki → Waterland ≈ 30 min · Waterland → Kamena Vourla ≈ 3 h 20",
+    dayTips: [
+      "This is a brand-new stop, swapped in to break up what used to be a single brutal 5–6 hour drive straight to Nafplio",
+      "Bring swimsuits already on under clothes to save a changing-room queue at Waterland",
+      "Deliberately unstructured evening — the point of this stop is rest before tomorrow's shorter drive",
+      "If you want the natural springs without the resort setting, Kamena Vourla also has free public thermal pools (Kouniaviti/Asklipios) a short drive from the hotel"
+    ],
+    drinkOfTheDay: {
+      name: "Greek coffee",
+      type: "coffee",
+      pairing: "An easy, unhurried cup by the thermal pool — tonight is about resting, not a destination drink.",
+      servingNote: "Small cup, metrio (medium sweet) is the easy default"
+    }
+  },
+  {
+    dayNumber: 8,
+    date: "2026-08-22",
+    weekday: "Saturday",
+    departureTime: "11:00",
+    region: "south",
+    base: "Nafplio",
+    title: "Spa morning at Kamena Vourla, then south to Nafplio",
+    subtitle: "A relaxed thermal-pool morning, then a shorter drive that lands you in Nafplio with the afternoon still ahead",
+    activities: [
+      {
+        time: "09:00",
+        title: "Thermal pool morning — Mitsis Galini",
+        description:
+          "Check the resort's thermal-pool access hours when you book — some spa resorts reserve certain windows for treatments rather than general guest use. Worth confirming ahead whether children can use the thermal (vs. freshwater) pool, since some hot-spring pools carry age or temperature restrictions.",
+        tag: "nature",
+        rideToNext: { duration: "3 h 10", note: "Kamena Vourla → Nafplio" }
+      },
+      {
+        time: "12:00",
+        title: "Drive Kamena Vourla → Nafplio",
+        description: "Roughly half the distance of the old direct Thessaloniki–Nafplio run — you should land in Nafplio around midday with a real afternoon left, not just an evening.",
+      },
+      {
+        time: "Afternoon",
         title: "Check in — Nafplio old town",
         description:
           "Traditional house of 1898, in the heart of old Nafplio. Confirmation #5347700468, PIN 8001, 1 night (22–23 Aug). This is the leg with the Athens alternative still open — see Tickets below — but Nafplio is the plan."
       },
       {
-        time: "Night",
+        time: "Evening",
         title: "Old town wander, waterfront dinner",
-        description: "Nafplio's old town is made for an evening stroll — Venetian architecture, small squares, gelato. Easy on tired kids after a long driving day.",
-        tag: "culture",
-        optional: true
+        description: "Nafplio's old town is made for an evening stroll — Venetian architecture, small squares, gelato. With a full afternoon in hand, this can be unhurried instead of a tired arrival after dark.",
+        tag: "culture"
       }
     ],
-    driveNotes: "Thessaloniki → Waterland ≈ 30 min · Waterland → Thermopylae ≈ 2 h 15 · Thermopylae → Nafplio ≈ 2 h 45",
+    driveNotes: "Kamena Vourla → Nafplio ≈ 3 h 10",
     dayTips: [
-      "Long day — Waterland in the morning, then a real driving stretch. Keep the park visit to 2.5–3 hours to still land in Nafplio at a reasonable hour",
-      "Bring swimsuits already on under clothes to save a changing-room queue",
-      "Thermopylae is a short stretch-the-legs stop, not a destination",
+      "This is the day that used to carry Waterland + Thermopylae + a 5–6 hour drive all in one go — splitting the Kamena Vourla stop off yesterday is what makes today light",
+      "Thermopylae has moved to Day 3 (Delphi → Plastiras), so there's no history stop to fit in today — just the pool and the drive",
       "Nafplio vs. Athens for tonight is still an open double-booking — see the flag on the Tickets card",
       "If you do end up in Athens instead, swap tonight's plan for a light Plaka wander"
     ],

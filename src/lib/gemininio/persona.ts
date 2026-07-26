@@ -25,14 +25,16 @@ const TRIP_FACTS = {
   endDate: "2026-08-23",
   travellers: "The Drozdovski family: Vadim, Irina, Thomas (8), Sophia (5.5)",
   cars: "1 rental car (MG ZS, Record Go) picked up and dropped off at Athens Airport",
-  bases: ["Delphi", "Lake Plastiras", "Pelion (Milopotamos)", "Thessaloniki", "Nafplio"],
+  bases: ["Delphi", "Lake Plastiras", "Pelion (Milopotamos)", "Thessaloniki", "Kamena Vourla", "Nafplio"],
   // Per-person plan facts that AREN'T derivable from the itinerary data —
   // keep them here and update when the plan changes.
   planNotes: [
-    "Three legs have DUPLICATE hotel bookings still pending a decision: Delphi (Amalia vs Acropole, 15–17 Aug), Thessaloniki (September vs City Hotel — currently booked 20–22 Aug but the plan now arrives 21 Aug, so whichever is kept needs its check-in date moved), and the last night (Nafplio's Traditional house of 1898 vs Philia Boutique Hotel in Athens, 22–23 Aug). The itinerary currently assumes Nafplio for the last night. If asked which hotel is booked for a doubled leg, say clearly that it's still an open decision and name both options.",
-    "Pelion was added on Day 6 (staying at Faros, Milopotamos — booked, confirmation 5209377665), swapped in for what used to be a second Thessaloniki night. Thessaloniki is now just 1 night (21–22 Aug) instead of 2. Faros is cash-only with a rough access road, and the boat trip the next morning departs from Agios Ioannis, a short 15–20 min drive away. Waterland moved to Day 8 morning, before Thermopylae/Nafplio.",
+    "Delphi and Thessaloniki hotel decisions are RESOLVED: Delphi keeps Acropole Delphi City Hotel (Amalia is being cancelled). Thessaloniki keeps the newly-booked S Hotel Boutique Thessaloniki, 1 night 20–21 Aug (September Hotel and City Hotel are both being cancelled — they were leftover duplicates from an earlier plan). Only the last night is still genuinely open: Nafplio's Traditional house of 1898 vs Philia Boutique Hotel in Athens, both 22–23 Aug. The itinerary currently assumes Nafplio.",
+    "Faros (Pelion) has a PENDING date change: it's booked but still shows check-in Thu 20 Aug in the confirmation, while the plan needs it to be Wed 19 Aug (a request is in with the hotel, awaiting reply). If asked about Pelion dates, mention this is still pending confirmation, not yet final.",
+    "Plastiras was trimmed from 3 nights to 2 (17–19 Aug) — the horse riding/archery day was cut to make room. Thermopylae moved from the old Day 8 to Day 3 (Delphi → Plastiras drive), since it sits almost on that road anyway. Meteora + the drive to Pelion moved up from Day 6 to Day 5 to fill the gap left by the shorter Plastiras stay.",
+    "Kamena Vourla (Mitsis Galini Wellness Spa Resort) is a NEW stop added on Day 7 (21–22 Aug), splitting what used to be a single 5–6 hour Thessaloniki→Nafplio drive into two easier days. Day 7 is Waterland water park + drive to Kamena Vourla, kept deliberately unstructured that evening. Day 8 is a relaxed thermal-pool morning at the resort (natural radon/mineral springs) before the shorter drive on to Nafplio, arriving around midday instead of after dark.",
     "Irina is pescatarian and loves shellfish — lean into seafood recommendations for her specifically (Mavri Thalassa in Thessaloniki is the big one).",
-    "Vadim eats everything. Both adults like Indian food, amusement parks, and spas/thermal baths when they come up, though none are on this particular trip's plan.",
+    "Vadim eats everything. Both adults like Indian food, amusement parks, and spas/thermal baths — the Kamena Vourla stop is a deliberate nod to the spa/thermal-bath preference.",
     "The last day (23 Aug, Nafplio → Athens Airport) is intentionally light — no excursions — because of the evening flight."
   ]
 } as const;
