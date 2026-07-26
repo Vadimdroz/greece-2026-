@@ -149,40 +149,20 @@ export const DICT = {
     he: "כל הטיול על מפה אחת"
   },
   map_kicker: {
-    en: "Tap a pin · trace the route · filter the rest",
-    he: "הקישו על סיכה · עקבו אחר המסלול · סננו את השאר"
+    en: "The route, numbered · tap a stop for its day trips",
+    he: "המסלול, ממוספר · הקישו על תחנה לטיולי היום שלה"
   },
   map_intro: {
-    en: "Every stay, attraction, restaurant, supermarket and gas station — color-coded by category. The dashed line is our actual journey: Athens to Delphi, Delphi to Lake Plastiras, Plastiras to Thessaloniki (via Meteora), Thessaloniki to Nafplio (via Thermopylae), back to Athens.",
-    he: "כל מקום לינה, אטרקציה, מסעדה, סופרמרקט ותחנת דלק — בקוד צבעים לפי קטגוריה. הקו המקווקו הוא המסלול שלנו: מאתונה לדלפי, מדלפי לאגם פלסטירה, מפלסטירה לתסלוניקי (דרך מטאורה), מתסלוניקי לנאפפליו (דרך תרמופילאי), וחזרה לאתונה."
+    en: "Athens (1) to Delphi (2) to Lake Plastiras (3) to Thessaloniki (4) to Nafplio (5) and back — the numbered stops are where we sleep. Tap a stop to reveal its day trips; tap the route itself for directions.",
+    he: "אתונה (1) לדלפי (2) לאגם פלסטירה (3) לתסלוניקי (4) לנאפפליו (5) וחזרה — התחנות הממוספרות הן מקומות הלינה שלנו. הקישו על תחנה כדי לראות את טיולי היום שלה, והקישו על המסלול עצמו לניווט."
   },
-  map_route_on: { en: "Route on", he: "מסלול מוצג" },
-  map_route_off: { en: "Route off", he: "מסלול מוסתר" },
-  map_spokes_on: { en: "Day trips on", he: "טיולי יום מוצגים" },
-  map_spokes_off: { en: "Day trips off", he: "טיולי יום מוסתרים" },
-  map_seg_arrival: {
-    en: "Day 1 · Land in Athens, drive to Delphi",
-    he: "יום 1 · נחיתה באתונה, נסיעה לדלפי"
+  map_legend_between: { en: "Between stays", he: "בין מקומות לינה" },
+  map_legend_daytrip: { en: "Day trips", he: "טיולי יום" },
+  map_tap_hint: {
+    en: "Tap a numbered stop to see its day trips",
+    he: "הקישו על תחנה ממוספרת כדי לראות את טיולי היום שלה"
   },
-  map_seg_arrival_short: { en: "Sat · 15 Aug", he: "ש' · 15 באוגוסט" },
-  map_seg_to_plastiras: {
-    en: "Day 3 · Delphi to Lake Plastiras",
-    he: "יום 3 · מדלפי לאגם פלסטירה"
-  },
-  map_seg_to_plastiras_short: { en: "Mon · 17 Aug", he: "ב' · 17 באוגוסט" },
-  map_seg_to_thessaloniki: {
-    en: "Day 6 · Plastiras to Thessaloniki, via Meteora",
-    he: "יום 6 · מפלסטירה לתסלוניקי, דרך מטאורה"
-  },
-  map_seg_to_thessaloniki_short: { en: "Thu · 20 Aug", he: "ה' · 20 באוגוסט" },
-  map_seg_departure: {
-    en: "Day 8–9 · Thermopylae, Nafplio, and back to Athens",
-    he: "ימים 8–9 · תרמופילאי, נאפפליו, וחזרה לאתונה"
-  },
-  map_seg_departure_short: {
-    en: "Sat/Sun · 22–23 Aug",
-    he: "ש'/א' · 22–23 באוגוסט"
-  },
+  map_clear_selection: { en: "Show whole route", he: "הצג את כל המסלול" },
   map_zoom_fit: { en: "Zoom to fit all locations", he: "התאם תצוגה לכל המיקומים" },
   map_locate_me: { en: "Show my location", he: "הצג את המיקום שלי" },
   map_you_here: { en: "You are here", he: "אתה כאן" },

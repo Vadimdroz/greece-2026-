@@ -72,8 +72,13 @@ Use this as the short runbook before diving into the detailed sections:
    family reference found by grep.
 4. **Fill the data source of truth** — update `src/data/types.ts` only
    if the new trip needs new fields, then work through `itinerary.ts`,
-   `attractions.ts`, `stays.ts`, `services.ts`, `tips.ts`,
-   `emergency.ts`, `checklist.ts`, and optional food / winery modules.
+   `attractions.ts`, `stays.ts`, `services.ts`, `route.ts` (the map's
+   numbered stop sequence — §6), `tips.ts`, `emergency.ts`,
+   `checklist.ts`, and optional food / winery modules. If any leg
+   still has more than one candidate hotel, keep every option in
+   `stays.ts` but mark all but one `routeStatus: "alternate"` (§6) so
+   the map has exactly one point per leg — flip the flag once the
+   booking is final.
 5. **Add translations and UI copy** — update `src/data/i18n/*`,
    `src/data/i18n/index.ts`, and `src/lib/dict.ts`; verify RTL layout
    if Hebrew or another RTL language is enabled.
@@ -135,11 +140,11 @@ Work top to bottom; each row depends on the ones above.
 |---|------|----------------|
 | 1 | **Vite / GitHub Pages** | `vite.config.ts` → `base: '/<repo>/'` matches the repo name. Every asset path under `public/` is referenced as `./…` from HTML/JSON, never root-absolute `/…` (see §20). |
 | 2 | **Trip clock** | Trip start/end constants consumed by hero, chapter picker, stats (§5). Use **local** `YYYY-MM-DD` for "today" — never `toISOString().slice(0,10)` for itinerary keys (§20). |
-| 3 | **Typed data (source of truth)** | `src/data/types.ts` first, then English modules: `itinerary.ts`, `attractions.ts`, `stays.ts`, `services.ts`, `tips.ts`, `emergency.ts`, `checklist.ts`, optional `dishes.ts` / `wineries.ts`. |
+| 3 | **Typed data (source of truth)** | `src/data/types.ts` first, then English modules: `itinerary.ts`, `attractions.ts`, `stays.ts`, `services.ts`, `route.ts` (the map's numbered stop sequence — §6), `tips.ts`, `emergency.ts`, `checklist.ts`, optional `dishes.ts` / `wineries.ts`. |
 | 4 | **i18n overlays** | Parallel files under `src/data/i18n/` (`itinerary.he.ts`, `attractions.he.ts`, …) plus `i18n/index.ts` lookup wiring. |
 | 5 | **UI strings** | `src/lib/dict.ts` — brand, nav, sections, install copy, Gemininio strings. Grep `brand_`, `nav_`, `gem_`, `install_` in the previous trip repo as a template list. |
 | 6 | **Page composition** | `src/App.tsx` (and section components) — reorder sections to match the new trip's rhythm (§4). |
-| 7 | **Map** | Defaults: centre, zoom, bounding behaviour, country filter for "you are here" (§6, §11). |
+| 7 | **Map** | Defaults: centre, zoom, bounding behaviour, country filter for "you are here" (§6, §11). Populate `route.ts`'s numbered stop sequence, tag every attraction `dayTripFrom` or `enRouteBetween` (§6, §7), and mark any still-undecided stay `routeStatus: "alternate"` so the route has exactly one point per leg. |
 | 8 | **Install / PWA metadata** | `public/manifest.webmanifest` (`name`, `short_name`), `index.html` meta (`apple-mobile-web-app-title`, OG/Twitter). Short install label ≠ long `<title>` — pick a tight nickname for the home-screen icon vs a longer marketing-style browser-tab title (Appendix A1 has the worked example). |
 | 9 | **Gemininio** | **Persona & party:** §15 (`persona.ts`). **Keys, Live, REST:** §16. `.env.local` `VITE_GEMINI_API_KEY` + GitHub Actions secret; restrict key by **HTTP referrer** in AI Studio. |
 | 10 | **Optional audio** | Pre-generated MP3s + scripts (§14) — run locally, never commit TTS secrets. Scripts read **`GEMINI_API_KEY`** (no `VITE_` prefix), separate from the in-app key. |
@@ -648,8 +653,21 @@ with the actual `ItalianWord` type and sample data: Appendix A4.)
 
 ## 6. The map
 
-The map is the second-most-used section. Make it loud and useful, not
-a decoration.
+The map is the second-most-used section. Its **one job** is to make
+the route legible at a glance — where we sleep, in order, and what
+hangs off each stop. Everything else (restaurants, gas, wineries) is
+a secondary layer the reader opts into, not the default view.
+
+> **Standardization note:** this section documents the pattern as of
+> the Greece 2026 build. The earlier Tuscany build used a cruder
+> `region: "north" | "south"` heuristic to draw "spokes" from
+> attractions back to whichever base happened to be first in the
+> array — it silently mis-routed day trips whenever a trip had more
+> than two bases (a real bug: Lake Plastiras day trips drew a spoke to
+> the *Delphi* hotel). The `dayTripFrom` / `enRouteBetween` /
+> `routeStatus` fields below replace that heuristic entirely. Don't
+> reintroduce the region-guessing version — every attraction should
+> point at a real stay id, not a coarse region bucket.
 
 ### Tiles
 
@@ -664,45 +682,157 @@ CartoDB Voyager is warm, editorial, free, and key-less. Stamen
 Watercolor is pretty but blocks non-localhost without a Stadia
 account — don't get bitten by this one in production.
 
-### Markers
+### The route: numbered stops, not colored days
 
-Don't use the default Leaflet pins. Build a custom `divIcon` with a
-gradient, a glyph, and a soft drop-shadow. Color by category:
+The default view shows **only** the numbered sequence of places you
+sleep, plus the shared start/end anchor (airport). Number the
+progression, don't color-code it by day — one consistent pin color
+carries "this is a stop on the route"; the *number* carries "which
+one." Reserve color for the two line types below.
+
+`src/data/route.ts` is the small, declarative topology file that
+drives this — keep it separate from exact stay picks so resolving a
+pending booking (see **Duplicate / pending bookings** below) is a
+one-line edit, not a component rewrite:
+
+```ts
+// src/data/route.ts
+export interface RouteAnchor { poiId: string; order: number; } // Stay.id, or the airport POI's id
+export interface RouteTransition { id: string; from: string; to: string; bend?: [number, number][]; }
+
+export const ROUTE_ANCHORS: RouteAnchor[] = [
+  { poiId: "ath", order: 1 },              // airport — shared start AND end of the loop
+  { poiId: "stay-delphi-amalia", order: 2 },
+  { poiId: "stay-plastiras", order: 3 },
+  // …one entry per leg, in travel order
+];
+
+export const ROUTE_TRANSITIONS: RouteTransition[] = [
+  { id: "t1", from: "ath", to: "stay-delphi-amalia", bend: [[38.1, 23.2]] },
+  // "bend" is a purely cosmetic waypoint or two so the line follows
+  // real roads instead of cutting straight through mountains — it
+  // has NO bearing on which stay is "the" stop; only ROUTE_ANCHORS
+  // decides that.
+];
+```
+
+A round-trip loop reuses the airport anchor for both ends (`t5: nafplio → ath`)
+rather than minting a redundant final number — don't add a "6" pin
+for the same physical airport you started at.
+
+The component resolves `ROUTE_ANCHORS`/`ROUTE_TRANSITIONS` against
+`stays.ts` + the hardcoded airport POI at render time, draws a thick
+dashed `Polyline` per transition, and renders one numbered `divIcon`
+pin per anchor. Nothing about the map component itself is
+destination-specific — only `route.ts`'s contents are.
+
+### Attraction relationships: day trips vs. en-route
+
+Every attraction is exactly one of two things relative to the route —
+tag it on the `POI` itself, not inferred from `region`:
+
+```ts
+export interface POI {
+  // …
+  /** A day trip: visited from this stay and returned to it. Hidden
+   *  by default; appears (thin line + small dot) only when this stay's
+   *  numbered pin is tapped. */
+  dayTripFrom?: string;         // Stay.id
+  /** A pass-through stop on the drive between two stays — no separate
+   *  return trip. Always visible, unnumbered, sitting on that
+   *  transition's thick line (e.g. Thermopylae between two bases). */
+  enRouteBetween?: [string, string]; // [Stay.id, Stay.id]
+}
+```
+
+- **Day trips** stay hidden until their stay's numbered pin is
+  clicked — this is what keeps the default view uncluttered, and it's
+  also the fix for the old spokes bug: the line/marker only exists
+  once you can prove which stay it belongs to.
+- **En-route stops** are always on, small, and unnumbered — they're
+  literally on the path, not an optional detour.
+- Every attraction should set exactly one of the two fields. If
+  neither fits (an attraction with no relationship to any stay's
+  route), it simply won't render on the map — that's a signal to add
+  the missing stay or transition, not to fall back to a region guess.
+
+### Click-to-navigate on the route itself
+
+Every line and every dot — not just stay pins — should open Google
+Maps / Waze links to its own destination on click, reusing the
+existing `NavigateLinks` component (§10) inside a Leaflet `<Popup>`
+child:
+
+```tsx
+<Polyline positions={...} pathOptions={...}>
+  <Popup>
+    <NavigateLinks name={destination.name} coords={destination.coords} address={destination.address} />
+  </Popup>
+</Polyline>
+```
+
+For a **transition** line, the destination is the stay/anchor at the
+far end (tapping the Athens→Delphi line links to the Delphi hotel).
+For a **day-trip** line, the destination is the attraction itself
+(tapping the Delphi→Sanctuary line links to the Sanctuary). Don't set
+`interactive={false}` on these lines the way decorative overlays
+usually get drawn — that was the old pattern and it silently ate
+clicks.
+
+### Duplicate / pending bookings
+
+Family trips routinely have more than one hotel booked for the same
+dates while a decision is pending (free-cancellation windows,
+comparing options). The map can't draw two numbered "2"s, so resolve
+this in the data, not the component:
+
+```ts
+export interface Stay extends POI {
+  // …
+  /** Defaults to "primary" when omitted. Exactly one "primary" stay
+   *  per leg is plotted on the map's numbered route; "alternate"
+   *  stays are excluded from the map entirely but still show
+   *  normally (warnings and all) in the Stays section. */
+  routeStatus?: "primary" | "alternate";
+}
+```
+
+Keep every candidate booking as its own `Stay` entry (don't delete or
+merge them — you still need to track and eventually cancel the
+loser), mark all but one `routeStatus: "alternate"` for each
+contested leg, and point `ROUTE_ANCHORS` at the `primary` one. Once
+the family actually books, flip the flags and swap the id in
+`route.ts` — a one-line change, no component edits. Surface the
+pending state loudly elsewhere (a countdown-banner callout, a Stays
+card warning) so it doesn't get forgotten before the free-cancellation
+deadline.
+
+### Markers (secondary layers)
+
+Restaurants, wineries, supermarkets, gas — the layers that stay off
+by default. Don't use the default Leaflet pins; build a custom
+`divIcon` with a gradient, a glyph, and a soft drop-shadow, colored by
+category:
 
 ```ts
 const CATEGORY_CONFIG = {
-  stay:        { color: "#A23E2A", Icon: Home,         glyph: "&#8962;" },
-  attraction:  { color: "#C68A2A", Icon: Star,         glyph: "&#9733;" },
   restaurant:  { color: "#5C7244", Icon: Utensils,     glyph: "&#127860;" },
   winery:      { color: "#7A2E3F", Icon: Grape,        glyph: "&#127815;" },
   supermarket: { color: "#587A8E", Icon: ShoppingCart, glyph: "&#128722;" },
-  gas:         { color: "#8B6F4A", Icon: Fuel,         glyph: "&#9981;"  },
-  airport:     { color: "#3D4F65", Icon: Plane,        glyph: "&#9992;"  }
+  gas:         { color: "#8B6F4A", Icon: Fuel,         glyph: "&#9981;"  }
 };
 ```
 
+Stays, attractions, and the airport are **not** part of this
+category-config/toggle system any more — stays + airport are always
+the numbered route, and attractions are revealed contextually per the
+rules above.
+
 ### Filter chips
 
-A horizontal-scrolling row of category chips above the map. Each
-chip shows the count and toggles its layer. **Default-on** the
-essentials (stays, attractions, airport); leave the rest off so the
-map doesn't look crowded on first load.
-
-### The route
-
-Draw your trip's big movements as dashed `Polyline`s in
-category-matching colors:
-- Arrival (airport → north base)
-- Transfer (north base → south base)
-- Departure (south base → airport)
-
-Add a hover/tap state that thickens the segment and dims the others.
-
-### Spokes
-
-For each base stay, draw a thin dashed spoke to every attraction in
-that region. Hides nicely under the main route, adds a "this is what
-belongs to which half" reading at a glance. Toggle with a button.
+A horizontal-scrolling row of chips above the map, one per secondary
+category, each showing a count and toggling its layer. **All off by
+default** — the default view is the route, undistracted.
 
 ### Floating buttons
 
@@ -748,6 +878,8 @@ export interface POI {
   tags?: AttractionTag[];
   difficulty?: Difficulty;
   tips?: string[];        // insider notes
+  dayTripFrom?: string;    // attraction-only: Stay.id it's a day trip from (§6)
+  enRouteBetween?: [string, string]; // attraction-only: the two anchor ids it sits between (§6)
 }
 
 export interface Stay extends POI {
@@ -759,6 +891,7 @@ export interface Stay extends POI {
   highlights: string[];
   warnings?: string[];
   gallery?: string[];     // extra photos for the carousel
+  routeStatus?: "primary" | "alternate"; // duplicate/pending bookings — §6
 }
 
 export interface DayActivity {
@@ -838,6 +971,12 @@ A few patterns worth stealing:
   restaurant data inline on the day; just list ids and look them up
   via a memoized `getService(id)` helper. That way the same
   restaurant on two days shares one source of truth.
+- **`dayTripFrom` / `enRouteBetween` on attractions, `routeStatus` on
+  stays, and `route.ts`'s topology, kept separate from each other.**
+  Whether an attraction is a day trip or a pass-through is a fact
+  about the attraction; which stay is "the" pick for a leg is a fact
+  about the stay; the order stays appear in is a fact about the trip.
+  Three separate concerns, three separate places to edit — see §6.
 
 #### The Optional auto-rule
 
