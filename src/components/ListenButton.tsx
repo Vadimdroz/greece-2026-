@@ -2,7 +2,7 @@ import { Play, Pause, Loader2 } from "lucide-react";
 import { useT } from "../lib/dict";
 import { useLang } from "../lib/i18n";
 import { resolveAudioUrl, resolveAttractionListenUrls } from "../lib/audioUrl";
-import { useAudioPlayer } from "../lib/audioPlayer";
+import { useAudioPlayer } from "../lib/audioPlayerContext";
 
 type Variant = "default" | "compact";
 

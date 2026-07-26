@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
 import Section from "./Section";
 import { TicketCardFace, TicketDetails } from "./WalletTicket";
 import TicketUnlock from "./TicketUnlock";
-import { useBookings } from "../lib/bookingsStore";
+import { useBookings } from "../lib/bookingsContext";
 import { useT } from "../lib/dict";
 import { useLang } from "../lib/i18n";
 import type { Booking } from "../lib/bookingsTypes";
