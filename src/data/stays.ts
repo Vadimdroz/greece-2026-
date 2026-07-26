@@ -2,13 +2,39 @@ import type { Stay } from "./types";
 
 export const stays: Stay[] = [
   {
+    id: "stay-delphi-acropole",
+    name: "Acropole Delphi City Hotel",
+    category: "stay",
+    region: "north",
+    shortDescription: "The pick — 2 nights, 15–17 Aug",
+    description:
+      "Booked for 2 nights, 15–17 Aug, €256.88 total. This is the one to keep — cancel Amalia Hotel Delphi (below) before its free-cancellation deadline.",
+    address: "13 Filellinon Str, Delfoi, 33054, Greece",
+    coords: [38.4818, 22.4995],
+    checkIn: "2026-08-15",
+    checkOut: "2026-08-17",
+    nights: 2,
+    highlights: [
+      "Booking.com confirmation 6091715929, PIN 9267",
+      "2 rooms booked for 2 adults, 2 children",
+      "€256.88 total — the cheaper of the two Delphi bookings"
+    ],
+    image: "./images/stay-delphi-acropole.jpg",
+    imageCredit: {
+      author: "Angela Monika Arnold, Berlin",
+      license: "CC BY 3.0",
+      source: "https://commons.wikimedia.org/wiki/File:GR_08-04-24_Delphi_Hauptstrasse.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by/3.0"
+    }
+  },
+  {
     id: "stay-delphi-amalia",
     name: "Amalia Hotel Delphi",
     category: "stay",
     region: "north",
-    shortDescription: "PENDING — one of two Delphi hotels booked for the same nights",
+    shortDescription: "TO CANCEL — superseded by Acropole",
     description:
-      "Classic Double/Twin room, breakfast included. Booked for 2 nights, 15–17 Aug. This is one of two Delphi bookings for the same dates — pick this one or Acropole Delphi City Hotel and cancel the other before the free-cancellation deadline.",
+      "Classic Double/Twin room, breakfast included. Booked for 2 nights, 15–17 Aug, €467.51 total. Acropole Delphi City Hotel is the one being kept — cancel this one before the free-cancellation deadline.",
     address: "Apollonos Street 1, Delfoi, 33054, Greece",
     coords: [38.4824, 22.5010],
     checkIn: "2026-08-15",
@@ -20,7 +46,7 @@ export const stays: Stay[] = [
       "Free cancellation until 12 August 2026 23:59 — after that, first night's cost as a fee"
     ],
     warnings: [
-      "PENDING DECISION — duplicate booking with Acropole Delphi City Hotel, same dates. Cancel one before 12 Aug."
+      "TO CANCEL — Acropole Delphi City Hotel is the kept booking. Cancel this one before 12 Aug 23:59."
     ],
     image: "./images/stay-delphi-amalia.jpg",
     imageCredit: {
@@ -31,50 +57,22 @@ export const stays: Stay[] = [
     }
   },
   {
-    id: "stay-delphi-acropole",
-    name: "Acropole Delphi City Hotel",
-    category: "stay",
-    region: "north",
-    shortDescription: "PENDING — one of two Delphi hotels booked for the same nights",
-    description:
-      "Booked for 2 nights, 15–17 Aug. The other half of the Delphi double-booking — compare against Amalia Hotel Delphi and keep one.",
-    address: "13 Filellinon Str, Delfoi, 33054, Greece",
-    coords: [38.4818, 22.4995],
-    checkIn: "2026-08-15",
-    checkOut: "2026-08-17",
-    nights: 2,
-    highlights: [
-      "Booking.com confirmation 6091715929, PIN 9267",
-      "2 rooms booked for 2 adults, 2 children"
-    ],
-    warnings: [
-      "PENDING DECISION — duplicate booking with Amalia Hotel Delphi, same dates."
-    ],
-    image: "./images/stay-delphi-acropole.jpg",
-    imageCredit: {
-      author: "Angela Monika Arnold, Berlin",
-      license: "CC BY 3.0",
-      source: "https://commons.wikimedia.org/wiki/File:GR_08-04-24_Delphi_Hauptstrasse.jpg",
-      licenseUrl: "https://creativecommons.org/licenses/by/3.0"
-    }
-  },
-  {
     id: "stay-plastiras",
     name: "Kazarma Hotel",
     category: "stay",
     region: "north",
-    shortDescription: "Confirmed — lake-view room, 3 nights, Lake Plastiras",
+    shortDescription: "Confirmed — lake-view room, 2 nights, Lake Plastiras",
     description:
-      "Superior Double/Twin Room with Lake View, in Kalyvia Fylaktis on Lake Plastiras. The one leg of the trip with no double-booking to resolve — this one's locked in.",
+      "Superior Double/Twin Room with Lake View, in Kalyvia Fylaktis on Lake Plastiras. Shortened from 3 to 2 nights on 26 July to make room for Meteora/Pelion moving up a day — the horse riding/archery day was cut.",
     address: "Kalivia Filaktis, Kalyvia Fylaktis, 43067, Greece",
     coords: [39.3625, 21.7028],
     checkIn: "2026-08-17",
-    checkOut: "2026-08-20",
-    nights: 3,
+    checkOut: "2026-08-19",
+    nights: 2,
     highlights: [
       "Booking.com confirmation 5911663775, PIN 1975",
-      "Free cancellation ended 26 July 2026 — locked in",
-      "Base for the rafting, horse riding, and archery days"
+      "Modified 26 July 2026: departure moved from 20 Aug to 19 Aug, €428 (was €642)",
+      "Base for the rafting day"
     ],
     image: "./images/stay-plastiras.jpg",
     imageCredit: {
@@ -89,9 +87,9 @@ export const stays: Stay[] = [
     name: "Faros, Milopotamos",
     category: "stay",
     region: "transit",
-    shortDescription: "Confirmed — hillside hideaway above Mylopotamos beach",
+    shortDescription: "PENDING date change — awaiting hotel confirmation",
     description:
-      "A small, family-run hillside hotel above Mylopotamos beach, one of East Pelion's most beautiful. Rated 9.8 across hundreds of reviews — home-cooked meals from the owners' own farm, sea views, and a genuinely secluded feel. Two rooms booked. Note: cash-only property, and the access road is rough (manageable, but not a smooth drive-up) — worth knowing before arrival.",
+      "A small, family-run hillside hotel above Mylopotamos beach, one of East Pelion's most beautiful. Rated 9.8 across hundreds of reviews — home-cooked meals from the owners' own farm, sea views, and a genuinely secluded feel. Two rooms booked. A request to move check-in from Thu 20 Aug to Wed 19 Aug is in with the property (Kazarma's new checkout is 19 Aug, so 20 Aug would leave a night unbooked) — still waiting to hear back. Note: cash-only property, and the access road is rough (manageable, but not a smooth drive-up) — worth knowing before arrival.",
     address: "Pilio, Milopotamos, 37012, Greece",
     coords: [39.3520, 23.1050],
     checkIn: "2026-08-20",
@@ -99,23 +97,51 @@ export const stays: Stay[] = [
     nights: 1,
     highlights: [
       "Booking.com confirmation 5209377665, PIN 7030",
-      "2 rooms, total US$189",
+      "2 rooms, total €166",
       "9.8 rating — home-cooked farm-to-table meals, sea-view rooms, quiet hillside setting",
       "Message the property ahead about check-in/out times and the access road"
     ],
     warnings: [
+      "PENDING — awaiting confirmation from the hotel on moving check-in from 20 Aug to 19 Aug. Still shows 20 Aug as of this update; call ahead if it hasn't been confirmed by the time you leave Plastiras.",
       "Cash only — no cards accepted on site",
       "Access road is rough — fine for any car per reviews, but not paved smooth; drive carefully with the family"
     ]
+  },
+  {
+    id: "stay-thessaloniki-shotel",
+    name: "S Hotel Boutique Thessaloniki",
+    category: "stay",
+    region: "south",
+    shortDescription: "Confirmed — 1 night, 20–21 Aug",
+    description:
+      "Junior Suite, 1 night (20–21 Aug), €272.21 total. Booked to replace the old September Hotel / City Hotel double-booking, which had the wrong number of nights for the current plan — this one matches the itinerary exactly.",
+    address: "Kalapothaki 5, Thessaloniki, 54624, Greece",
+    coords: [40.6320, 22.9440],
+    checkIn: "2026-08-20",
+    checkOut: "2026-08-21",
+    nights: 1,
+    highlights: [
+      "Booking.com confirmation 5365254420, PIN 9179",
+      "Junior Suite, €272.21 total",
+      "Free cancellation until 16 August 2026 23:59",
+      "Matches the plan's actual 1-night Thessaloniki stay — no date fix needed"
+    ],
+    image: "./images/stay-thessaloniki-september.jpg",
+    imageCredit: {
+      author: "Unsplash",
+      license: "Unsplash License",
+      source: "https://unsplash.com/photos/photo-1763717630658-d8fa5fa754e9",
+      licenseUrl: "https://unsplash.com/license"
+    }
   },
   {
     id: "stay-thessaloniki-september",
     name: "September Hotel Thessaloniki",
     category: "stay",
     region: "south",
-    shortDescription: "PENDING — one of two Thessaloniki hotels booked for the same nights",
+    shortDescription: "TO CANCEL — superseded by S Hotel Boutique",
     description:
-      "5* hotel, Junior Suite with Garden View, booked for 2 nights, 20–22 Aug. This is one of two Thessaloniki bookings for the same dates — pick this one or City Hotel Thessaloniki and cancel the other before 18 Aug.",
+      "5* hotel, Junior Suite with Garden View, booked for 2 nights, 20–22 Aug, €674.40 total. S Hotel Boutique Thessaloniki is the one being kept — cancel this before 18 Aug.",
     address: "Asklipiou 16-18, Thessaloniki, 55535, Greece",
     coords: [40.6260, 22.9500],
     checkIn: "2026-08-20",
@@ -127,8 +153,7 @@ export const stays: Stay[] = [
       "Free cancellation until 18 August 2026 23:59"
     ],
     warnings: [
-      "PENDING DECISION — duplicate booking with City Hotel Thessaloniki, same dates. Cancel one before 18 Aug.",
-      "ITINERARY MISMATCH — the plan now has you arriving in Thessaloniki on 21 Aug (Pelion was added before it), one day after this booking's check-in. If you keep this hotel, change the check-in date to 21 Aug (1 night) via Booking.com, or you'll pay for an unused first night."
+      "TO CANCEL — S Hotel Boutique Thessaloniki is the kept booking. Cancel this before 18 Aug 23:59."
     ],
     image: "./images/stay-thessaloniki-september.jpg",
     imageCredit: {
@@ -143,9 +168,9 @@ export const stays: Stay[] = [
     name: "City Hotel Thessaloniki",
     category: "stay",
     region: "south",
-    shortDescription: "PENDING — one of two Thessaloniki hotels booked for the same nights",
+    shortDescription: "TO CANCEL — superseded by S Hotel Boutique",
     description:
-      "Junior Suite Inner View, booked for 2 nights, 20–22 Aug. The other half of the Thessaloniki double-booking. Note this booking was made for 2 adults + 1 child — double-check occupancy before keeping it.",
+      "Junior Suite Inner View, booked for 2 nights, 20–22 Aug, booked for 2 adults + 1 child only. S Hotel Boutique Thessaloniki is the one being kept — cancel this before 18 Aug.",
     address: "Komninon 11, Thessaloniki, 546 24, Greece",
     coords: [40.6320, 22.9430],
     checkIn: "2026-08-20",
@@ -156,9 +181,8 @@ export const stays: Stay[] = [
       "Free cancellation until 18 August 2026 23:59"
     ],
     warnings: [
-      "PENDING DECISION — duplicate booking with September Hotel Thessaloniki, same dates.",
-      "Booked for 2 adults + 1 child only — confirm occupancy before keeping this one over the other",
-      "ITINERARY MISMATCH — the plan now has you arriving in Thessaloniki on 21 Aug (Pelion was added before it), one day after this booking's check-in. If you keep this hotel, change the check-in date to 21 Aug (1 night) via Booking.com, or you'll pay for an unused first night."
+      "TO CANCEL — S Hotel Boutique Thessaloniki is the kept booking. Cancel this before 18 Aug 23:59.",
+      "Was also booked for 2 adults + 1 child only, wrong occupancy for the family"
     ],
     image: "./images/stay-thessaloniki-city.jpg",
     imageCredit: {
@@ -167,6 +191,30 @@ export const stays: Stay[] = [
       source: "https://unsplash.com/photos/a-modern-hotel-room-with-elegant-furnishings-Qvn9nTldQgc",
       licenseUrl: "https://unsplash.com/license"
     }
+  },
+  {
+    id: "stay-kamena-vourla",
+    name: "Mitsis Galini Wellness Spa Resort",
+    category: "stay",
+    region: "south",
+    shortDescription: "Confirmed — 1 night, 21–22 Aug, Kamena Vourla",
+    description:
+      "New stop, added to split the old direct Thessaloniki–Nafplio drive (5–6 hours) into two manageable days. 1 night, 2 rooms, breakfast + dinner included. The resort's outdoor thermal pool is fed by Kamena Vourla's natural radon/mineral springs. Plan is to rest the evening of the 21st and use the thermal pool the morning of the 22nd before driving on to Nafplio.",
+    address: "5 Ger. Vassiliadi, Kamena Vourla, 35008, Greece",
+    coords: [38.7760, 22.7780],
+    checkIn: "2026-08-21",
+    checkOut: "2026-08-22",
+    nights: 1,
+    highlights: [
+      "Booking.com confirmation 6652799478, PIN 4393",
+      "2 rooms, €444 total, breakfast and dinner included",
+      "Natural thermal spring pool — same source as the town's free public baths, with resort loungers and changing rooms",
+      "Free cancellation until 13 August 2026 23:59"
+    ],
+    warnings: [
+      "Confirm thermal-pool access hours ahead — some spa resorts reserve windows for treatments vs. general guest use",
+      "Confirm ahead whether children can use the thermal (not just freshwater) pool — some hot-spring pools have age/temperature restrictions"
+    ]
   },
   {
     id: "stay-nafplio",

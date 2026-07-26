@@ -14,9 +14,9 @@ export const checklist: ChecklistItem[] = [
   {
     id: "resolve-delphi-hotel",
     category: "hotels",
-    text: "Pick one Delphi hotel, cancel the other",
+    text: "Cancel Amalia Hotel Delphi — Acropole is the pick",
     detail:
-      "Amalia Hotel Delphi (conf. 6091713128, free cancel until 12 Aug) vs. Acropole Delphi City Hotel (conf. 6091715929). Both booked for 15–17 Aug.",
+      "Decision made: keeping Acropole Delphi City Hotel (conf. 6091715929, €256.88). Cancel Amalia Hotel Delphi (conf. 6091713128) before its free-cancellation deadline.",
     urgent: true,
     dueBy: "2026-08-12",
     mapsUrl: maps("Amalia Hotel Delphi Greece"),
@@ -25,9 +25,9 @@ export const checklist: ChecklistItem[] = [
   {
     id: "resolve-thessaloniki-hotel",
     category: "hotels",
-    text: "Pick one Thessaloniki hotel, cancel the other, and fix the check-in date",
+    text: "Cancel September Hotel and City Hotel Thessaloniki",
     detail:
-      "September Hotel (conf. 5559705389) vs. City Hotel Thessaloniki (conf. 5066676607, booked for 2 adults + 1 child only — check occupancy). Both currently booked 20–22 Aug, free cancel until 18 Aug — but the plan now arrives 21 Aug (Pelion night added before it), so whichever you keep needs its check-in moved to 21 Aug (1 night), or you'll pay for an unused first night.",
+      "Decision made: booked S Hotel Boutique Thessaloniki instead (conf. 5365254420, 1 night 20–21 Aug, €272.21 — matches the itinerary exactly). September Hotel (conf. 5559705389) and City Hotel Thessaloniki (conf. 5066676607) are both now redundant — cancel both before 18 Aug to avoid a stray charge.",
     urgent: true,
     dueBy: "2026-08-18",
     mapsUrl: maps("September Hotel Thessaloniki"),
@@ -36,11 +36,21 @@ export const checklist: ChecklistItem[] = [
   {
     id: "book-pelion-hotel",
     category: "hotels",
-    text: "Pelion hotel booked — Faros, Milopotamos (20–21 Aug)",
+    text: "Pelion hotel — Faros, Milopotamos, date change pending",
     detail:
-      "Confirmed: Booking.com conf. 5209377665, PIN 7030, 2 rooms, US$189 total. Cash-only property with a rough access road — message them ahead about check-in and directions.",
-    done: true,
+      "Booked (conf. 5209377665, PIN 7030, 2 rooms, €166 total) but currently still checks in Thu 20 Aug. A request is in with the property to move it to Wed 19 Aug, matching Kazarma's new checkout — waiting to hear back. Without the change, the night of 19 Aug has no hotel booked.",
+    urgent: true,
+    dueBy: "2026-08-15",
     mapsUrl: maps("Faros Milopotamos Pelion Greece")
+  },
+  {
+    id: "book-kamena-vourla-hotel",
+    category: "hotels",
+    text: "Kamena Vourla hotel booked — Mitsis Galini (21–22 Aug)",
+    detail:
+      "Confirmed: Booking.com conf. 6652799478, PIN 4393, 2 rooms, €444 total, breakfast + dinner included. New stopover added to split the Thessaloniki–Nafplio drive in half.",
+    done: true,
+    mapsUrl: maps("Mitsis Galini Wellness Spa Resort Kamena Vourla")
   },
   {
     id: "resolve-last-night",
@@ -57,9 +67,9 @@ export const checklist: ChecklistItem[] = [
   {
     id: "book-mavri-thalassa",
     category: "restaurants",
-    text: "Reserve Mavri Thalassa (21 Aug dinner)",
+    text: "Reserve Mavri Thalassa (20 Aug dinner)",
     detail:
-      "Kalamaria, Thessaloniki. Reserve by phone (+30 231 093 2542) or online — same-day online bookings close 15:00. Especially important for a Friday night.",
+      "Kalamaria, Thessaloniki. Reserve by phone (+30 231 093 2542) or online — same-day online bookings close 15:00. Especially important for a Thursday night.",
     dueBy: "2026-08-20",
     mapsUrl: maps("Mavri Thalassa Kalamaria Thessaloniki"),
     website: "https://mavri-thalassa.gr/en/"
@@ -96,28 +106,19 @@ export const checklist: ChecklistItem[] = [
       "https://www.active-nature.gr/en/activities/rafting/rafting-in-aliakmonas-river/"
   },
   {
-    id: "book-horses-archery",
-    category: "attractions",
-    text: "Confirm horse riding + archery at Lake Plastiras",
-    detail:
-      "Small local operators — confirm availability a day or two ahead, and ask about a lead-rope option for Sophia (5.5).",
-    dueBy: "2026-08-16",
-    mapsUrl: maps("Lake Plastiras horse riding Karditsa Greece")
-  },
-  {
     id: "book-waterland-tickets",
     category: "attractions",
-    text: "Waterland Water Park tickets (22 Aug morning)",
+    text: "Waterland Water Park tickets (21 Aug morning)",
     detail:
-      "Peraia, near Thessaloniki — now the first stop on Day 8, before Thermopylae/Nafplio. Check whether buying online ahead is cheaper than at the gate.",
-    dueBy: "2026-08-21",
+      "Peraia, near Thessaloniki — the first stop on Day 7, before the drive to Kamena Vourla. Check whether buying online ahead is cheaper than at the gate.",
+    dueBy: "2026-08-20",
     mapsUrl: maps("Waterland Water Park Tagarades Thessaloniki"),
     website: "https://www.waterland.gr/en/"
   },
   {
     id: "book-pelion-boat-trip",
     category: "attractions",
-    text: "Book the Pelion Scout \"Mamma Mia\" boat trip (21 Aug morning)",
+    text: "Book the Pelion Scout \"Mamma Mia\" boat trip (20 Aug morning)",
     detail:
       "Agios Ioannis, 10:00 departure. Small boats — max 11 guests — book ahead. Minimum age 4, easy difficulty, fine for both kids.",
     dueBy: "2026-08-15",
