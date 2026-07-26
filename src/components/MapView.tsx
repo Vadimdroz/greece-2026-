@@ -1,7 +1,7 @@
 import { useEffect, useImperativeHandle, useMemo, useRef, useState, forwardRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from "react-leaflet";
 import L from "leaflet";
-import { Home, Star, Utensils, ShoppingCart, Fuel, Plane, ExternalLink, Maximize2, Locate, X, Grape } from "lucide-react";
+import { Home, Star, Utensils, ShoppingCart, Fuel, Plane, ExternalLink, Maximize2, Locate, X, Grape, Route } from "lucide-react";
 import { attractions } from "../data/attractions";
 import { stays } from "../data/stays";
 import { services } from "../data/services";
@@ -38,14 +38,13 @@ const CATEGORY_CONFIG: Record<Category, CategoryConfig> = {
   winery:      { id: "winery",      labelKey: "cat_winery",      color: "#7A2E3F", bg: "#7A2E3F", Icon: Grape }         // deep burgundy
 };
 
-/* Route styling — two colors only, per the map's "the number carries
-   the progression" design: brick for the thick between-stays drives,
-   olive for the thin day-trip out-and-backs. En-route pass-through
-   stops (Thermopylae, Meteora, Waterland) get their own small muted
-   marker, distinct from both numbered stops and day-trip pins. */
+/* Route styling — two colors only, matching the two map chips: red for
+   the "Route" chip (thick between-stays drives), green for the
+   "Attractions" chip (every attraction marker, whether it's a day trip
+   you return from or a pass-through stop en route — both read as the
+   same kind of thing, so they share one color). */
 const TRANSITION_COLOR = "#A23E2A";
-const DAYTRIP_COLOR = "#5C7244";
-const ENROUTE_COLOR = "#8B6F4A";
+const ATTRACTION_COLOR = "#5C7244";
 
 /* Category chips shown in the secondary-layers row — restaurants,
    wineries, supermarkets, gas. Stays/attractions/airport aren't part
@@ -222,6 +221,11 @@ interface FlyHandle {
   flyToId: (id: string) => void;
   fitAll: () => void;
   flyToCoords: (coords: [number, number], zoom?: number) => void;
+  /** Fly to frame a specific set of coords — used to focus a stay
+   *  together with its day-trip attractions ("the Delphi area") rather
+   *  than just the stay's own pin. A single coord falls back to a
+   *  plain flyTo at `maxZoom`. */
+  fitBounds: (coordsList: [number, number][], maxZoom?: number) => void;
 }
 
 const MapController = forwardRef<
@@ -248,6 +252,15 @@ const MapController = forwardRef<
       },
       flyToCoords: (coords, zoom = 12) => {
         map.flyTo(coords, Math.max(map.getZoom(), zoom), { duration: 1.0 });
+      },
+      fitBounds: (coordsList, maxZoom = 14) => {
+        if (coordsList.length === 0) return;
+        if (coordsList.length === 1) {
+          map.flyTo(coordsList[0], maxZoom, { duration: 1.0 });
+          return;
+        }
+        const bounds = L.latLngBounds(coordsList);
+        map.flyToBounds(bounds, { padding: [60, 60], duration: 1.1, maxZoom });
       }
     }),
     [map, pois, markersRef]
@@ -318,6 +331,14 @@ export default function MapView({ registerFocus }: Props) {
   // revealed contextually (day-trip on stop click, en-route always on).
   const [activeCats, setActiveCats] = useState<Set<Category>>(new Set<Category>());
   const [selectedStayId, setSelectedStayId] = useState<string | null>(null);
+
+  // The two primary map chips. "Route" gates the thick between-stay
+  // lines only (the numbered stops themselves always show — they're
+  // the map's spine, not an optional layer). "Attractions" gates every
+  // attraction marker at once, day-trip and en-route alike, on top of
+  // and independent from the existing per-stop click reveal below.
+  const [showRoute, setShowRoute] = useState(true);
+  const [showAttractions, setShowAttractions] = useState(false);
 
   // Geolocation: live "you are here" dot. We use watchPosition so the
   // marker stays current as we drive around during the trip; centering
@@ -410,17 +431,26 @@ export default function MapView({ registerFocus }: Props) {
     [poiById]
   );
 
-  // En-route attractions (Meteora, Waterland, Thermopylae) — always
-  // visible, unnumbered, sitting on their transition's line.
+  // En-route attractions (Meteora, Waterland, Thermopylae) — sitting on
+  // their transition's line, gated by the "Attractions" chip.
   const enRouteAttractions = useMemo(
     () => localizedPOIs.filter(p => p.category === "attraction" && p.enRouteBetween),
     [localizedPOIs]
   );
 
-  // Day-trip attractions for the currently-selected stop only — this
-  // is the fix for the Lake Plastiras bug: each attraction now points
-  // at its real base stay, not a crude north/south region guess.
-  const dayTripAttractions = useMemo(
+  // Every day-trip attraction, across every stay — shown all at once
+  // when the "Attractions" chip is on.
+  const allDayTripAttractions = useMemo(
+    () => localizedPOIs.filter(p => p.category === "attraction" && p.dayTripFrom),
+    [localizedPOIs]
+  );
+
+  // Day-trip attractions for the currently-selected stop only. This is
+  // what draws the connecting line (always gated by selection, never
+  // by the "Attractions" chip), and it's also the fix for the Lake
+  // Plastiras bug: each attraction now points at its real base stay,
+  // not a crude north/south region guess.
+  const dayTripAttractionsForSelected = useMemo(
     () =>
       selectedStayId
         ? localizedPOIs.filter(p => p.category === "attraction" && p.dayTripFrom === selectedStayId)
@@ -428,8 +458,32 @@ export default function MapView({ registerFocus }: Props) {
     [localizedPOIs, selectedStayId]
   );
 
+  // What actually renders as a day-trip marker: everything, if the
+  // chip is on; otherwise just the selected stop's own day trips (the
+  // existing "come to life on click" behavior, unconditional on the chip).
+  const visibleDayTripAttractions = showAttractions ? allDayTripAttractions : dayTripAttractionsForSelected;
+
   const markersRef = useRef<Record<string, L.Marker | null>>({});
   const flyRef = useRef<FlyHandle>(null);
+
+  // Selecting a stop focuses the map on "the area that best represents"
+  // it — the stop itself plus every one of its day-trip attractions —
+  // rather than just flying to the stop's own pin. Deselecting zooms
+  // back out to frame the whole route.
+  const selectStay = (stayId: string) => {
+    setSelectedStayId(stayId);
+    const poi = poiById.get(stayId);
+    if (!poi) return;
+    const dayTrips = allDayTripAttractions.filter(a => a.dayTripFrom === stayId);
+    const coordsList = [poi.coords, ...dayTrips.map(d => d.coords)];
+    setTimeout(() => flyRef.current?.fitBounds(coordsList), 50);
+  };
+
+  const clearSelection = () => {
+    setSelectedStayId(null);
+    const routeCoords = routeStops.map(r => r.poi.coords);
+    setTimeout(() => flyRef.current?.fitBounds(routeCoords, 8), 50);
+  };
 
   useEffect(() => {
     registerFocus((id: string) => {
@@ -437,10 +491,13 @@ export default function MapView({ registerFocus }: Props) {
       if (poi && SECONDARY_CATS.includes(poi.category) && !activeCats.has(poi.category)) {
         setActiveCats(prev => new Set(prev).add(poi.category));
       }
-      // Attractions hidden behind a stay selection need that stay
-      // selected first so their marker/line actually exist to fly to.
-      if (poi?.category === "attraction" && poi.dayTripFrom) {
-        setSelectedStayId(poi.dayTripFrom);
+      if (poi?.category === "attraction") {
+        // Day-trip attractions hidden behind a stay selection need that
+        // stay selected first; en-route attractions need the
+        // "Attractions" chip on — either way, so their marker actually
+        // exists to fly to.
+        if (poi.dayTripFrom) setSelectedStayId(poi.dayTripFrom);
+        else if (poi.enRouteBetween) setShowAttractions(true);
       }
       setTimeout(() => {
         flyRef.current?.flyToId(id);
@@ -469,66 +526,89 @@ export default function MapView({ registerFocus }: Props) {
       kicker={t("map_kicker")}
       intro={t("map_intro")}
     >
-      <div className="-mx-4 sm:mx-0 px-4 sm:px-0 overflow-x-auto scrollbar-hide mb-3">
-        <div className="flex gap-2 min-w-max sm:min-w-0 sm:flex-wrap">
-          {SECONDARY_CATS.map(
-            c => {
-              const cfg = CATEGORY_CONFIG[c];
-              const on = activeCats.has(c);
-              const Icon = cfg.Icon;
-              return (
-                <button
-                  key={c}
-                  onClick={() => toggle(c)}
-                  className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-2 text-xs font-medium transition-all whitespace-nowrap min-h-9 ${
-                    on
-                      ? "text-cream-50 shadow-sm"
-                      : "bg-cream-50 text-ink-700 border-cream-300 opacity-60 hover:opacity-100 active:opacity-100"
-                  }`}
-                  style={
-                    on ? { backgroundColor: cfg.color, borderColor: cfg.color } : undefined
-                  }
-                >
-                  <Icon size={13} />
-                  {t(cfg.labelKey)}
-                  <span
-                    className={`text-[10px] ${
-                      on ? "text-cream-200" : "text-ink-700/60"
+      <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div className="-mx-4 sm:mx-0 px-4 sm:px-0 overflow-x-auto scrollbar-hide flex-1 min-w-0">
+          <div className="flex gap-2 min-w-max sm:min-w-0 sm:flex-wrap">
+            {SECONDARY_CATS.map(
+              c => {
+                const cfg = CATEGORY_CONFIG[c];
+                const on = activeCats.has(c);
+                const Icon = cfg.Icon;
+                return (
+                  <button
+                    key={c}
+                    onClick={() => toggle(c)}
+                    className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-2 text-xs font-medium transition-all whitespace-nowrap min-h-9 ${
+                      on
+                        ? "text-cream-50 shadow-sm"
+                        : "bg-cream-50 text-ink-700 border-cream-300 opacity-60 hover:opacity-100 active:opacity-100"
                     }`}
+                    style={
+                      on ? { backgroundColor: cfg.color, borderColor: cfg.color } : undefined
+                    }
                   >
-                    {allPOIs.filter(p => p.category === c).length}
-                  </span>
-                </button>
-              );
-            }
-          )}
+                    <Icon size={13} />
+                    {t(cfg.labelKey)}
+                    <span
+                      className={`text-[10px] ${
+                        on ? "text-cream-200" : "text-ink-700/60"
+                      }`}
+                    >
+                      {allPOIs.filter(p => p.category === c).length}
+                    </span>
+                  </button>
+                );
+              }
+            )}
+          </div>
+        </div>
+
+        {/* The two primary map chips — Route (red, the between-stay
+            lines) and Attractions (green, every attraction marker).
+            Colored so the chips double as their own legend. */}
+        <div className="flex gap-2 shrink-0">
+          <button
+            onClick={() => setShowRoute(s => !s)}
+            aria-pressed={showRoute}
+            className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-2 text-xs font-medium transition-all whitespace-nowrap min-h-9 ${
+              showRoute
+                ? "text-cream-50 shadow-sm"
+                : "bg-cream-50 text-ink-700 border-cream-300 opacity-60 hover:opacity-100 active:opacity-100"
+            }`}
+            style={showRoute ? { backgroundColor: TRANSITION_COLOR, borderColor: TRANSITION_COLOR } : undefined}
+          >
+            <Route size={13} />
+            {t("map_chip_route")}
+          </button>
+          <button
+            onClick={() => setShowAttractions(s => !s)}
+            aria-pressed={showAttractions}
+            className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-2 text-xs font-medium transition-all whitespace-nowrap min-h-9 ${
+              showAttractions
+                ? "text-cream-50 shadow-sm"
+                : "bg-cream-50 text-ink-700 border-cream-300 opacity-60 hover:opacity-100 active:opacity-100"
+            }`}
+            style={showAttractions ? { backgroundColor: ATTRACTION_COLOR, borderColor: ATTRACTION_COLOR } : undefined}
+          >
+            <Star size={13} />
+            {t("map_chip_attractions")}
+          </button>
         </div>
       </div>
 
-      {/* Legend + selection state */}
-      <div className="flex items-center justify-between gap-3 mb-3 px-1 flex-wrap">
-        <div className="flex items-center gap-3 sm:gap-4 flex-wrap">
-          <span className="flex items-center gap-2 text-[11px] uppercase tracking-[0.16em] font-medium text-ink-800">
-            <span className="block w-6 h-[3px] rounded-full" style={{ background: `repeating-linear-gradient(90deg, ${TRANSITION_COLOR} 0 5px, transparent 5px 9px)` }} />
-            {t("map_legend_between")}
-          </span>
-          <span className="flex items-center gap-2 text-[11px] uppercase tracking-[0.16em] font-medium text-ink-800">
-            <span className="block w-6 h-[2px] rounded-full" style={{ background: `repeating-linear-gradient(90deg, ${DAYTRIP_COLOR} 0 3px, transparent 3px 6px)` }} />
-            {t("map_legend_daytrip")}
-          </span>
-        </div>
-        {selectedStayId ? (
+      {/* Selection state — only shown once a stop is selected, since the
+          chips above already explain the two line colors. */}
+      {selectedStayId && (
+        <div className="flex justify-end mb-3 px-1">
           <button
-            onClick={() => setSelectedStayId(null)}
+            onClick={clearSelection}
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] uppercase tracking-[0.16em] font-medium transition-colors min-h-9 text-cream-50"
-            style={{ backgroundColor: DAYTRIP_COLOR }}
+            style={{ backgroundColor: ATTRACTION_COLOR }}
           >
             <X size={12} /> {t("map_clear_selection")}
           </button>
-        ) : (
-          <span className="text-[11px] text-ink-700/60 italic">{t("map_tap_hint")}</span>
-        )}
-      </div>
+        </div>
+      )}
 
       <div className="relative card-paper overflow-hidden -mx-4 sm:mx-0 rounded-none sm:rounded-2xl">
         <MapContainer
@@ -548,42 +628,47 @@ export default function MapView({ registerFocus }: Props) {
           />
           <MapController pois={allPOIs} markersRef={markersRef} ref={flyRef} />
 
-          {/* Transition lines — thick, always on, one per leg between
-              consecutive numbered stops. Clicking anywhere on the line
-              pops up directions to that leg's destination stop. */}
-          {transitions.map(seg => (
-            <Polyline
-              key={seg.id}
-              positions={seg.positions}
-              pathOptions={{
-                color: TRANSITION_COLOR,
-                weight: 5,
-                opacity: 0.85,
-                dashArray: "12 9",
-                lineCap: "round",
-                lineJoin: "round"
-              }}
-            >
-              <Popup>
-                <div className="font-sans p-1">
-                  <div className="font-serif text-sm text-ink-900 leading-tight mb-1.5">
-                    {seg.to.name}
+          {/* Transition lines — thick, gated by the "Route" chip. One
+              per leg between consecutive numbered stops. Clicking
+              anywhere on the line pops up directions to that leg's
+              destination stop. */}
+          {showRoute &&
+            transitions.map(seg => (
+              <Polyline
+                key={seg.id}
+                positions={seg.positions}
+                pathOptions={{
+                  color: TRANSITION_COLOR,
+                  weight: 5,
+                  opacity: 0.85,
+                  dashArray: "12 9",
+                  lineCap: "round",
+                  lineJoin: "round"
+                }}
+              >
+                <Popup>
+                  <div className="font-sans p-1">
+                    <div className="font-serif text-sm text-ink-900 leading-tight mb-1.5">
+                      {seg.to.name}
+                    </div>
+                    <NavigateLinks name={seg.to.name} coords={seg.to.coords} address={seg.to.address} size={11} />
                   </div>
-                  <NavigateLinks name={seg.to.name} coords={seg.to.coords} address={seg.to.address} size={11} />
-                </div>
-              </Popup>
-            </Polyline>
-          ))}
+                </Popup>
+              </Polyline>
+            ))}
 
           {/* Day-trip lines — thin, only for the selected stop's
               attractions, resolved from real dayTripFrom links (this is
               the fix for the Lake Plastiras / Kazarma Hotel bug: each
-              attraction now points at its actual base stay). Clicking
-              the line, like the thick transitions, pops up directions —
-              here to the attraction, since that's the "destination" of
+              attraction now points at its actual base stay). Always
+              gated by selection, regardless of the "Attractions" chip —
+              the line's whole point is "which stay is this a day trip
+              from," so it only makes sense for the stop you tapped.
+              Clicking the line, like the thick transitions, pops up
+              directions — here to the attraction, the "destination" of
               a day trip. */}
           {selectedStayId &&
-            dayTripAttractions.map(a => {
+            dayTripAttractionsForSelected.map(a => {
               const base = poiById.get(selectedStayId);
               if (!base) return null;
               return (
@@ -591,7 +676,7 @@ export default function MapView({ registerFocus }: Props) {
                   key={`daytrip-${a.id}`}
                   positions={[base.coords, a.coords]}
                   pathOptions={{
-                    color: DAYTRIP_COLOR,
+                    color: ATTRACTION_COLOR,
                     weight: 2,
                     opacity: 0.75,
                     dashArray: "3 6",
@@ -627,29 +712,32 @@ export default function MapView({ registerFocus }: Props) {
             </Marker>
           )}
 
-          {/* En-route attractions — always visible, unnumbered, small
-              muted dot on the transition they belong to. */}
-          {enRouteAttractions.map(poi => (
-            <Marker
-              key={poi.id}
-              position={poi.coords}
-              icon={makeSmallDotIcon(ENROUTE_COLOR)}
-              ref={ref => {
-                markersRef.current[poi.id] = ref;
-              }}
-            >
-              <Popup>
-                <PoiPopupBody poi={poi} t={t} />
-              </Popup>
-            </Marker>
-          ))}
+          {/* En-route attractions — small unnumbered dot on the
+              transition they belong to, gated by the "Attractions" chip. */}
+          {showAttractions &&
+            enRouteAttractions.map(poi => (
+              <Marker
+                key={poi.id}
+                position={poi.coords}
+                icon={makeSmallDotIcon(ATTRACTION_COLOR)}
+                ref={ref => {
+                  markersRef.current[poi.id] = ref;
+                }}
+              >
+                <Popup>
+                  <PoiPopupBody poi={poi} t={t} />
+                </Popup>
+              </Marker>
+            ))}
 
-          {/* Day-trip attraction pins — only for the selected stop. */}
-          {dayTripAttractions.map(poi => (
+          {/* Day-trip attraction pins — every stay's, if the
+              "Attractions" chip is on; otherwise just the selected
+              stop's own (the per-click reveal, independent of the chip). */}
+          {visibleDayTripAttractions.map(poi => (
             <Marker
               key={poi.id}
               position={poi.coords}
-              icon={makeSmallDotIcon(DAYTRIP_COLOR)}
+              icon={makeSmallDotIcon(ATTRACTION_COLOR)}
               ref={ref => {
                 markersRef.current[poi.id] = ref;
               }}
@@ -661,8 +749,9 @@ export default function MapView({ registerFocus }: Props) {
           ))}
 
           {/* Numbered route stops — Athens Airport + each primary stay,
-              in travel order. Clicking one opens its own card and
-              toggles its day trips on. */}
+              in travel order. Clicking one opens its own card, toggles
+              its day trips on, and focuses the map on the area that
+              best frames the stop together with its day trips. */}
           {routeStops.map(({ order, poi }) => {
             const isSelected = selectedStayId === poi.id;
             return (
@@ -673,7 +762,8 @@ export default function MapView({ registerFocus }: Props) {
                 eventHandlers={{
                   click: () => {
                     if (poi.category !== "stay") return;
-                    setSelectedStayId(cur => (cur === poi.id ? null : poi.id));
+                    if (isSelected) clearSelection();
+                    else selectStay(poi.id);
                   }
                 }}
                 ref={ref => {

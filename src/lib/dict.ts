@@ -153,15 +153,11 @@ export const DICT = {
     he: "המסלול, ממוספר · הקישו על תחנה לטיולי היום שלה"
   },
   map_intro: {
-    en: "Athens (1) to Delphi (2) to Lake Plastiras (3) to Thessaloniki (4) to Nafplio (5) and back — the numbered stops are where we sleep. Tap a stop to reveal its day trips; tap the route itself for directions.",
-    he: "אתונה (1) לדלפי (2) לאגם פלסטירה (3) לתסלוניקי (4) לנאפפליו (5) וחזרה — התחנות הממוספרות הן מקומות הלינה שלנו. הקישו על תחנה כדי לראות את טיולי היום שלה, והקישו על המסלול עצמו לניווט."
+    en: "Athens (1) to Delphi (2) to Lake Plastiras (3) to Pelion (4) to Thessaloniki (5) to Kamena Vourla (6) to Nafplio (7) and back — the numbered stops are where we sleep. Tap a stop to reveal its day trips and focus the map there; tap the route itself, or any attraction, for directions.",
+    he: "אתונה (1) לדלפי (2) לאגם פלסטירה (3) לפליון (4) לתסלוניקי (5) לקמנה וורלה (6) לנאפפליו (7) וחזרה — התחנות הממוספרות הן מקומות הלינה שלנו. הקישו על תחנה כדי לראות את טיולי היום שלה ולמקד את המפה שם, והקישו על המסלול עצמו, או על כל אטרקציה, לניווט."
   },
-  map_legend_between: { en: "Between stays", he: "בין מקומות לינה" },
-  map_legend_daytrip: { en: "Day trips", he: "טיולי יום" },
-  map_tap_hint: {
-    en: "Tap a numbered stop to see its day trips",
-    he: "הקישו על תחנה ממוספרת כדי לראות את טיולי היום שלה"
-  },
+  map_chip_route: { en: "Route", he: "מסלול" },
+  map_chip_attractions: { en: "Attractions", he: "אטרקציות" },
   map_clear_selection: { en: "Show whole route", he: "הצג את כל המסלול" },
   map_zoom_fit: { en: "Zoom to fit all locations", he: "התאם תצוגה לכל המיקומים" },
   map_locate_me: { en: "Show my location", he: "הצג את המיקום שלי" },

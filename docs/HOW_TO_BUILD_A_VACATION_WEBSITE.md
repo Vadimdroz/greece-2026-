@@ -688,7 +688,10 @@ The default view shows **only** the numbered sequence of places you
 sleep, plus the shared start/end anchor (airport). Number the
 progression, don't color-code it by day — one consistent pin color
 carries "this is a stop on the route"; the *number* carries "which
-one." Reserve color for the two line types below.
+one." Reserve color for the two-chip system below: red for the route
+(between-stay lines), green for attractions (every attraction marker
+and every day-trip line, day-trip or en-route alike — they're both
+"an attraction," so they share one color rather than two).
 
 `src/data/route.ts` is the small, declarative topology file that
 drives this — keep it separate from exact stay picks so resolving a
@@ -748,13 +751,71 @@ export interface POI {
 - **Day trips** stay hidden until their stay's numbered pin is
   clicked — this is what keeps the default view uncluttered, and it's
   also the fix for the old spokes bug: the line/marker only exists
-  once you can prove which stay it belongs to.
-- **En-route stops** are always on, small, and unnumbered — they're
-  literally on the path, not an optional detour.
+  once you can prove which stay it belongs to. The connecting *line*
+  is always gated by that selection, full stop — it only makes sense
+  for the one stop you tapped.
+  Day-trip *markers* have a second way to appear: the global
+  "Attractions" chip (see below), which shows every day trip for every
+  stay at once, independent of any selection.
+- **En-route stops** are small and unnumbered, sitting on the
+  transition line they belong to — gated by the same "Attractions"
+  chip as day-trip markers (both read as "an attraction," so one chip
+  covers both).
 - Every attraction should set exactly one of the two fields. If
   neither fits (an attraction with no relationship to any stay's
   route), it simply won't render on the map — that's a signal to add
   the missing stay or transition, not to fall back to a region guess.
+
+### The two primary chips: Route and Attractions
+
+Above the map, alongside the secondary-layer chips, put two
+always-visible toggle chips that double as the map's legend (their own
+fill color *is* the legend, so you don't need a separate swatch key):
+
+- **Route** (red, matches `TRANSITION_COLOR`) — gates the thick
+  between-stay lines only. The numbered pins themselves are never
+  gated by this; they're the map's spine, not an optional layer.
+- **Attractions** (green, matches the shared attraction color) — gates
+  every attraction marker at once, day-trip and en-route alike. This
+  is independent of, and additive with, the per-stop click reveal:
+  clicking a stop always shows *that stop's* day trips regardless of
+  the chip; turning the chip on shows *every* stop's day trips (plus
+  every en-route stop) regardless of any selection. The day-trip
+  *line*, unlike the marker, is only ever drawn for the selected stop.
+
+Default state: Route on, Attractions off — the default view stays
+just the numbered route, per the north-star rule above.
+
+### Focus the map on a stop's own area, not just its pin
+
+Clicking a numbered stop shouldn't just fly to that one point — it
+should frame the stop together with everything it's a base for, so a
+tightly-clustered stop (say, three attractions all within a kilometer)
+zooms in close, while a stop whose day trips are genuinely spread out
+zooms out to fit them all. Give `MapController` a bounds-based fly
+method, not just a single-point one:
+
+```ts
+fitBounds: (coordsList: [number, number][], maxZoom = 14) => {
+  if (coordsList.length === 0) return;
+  if (coordsList.length === 1) {
+    map.flyTo(coordsList[0], maxZoom, { duration: 1.0 });
+    return;
+  }
+  map.flyToBounds(L.latLngBounds(coordsList), { padding: [60, 60], duration: 1.1, maxZoom });
+}
+```
+
+Call it with `[stop.coords, ...itsDayTrips.map(d => d.coords)]` on
+select, and with every route anchor's coords (at a low `maxZoom`, e.g.
+8) on deselect, so clearing the selection zooms back out to the whole
+trip instead of leaving the view stuck wherever it last focused.
+
+One easy-to-misdiagnose gotcha: Leaflet's `flyTo`/`flyToBounds` use a
+curved "fly" animation that arcs *out* before swooping *in* — if you
+test by clicking, screenshotting immediately, and re-clicking before
+the ~1s animation finishes, it looks like a runaway zoom-out bug. It
+isn't; just wait for the animation to settle before judging the result.
 
 ### Click-to-navigate on the route itself
 
@@ -828,11 +889,15 @@ category-config/toggle system any more — stays + airport are always
 the numbered route, and attractions are revealed contextually per the
 rules above.
 
-### Filter chips
+### Filter chips (secondary layers)
 
 A horizontal-scrolling row of chips above the map, one per secondary
-category, each showing a count and toggling its layer. **All off by
-default** — the default view is the route, undistracted.
+category (restaurants, wineries, supermarkets, gas), each showing a
+count and toggling its layer. **All off by default** — the default
+view is the route, undistracted. Lay this row out with the two primary
+chips (Route, Attractions — see above) right-aligned in the same row,
+so the scrollable secondary chips and the two fixed primary toggles
+don't compete for space.
 
 ### Floating buttons
 
