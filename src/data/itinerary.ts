@@ -194,34 +194,36 @@ export const itinerary: Day[] = [
     dayNumber: 4,
     date: "2026-08-18",
     weekday: "Tuesday",
-    departureTime: "08:30",
-    rideToFirst: { duration: "1 h 15", note: "Kalyvia Fylaktis → Active Nature rafting base, Grevena" },
+    departureTime: "09:30",
     region: "north",
     base: "Lake Plastiras",
-    title: "Whitewater rafting on the Aliakmonas",
-    subtitle: "Booked with Active Nature — suitable for the kids",
+    title: "A day at Lake Plastiras",
+    subtitle: "Horseback riding in the morning, the lake all afternoon",
     activities: [
       {
         time: "10:00",
-        title: "Rafting on the Aliakmonas River — Active Nature",
+        title: "Horse riding above the lake",
         description:
-          "A 6–7 km, grade 1–2 stretch of Greece's longest river, near Grevena — gentle enough for families, with certified guides. The full outing (transport, kitting up, ~1.5–2 h on the water, changing) runs 4–5 hours. Bring swimsuits, towels, sunscreen, and a spare set of dry clothes for the drive back.",
-        attractionId: "aliakmonas-rafting",
-        tag: "water"
+          "Gentle forested trail rides above Lake Plastiras with a local stable used to beginners and kids — the anchor of an easy, no-long-drives day. Closed shoes and long trousers work best. Confirm a day ahead (small operators, limited horses) and ask whether Sophia needs a led/lead-rope option.",
+        attractionId: "plastiras-horses",
+        tag: "family"
+      },
+      {
+        time: "Late morning",
+        title: "Archery session",
+        description:
+          "A short, structured archery session near the stables — an easy add-on to the morning ride and a hit with kids around Thomas's age. Ask the stable whether they run both so it slots straight after the horses.",
+        attractionId: "plastiras-archery",
+        tag: "family",
+        optional: true
       },
       {
         time: "Afternoon",
-        title: "Drive back to Lake Plastiras",
-        description: "Relaxed return drive — dry off, warm up, and take it slow."
-      },
-      {
-        time: "Late afternoon",
-        title: "Horse riding, Lake Plastiras",
+        title: "Kayaks, SUP & a swim on the lake",
         description:
-          "Gentle forested trail rides above the lake, if there's energy left after the river — a taste of the horse-riding day that got cut to make room for Meteora/Pelion/Kamena Vourla. Confirm ahead whether Sophia needs a led/lead-rope option.",
-        attractionId: "plastiras-horses",
-        tag: "family",
-        optional: true
+          "Spend the hottest part of the day on the water — rent kayaks, stand-up paddleboards, or pedal boats from one of the lakeshore bases (Neochori / Lampero) and cool off with a swim. Calm, shallow-edged, and easy for the kids. Swimsuits, towels, and water shoes.",
+        attractionId: "plastiras-watersports",
+        tag: "water"
       },
       {
         time: "Evening",
@@ -231,20 +233,20 @@ export const itinerary: Day[] = [
       }
     ],
     dayTips: [
-      "Book confirmation and exact meeting point/time should be reconfirmed with Active Nature a few days before",
-      "Sports shoes that can get wet, or neoprene booties, work better than sandals",
-      "Personal electronics stay in the car — no dry bags mentioned in the booking",
-      "Last full day at Plastiras this trip — archery was cut entirely, but horse riding is back on as an optional add-on if the rafting doesn't wear everyone out"
+      "The relaxed day at Plastiras — no long drives, so let the kids set the pace",
+      "Rafting has moved to tomorrow (bundled with Meteora and the drive to Pelion), so today stays local to the lake",
+      "Confirm the horses — and archery, if you want it — a day ahead; small operators with limited slots",
+      "Water shoes or old trainers beat bare feet on the pebbly lake edges"
     ],
     gear: [
-      { item: "Swimsuits under regular clothes", for: "aliakmonas-rafting" },
-      { item: "Old sports shoes you don't mind getting soaked", for: "aliakmonas-rafting" },
-      { item: "Full dry change of clothes + towels for the ride back" }
+      { item: "Closed shoes + long trousers for riding", for: "plastiras-horses" },
+      { item: "Swimsuits, towels, and water shoes for the lake", for: "plastiras-watersports" },
+      { item: "Sun hats and high-SPF sunscreen — little shade on the water" }
     ],
     drinkOfTheDay: {
       name: "Frappé",
       type: "coffee",
-      pairing: "Greece's iced-coffee ritual, shaken to a foam — the right pick-me-up after a wet, adrenaline morning on the river.",
+      pairing: "Greece's iced-coffee ritual, shaken to a foam — the right thing to sip lakeside between the morning ride and an afternoon swim.",
       servingNote: "Tall glass, ice, straw, sweetness to taste (metrio = medium)"
     }
   },
@@ -252,42 +254,58 @@ export const itinerary: Day[] = [
     dayNumber: 5,
     date: "2026-08-19",
     weekday: "Wednesday",
-    departureTime: "09:00",
-    rideToFirst: { duration: "1 h 30", note: "Lake Plastiras → Meteora" },
+    departureTime: "07:30",
+    rideToFirst: { duration: "1 h 30", note: "Kazarma / Lake Plastiras → Meteora" },
     region: "transit",
     base: "Pelion (Agios Dimitrios)",
-    title: "Meteora, then on to Pelion",
-    subtitle: "Kazarma checkout, a viewpoint stop, then Om Living Pelion for the night",
+    title: "Meteora at dawn, rafting, then Pelion",
+    subtitle: "Kazarma checkout, an hour at Meteora, the Aliakmonas raft, and on to the coast",
     activities: [
       {
-        time: "10:30",
-        title: "Meteora — viewpoint drive-through",
+        time: "09:00",
+        title: "Meteora — one-hour viewpoint stop",
         description:
-          "The monasteries perched on sandstone pillars are worth the stop even without going inside one — pull off at the main viewpoints (Agios Nikolaos Anapafsas / the road above Kalambaka) for photos. Not a full monastery visit today — that would need its own half-day.",
+          "An early start pays off: drive the panoramic loop road above Kalambaka and pull off at the main overlooks (Agios Nikolaos Anapafsas, the road above the town) for photos of the monasteries on their sandstone pillars — before the tour buses arrive. Keep it to about an hour: photos and one short walk, not a full monastery tour. If anyone wants to duck inside a monastery, mind the dress code (see today's tips).",
         attractionId: "meteora-viewpoint",
         tag: "view",
-        rideToNext: { duration: "1 h 45", note: "Meteora → Pelion (Agios Ioannis)" }
+        rideToNext: { duration: "45 min", note: "Meteora → Active Nature raft base, Grevena" }
+      },
+      {
+        time: "11:00",
+        title: "Rafting on the Aliakmonas — Active Nature",
+        description:
+          "The family grade 1–2 stretch of Greece's longest river near Grevena — roughly 1.5–2 h on the water with certified guides. Ask Active Nature for the leanest late-morning/midday slot so the whole outing (kitting up, water, changing) stays around 3.5–4 hours and leaves the afternoon for the drive east. Swimsuits under clothes, a full dry change, and towels for the car.",
+        attractionId: "aliakmonas-rafting",
+        tag: "water",
+        rideToNext: { duration: "2 h 30", note: "Grevena → Pelion (Agios Ioannis / Agios Dimitrios)" }
       },
       {
         time: "Evening",
         title: "Check in — Om Living Pelion, Agios Dimitrios",
         description:
-          "Ground-floor apartment, booked to replace Faros — Faros couldn't move its check-in to today, so that booking was cancelled and this one took its place. Booking.com confirmation 6584233490, PIN 2645. Contactless check-in — Pre-Check-In Form already completed (unit P 03, 1 bed / 1 bath / 4 guests confirmed); the door code arrives by email at 12:00 PM today, valid from 15:00 onward. One bedroom with a double bed plus a sofa bed for the kids, confirmed by the property. Just 1 km from Agios Ioannis, where tomorrow's boat trip departs.",
+          "Ground-floor apartment, booked to replace Faros — Faros couldn't move its check-in to today, so that booking was cancelled and this one took its place. Booking.com confirmation 6584233490, PIN 2645. Contactless check-in — Pre-Check-In Form already completed (unit P 03, 1 bed / 1 bath / 4 guests confirmed); the door code arrives by email at 12:00 PM today, valid from 15:00 onward — so a late-afternoon arrival after the raft is fine. One bedroom with a double bed plus a sofa bed for the kids, confirmed by the property. Just 1 km from Agios Ioannis, where tomorrow's boat trip departs.",
         tag: "nature"
       },
       {
         time: "Night",
         title: "Beach evening, easy dinner",
-        description: "After two driving stretches, an unstructured evening on the beach or a seafront taverna in Agios Ioannis is the right pace.",
+        description: "After a big day — an hour at Meteora, a morning on the river, and the drive east — an unstructured evening on the beach or a seafront taverna in Agios Ioannis is the right pace.",
         tag: "food",
         optional: true
       }
     ],
-    driveNotes: "Plastiras → Meteora ≈ 1 h 30 · Meteora → Pelion (Agios Ioannis) ≈ 1 h 45",
+    driveNotes: "Kazarma / Plastiras → Meteora ≈ 1 h 30 · Meteora → Grevena raft base ≈ 45 min · Grevena → Pelion (Agios Ioannis) ≈ 2 h 30 · about 4 h 45 driving across the day",
     dayTips: [
-      "This whole day replaces the old horse-riding/archery rest day — Plastiras dropped to 2 nights, and Meteora + Pelion moved up a day to fill the gap Kazarma's shorter stay left open",
-      "Om Living Pelion has no reception — Pre-Check-In Form is already done; the door code follows automatically at 12:00 PM on arrival day, valid from 15:00",
-      "Keep the Meteora stop to photos and one short walk, not a full monastery tour"
+      "Leave Kazarma by 07:30 — the full day (Meteora hour + raft + two big drives) only works with an early checkout, and early Meteora buys cool light and no crowds",
+      "METEORA DRESS CODE: to step inside any monastery, shoulders AND knees must be covered — remind Irina (and everyone) to wear or pack a light scarf/shawl and a longer layer. Wraps are sometimes lent at the door, but don't count on it.",
+      "Reconfirm the raft with Active Nature a few days ahead — ask specifically for a late-morning/midday departure so you're off the water by mid-afternoon for the drive to Pelion",
+      "Om Living Pelion is contactless with no reception — door code arrives by email at 12:00 today, valid from 15:00, so arriving late afternoon is fine",
+      "This one long transit day replaces the old two-day split (raft one day, Meteora + Pelion the next) — yesterday at Plastiras is now the easy horses-and-lake day"
+    ],
+    gear: [
+      { item: "Light scarf/shawl + a knee-covering layer for the Meteora monasteries", for: "meteora-viewpoint" },
+      { item: "Swimsuits under your clothes + old shoes that can get soaked", for: "aliakmonas-rafting" },
+      { item: "Full dry change of clothes + towels for the drive to Pelion" }
     ],
     drinkOfTheDay: {
       name: "Tsipouro (Pelion-style)",

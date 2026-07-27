@@ -143,6 +143,28 @@ export const attractions: POI[] = [
       source: "https://commons.wikimedia.org/wiki/File:Kids_take_aim_with_after_school_archery_program_120308-M-IY869-125.jpg"
     }
   },
+  {
+    id: "plastiras-watersports",
+    name: "Kayaks, SUP & swimming, Lake Plastiras",
+    category: "attraction",
+    region: "north",
+    dayTripFrom: "stay-plastiras",
+    shortDescription: "Kayaks, paddleboards and pedal boats on the lake, plus a swim",
+    description:
+      "The lakeshore bases around Neochori and Lampero rent kayaks, stand-up paddleboards, and pedal boats by the hour, with calm, shallow-edged water that's easy for the kids and a welcome cool-off in the August heat. The best way to spend the hottest part of a Plastiras day between the morning horse ride and dinner by the lake.",
+    address: "Lake Plastiras waterfront (Neochori / Lampero), Karditsa, Greece",
+    coords: [39.2900, 21.7300],
+    tags: ["water", "family"],
+    difficulty: "easy",
+    tips: ["Water shoes or old trainers beat bare feet on the pebbly edges", "Little shade on the water — hats and high-SPF sunscreen", "Swimsuits on under clothes to skip the changing queue"],
+    image: "./images/plastiras-horses.jpg",
+    imageCredit: {
+      author: "Αλεξανδρής Αλέξης",
+      license: "CC BY-SA 4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Forest_Lake_Plastiras.jpg",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  },
 
   // ---------- TRANSIT ----------
   {
@@ -151,14 +173,14 @@ export const attractions: POI[] = [
     category: "attraction",
     region: "transit",
     enRouteBetween: ["stay-plastiras", "stay-pelion"],
-    shortDescription: "Monasteries on sandstone pillars — a photo stop, not a full visit",
+    shortDescription: "Monasteries on sandstone pillars — a one-hour viewpoint stop",
     description:
-      "The Meteora monasteries, perched on huge sandstone pillars above Kalambaka, are one of Greece's most striking sights even from the road. The plan for this trip is the viewpoint drive-through, not a full monastery visit (which needs its own half-day with dress-code stops).",
+      "The Meteora monasteries, perched on huge sandstone pillars above Kalambaka, are one of Greece's most striking sights even from the road. The plan for this trip is a one-hour early-morning viewpoint stop — drive the panoramic loop road and pull off at the main overlooks for photos before the tour buses arrive — not a full monastery tour (which needs its own half-day). If anyone wants to step inside a monastery, the dress code applies: shoulders and knees covered.",
     address: "Meteora, Kalambaka, Greece",
     coords: [39.7217, 21.6306],
     tags: ["view", "culture"],
     difficulty: "easy",
-    tips: ["Pull off at the main viewpoint road above Kalambaka for photos", "Modest dress required if you do go inside a monastery — shoulders and knees covered"],
+    tips: ["Go early — cool light, no crowds, and it keeps the stop to about an hour", "Pull off along the panoramic loop road above Kalambaka for the best photos", "Dress code to enter any monastery: shoulders AND knees covered — bring a light scarf/shawl and a longer layer, as door wraps aren't guaranteed"],
     image: "./images/meteora-viewpoint.jpg",
     imageCredit: {
       author: "Stathis floros",
