@@ -175,7 +175,7 @@ export const attractions: POI[] = [
     enRouteBetween: ["stay-plastiras", "stay-pelion"],
     shortDescription: "Monasteries on sandstone pillars — a one-hour viewpoint stop",
     description:
-      "The Meteora monasteries, perched on huge sandstone pillars above Kalambaka, are one of Greece's most striking sights even from the road. The plan for this trip is a one-hour early-morning viewpoint stop — drive the panoramic loop road and pull off at the main overlooks for photos before the tour buses arrive — not a full monastery tour (which needs its own half-day). If anyone wants to step inside a monastery, the dress code applies: shoulders and knees covered.",
+      "The Meteora monasteries, perched on huge sandstone pillars above Kalambaka, are one of Greece's most striking sights even from the road. The plan for this trip is a one-hour viewpoint stop — drive the panoramic loop road and pull off at the main overlooks for photos of the pillars — not a full monastery tour (which needs its own half-day). If anyone wants to step inside a monastery, the dress code applies: shoulders and knees covered.",
     address: "Meteora, Kalambaka, Greece",
     coords: [39.7217, 21.6306],
     tags: ["view", "culture"],
