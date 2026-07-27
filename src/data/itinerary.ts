@@ -198,43 +198,45 @@ export const itinerary: Day[] = [
     region: "north",
     base: "Lake Plastiras",
     title: "A day at Lake Plastiras",
-    subtitle: "Horseback riding in the morning, the lake all afternoon",
+    subtitle: "On the water in the morning, the farm in the late afternoon",
     activities: [
       {
-        time: "10:00",
-        title: "Horse riding above the lake",
-        description:
-          "Gentle forested trail rides above Lake Plastiras with a local stable used to beginners and kids — the anchor of an easy, no-long-drives day. Closed shoes and long trousers work best. Confirm a day ahead (small operators, limited horses) and ask whether Sophia needs a led/lead-rope option.",
-        attractionId: "plastiras-horses",
-        tag: "family"
-      },
-      {
-        time: "Late morning",
-        title: "Archery session",
-        description:
-          "A short, structured archery session near the stables — an easy add-on to the morning ride and a hit with kids around Thomas's age. Ask the stable whether they run both so it slots straight after the horses.",
-        attractionId: "plastiras-archery",
-        tag: "family",
-        optional: true
-      },
-      {
-        time: "Afternoon",
+        time: "09:30",
         title: "Kayaks, SUP & a swim on the lake",
         description:
-          "Spend the hottest part of the day on the water — rent kayaks, stand-up paddleboards, or pedal boats from one of the lakeshore bases (Neochori / Lampero) and cool off with a swim. Calm, shallow-edged, and easy for the kids. Swimsuits, towels, and water shoes.",
+          "Start on the water while the lake is still glassy — mornings are the calmest, easiest time to paddle. Rent kayaks, stand-up paddleboards, or pedal boats from one of the lakeshore bases (Neochori / Lampero) and cool off with a swim. Shallow-edged and easy for the kids. Swimsuits, towels, and water shoes.",
         attractionId: "plastiras-watersports",
         tag: "water"
       },
       {
-        time: "Evening",
-        title: "Dinner by the lake",
-        description: "Kalyvia Fylaktis or Neochori have a handful of lakeside tavernas — walk until something looks good.",
+        time: "13:00",
+        title: "Trout lunch by the lake",
+        description:
+          "Break for lunch between the water and the farm. Trout is the Lake Plastiras specialty — a lakeside taverna in Neochori or Kalyvia Fylaktis is the local thing to do. Shade and a long sit-down through the hottest part of the day.",
         tag: "food"
+      },
+      {
+        time: "Late afternoon",
+        title: "Horse riding above the lake",
+        description:
+          "Gentle forested trail rides above Lake Plastiras with a local stable used to beginners and kids. Late afternoon dodges the peak heat — better for the riders and the horses, and the light through the firs is at its best. Closed shoes and long trousers work best. Confirm a day ahead (small operators, limited horses) and ask whether Sophia needs a led/lead-rope option.",
+        attractionId: "plastiras-horses",
+        tag: "family"
+      },
+      {
+        time: "After the ride",
+        title: "Archery session",
+        description:
+          "A short, structured archery session near the stables — an easy add-on to the ride and a hit with kids around Thomas's age. Ask the stable whether they run both so it slots straight after the horses.",
+        attractionId: "plastiras-archery",
+        tag: "family",
+        optional: true
       }
     ],
     dayTips: [
       "The relaxed day at Plastiras — no long drives, so let the kids set the pace",
       "Rafting has moved to tomorrow (bundled with Meteora and the drive to Pelion), so today stays local to the lake",
+      "On the water in the morning while it's glassy; the ride's late afternoon once the heat eases — most stables prefer it that way too",
       "Confirm the horses — and archery, if you want it — a day ahead; small operators with limited slots",
       "Water shoes or old trainers beat bare feet on the pebbly lake edges"
     ],
@@ -246,7 +248,7 @@ export const itinerary: Day[] = [
     drinkOfTheDay: {
       name: "Frappé",
       type: "coffee",
-      pairing: "Greece's iced-coffee ritual, shaken to a foam — the right thing to sip lakeside between the morning ride and an afternoon swim.",
+      pairing: "Greece's iced-coffee ritual, shaken to a foam — the right thing to sip lakeside between the morning paddle and the late-afternoon ride.",
       servingNote: "Tall glass, ice, straw, sweetness to taste (metrio = medium)"
     }
   },
