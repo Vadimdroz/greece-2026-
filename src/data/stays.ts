@@ -73,6 +73,7 @@ export const stays: Stay[] = [
     highlights: [
       "Booking.com confirmation 5911663775, PIN 1975",
       "Modified 26 July 2026: departure moved from 20 Aug to 19 Aug, €428 (was €642)",
+      "Bed configuration confirmed by the property: 1 extra-large double bed + 2 separate sofa beds, no extra charge",
       "Base for the rafting day"
     ],
     image: "./images/stay-plastiras.jpg",
@@ -90,7 +91,7 @@ export const stays: Stay[] = [
     region: "transit",
     shortDescription: "Confirmed — 1 night, 19–20 Aug, Agios Dimitrios",
     description:
-      "Ground-floor apartment in Agios Dimitrios, a small hillside village just 1 km southwest of Agios Ioannis — a couple of minutes from where the \"Mamma Mia\" boat trip departs. Booked to replace Faros, Milopotamos: Faros couldn't move its check-in from 20 to 19 Aug (needed so the night after Kazarma's new checkout wasn't left unbooked), so that booking was cancelled and this one took its place. Self-catered, reception-free contactless check-in — the property sends a door code the day before arrival. The specific unit is P 03, a sea-view ground-floor apartment, 1 bedroom, sleeps up to 4.",
+      "Ground-floor apartment in Agios Dimitrios, a small hillside village just 1 km southwest of Agios Ioannis — a couple of minutes from where the \"Mamma Mia\" boat trip departs. Booked to replace Faros, Milopotamos: Faros couldn't move its check-in from 20 to 19 Aug (needed so the night after Kazarma's new checkout wasn't left unbooked), so that booking was cancelled and this one took its place. Self-catered, reception-free contactless check-in. Confirmed by the property: one bedroom with a double bed, plus a sofa bed in the living area that comfortably fits both kids. The specific unit is P 03, a sea-view ground-floor apartment, 1 bedroom, sleeps up to 4.",
     address: "Agios Dimitrios, Agios Dimitrios, 37012, Greece",
     coords: [39.3544, 23.2160],
     checkIn: "2026-08-19",
@@ -101,12 +102,15 @@ export const stays: Stay[] = [
       "Apartment, ground floor, 2 adults + 2 children (5 and 8)",
       "€196.24 total — no meal plan, self-catered",
       "Free cancellation until 4 August 2026 23:59 — after that, full price if cancelled or no-show",
-      "Host phone +30 231 028 0125 — door code sent one day before arrival",
-      "Unit P 03 | Deluxe Apartment Sea View Ground Floor, property code 20576"
+      "Host phone +30 231 028 0125",
+      "Unit P 03 | Deluxe Apartment Sea View Ground Floor, property code 20576",
+      "Pre-Check-In Form required before arrival (Greek law) — the property sends it by email, complete it ahead of time",
+      "Door code arrives by email at 12:00 PM on arrival day (19 Aug), valid from 15:00 onward — no need to message the property about arrival time"
     ],
     warnings: [
-      "Contactless check-in — no reception. Confirm your arrival time with the property ahead so the door code arrives in time.",
-      "Property doesn't accommodate hen/stag parties; guests under 18 need a parent or guardian to check in"
+      "Contactless check-in — no reception. The Pre-Check-In Form must be completed before the door code is issued.",
+      "Property doesn't accommodate hen/stag parties; guests under 18 need a parent or guardian to check in",
+      "Official contact is info@omliving.gr — the property warned against responding to any other source about personal data or payment"
     ],
     website: "https://guests.loggia.net/en/19696/overview/1424607",
     image: "./images/stay-pelion.jpg",
@@ -133,6 +137,7 @@ export const stays: Stay[] = [
     highlights: [
       "Booking.com confirmation 5365254420, PIN 9179",
       "Junior Suite, €272.21 total",
+      "Confirmed by the property: junior suite is suitable for 4, sofa beds prepared for the kids",
       "Free cancellation until 16 August 2026 23:59",
       "Matches the plan's actual 1-night Thessaloniki stay — no date fix needed"
     ],
@@ -220,6 +225,9 @@ export const stays: Stay[] = [
     highlights: [
       "Booking.com confirmation 6652799478, PIN 4393",
       "2 rooms, €444 total, breakfast and dinner included",
+      "Confirmed by the property: both rooms are singles, each with one queen bed",
+      "Check-in time approved for 17:00–18:00 (special request, no extra charge)",
+      "Dinner served 19:00–22:00, buffet at the main restaurant — cold plates sent to the room if arriving later",
       "Natural thermal spring pool — same source as the town's free public baths, with resort loungers and changing rooms",
       "Free cancellation until 13 August 2026 23:59"
     ],
@@ -282,10 +290,14 @@ export const stays: Stay[] = [
     highlights: [
       "Booking.com confirmation 5911625902, PIN 6418",
       "Free cancellation until 14 August 2026 23:59",
-      "Shorter drive to the airport the next morning than from Nafplio"
+      "Shorter drive to the airport the next morning than from Nafplio",
+      "Private transfer available on request — €55 one-way for up to 4 people",
+      "Checkout by 11:00; luggage storage available if arranged a day ahead"
     ],
     warnings: [
-      "PENDING DECISION — duplicate booking with Traditional house of 1898, Nafplio, same night."
+      "PENDING DECISION — duplicate booking with Traditional house of 1898, Nafplio, same night.",
+      "Reception isn't 24h — emergency contact +30 698 084 4054",
+      "Valid passport number + issuing country required at check-in (Greek Hospitality Authority requirement)"
     ],
     image: "./images/stay-athens-philia.jpg",
     imageCredit: {
