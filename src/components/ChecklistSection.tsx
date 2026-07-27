@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 import {
@@ -24,8 +24,7 @@ import type { ChecklistCategory, ChecklistItem } from "../data/types";
 import { useT } from "../lib/dict";
 import type { DictKey } from "../lib/dict";
 import { useLocalizeChecklistItem } from "../data/i18n";
-
-const STORAGE_KEY = "tuscany-checklist-v1";
+import { loadLocalChecked, subscribeChecklist, writeChecklistItem } from "../lib/checklistSync";
 
 /** Items marked done in the data (e.g. already-booked reservations) start
  *  checked. A user toggle is remembered and overrides this default. */
@@ -52,14 +51,6 @@ const ACTIVE_CATEGORIES = CHECKLIST_CATEGORY_ORDER.filter(
 
 function itemDone(id: string, checked: Record<string, boolean>): boolean {
   return id in checked ? checked[id] : !!DEFAULT_DONE[id];
-}
-
-function loadChecked(): Record<string, boolean> {
-  try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-  } catch {
-    return {};
-  }
 }
 
 /** Parse an ISO `YYYY-MM-DD` and format it for display in the active
@@ -190,16 +181,18 @@ function ChecklistList({
 export default function ChecklistSection() {
   const t = useT();
   const [tab, setTab] = useState<ChecklistCategory>(ACTIVE_CATEGORIES[0]);
-  const [checked, setChecked] = useState<Record<string, boolean>>(() => loadChecked());
+  const [checked, setChecked] = useState<Record<string, boolean>>(() => loadLocalChecked());
+
+  // Cross-device sync: subscribe to remote changes (Firebase Realtime
+  // Database), so a family member checking an item off on their phone
+  // updates everyone else's screen too. Falls back to the localStorage
+  // snapshot above when offline.
+  useEffect(() => subscribeChecklist(setChecked), []);
 
   const toggle = (id: string) => {
     setChecked(prev => {
       const next = { ...prev, [id]: !itemDone(id, prev) };
-      try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-      } catch {
-        /* ignore */
-      }
+      writeChecklistItem(id, next[id]);
       return next;
     });
   };
