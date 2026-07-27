@@ -23,8 +23,8 @@ export const checklistHE: Record<string, Partial<Pick<ChecklistItem, "text" | "d
     detail: "מאושר: אישור Booking.com 6652799478, PIN 4393, 2 חדרים, 444 יורו סה\"כ, כולל ארוחת בוקר וערב. עצירה חדשה שנוספה כדי לפצל את הנסיעה תסלוניקי-נאפפליו לשניים."
   },
   "resolve-last-night": {
-    text: "נאפפליו או אתונה ללילה האחרון?",
-    detail: "בית מסורתי 1898, נאפפליו (אישור 5347700468, ביטול חינם עד 7.8) מול Philia Boutique Hotel, אתונה (אישור 5911625902, ביטול חינם עד 14.8). שניהם מוזמנים ל-22-23.8."
+    text: "לבטל את Philia Boutique Hotel, אתונה — נאפפליו נבחרה",
+    detail: "ההחלטה התקבלה: משאירים את בית מסורתי 1898, נאפפליו (אישור 5347700468). לבטל את Philia Boutique Hotel, אתונה (אישור 5911625902) לפני מועד הביטול החינם."
   },
   "book-rafting-reconfirm": {
     text: "לאשר שוב את הרפטינג באליאקמונס עם Active Nature",

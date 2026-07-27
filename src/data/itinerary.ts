@@ -441,7 +441,7 @@ export const itinerary: Day[] = [
         time: "Afternoon",
         title: "Check in — Nafplio old town",
         description:
-          "Traditional house of 1898, in the heart of old Nafplio. Confirmation #5347700468, PIN 8001, 1 night (22–23 Aug). This is the leg with the Athens alternative still open — see Tickets below — but Nafplio is the plan."
+          "Traditional house of 1898, in the heart of old Nafplio. Confirmation #5347700468, PIN 8001, 1 night (22–23 Aug). The duplicate Athens booking (Philia Boutique Hotel) has been cancelled — Nafplio is the confirmed plan."
       },
       {
         time: "Evening",
@@ -453,9 +453,7 @@ export const itinerary: Day[] = [
     driveNotes: "Kamena Vourla → Nafplio ≈ 3 h 10",
     dayTips: [
       "This is the day that used to carry Waterland + Thermopylae + a 5–6 hour drive all in one go — splitting the Kamena Vourla stop off yesterday is what makes today light",
-      "Thermopylae has moved to Day 3 (Delphi → Plastiras), so there's no history stop to fit in today — just the pool and the drive",
-      "Nafplio vs. Athens for tonight is still an open double-booking — see the flag on the Tickets card",
-      "If you do end up in Athens instead, swap tonight's plan for a light Plaka wander"
+      "Thermopylae has moved to Day 3 (Delphi → Plastiras), so there's no history stop to fit in today — just the pool and the drive"
     ],
     drinkOfTheDay: {
       name: "Agiorgitiko (Nemea red wine)",

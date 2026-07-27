@@ -55,11 +55,11 @@ export const checklist: ChecklistItem[] = [
   {
     id: "resolve-last-night",
     category: "hotels",
-    text: "Nafplio or Athens for the last night?",
+    text: "Cancel Philia Boutique Hotel, Athens — Nafplio is the pick",
     detail:
-      "Traditional house of 1898, Nafplio (conf. 5347700468, free cancel until 7 Aug) vs. Philia Boutique Hotel, Athens (conf. 5911625902, free cancel until 14 Aug). Both booked for 22–23 Aug. Current plan assumes Nafplio.",
+      "Decision made: keeping Traditional house of 1898, Nafplio (conf. 5347700468). Cancel Philia Boutique Hotel, Athens (conf. 5911625902) before its free-cancellation deadline.",
     urgent: true,
-    dueBy: "2026-08-07",
+    dueBy: "2026-08-14",
     mapsUrl: maps("Traditional house of 1898 Spiliadou 2 Nafplio")
   },
 

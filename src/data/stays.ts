@@ -248,9 +248,9 @@ export const stays: Stay[] = [
     name: "Traditional house of 1898",
     category: "stay",
     region: "south",
-    shortDescription: "PENDING — competing with an Athens hotel for the same last night",
+    shortDescription: "Confirmed — 1 night, 22–23 Aug, old town Nafplio",
     description:
-      "Apartment in the heart of old Nafplio, 1 night (22–23 Aug). This is the trip's plan — but there's also a Philia Boutique Hotel booking in Athens for the exact same night. Resolve before 7 Aug (this one's free-cancellation deadline) or 14 Aug (Philia's).",
+      "Apartment in the heart of old Nafplio, 1 night (22–23 Aug). This is the kept last-night booking — the duplicate Philia Boutique Hotel booking in Athens has been cancelled.",
     address: "Σπηλιαδου 2, Nafplio, 21100, Greece",
     coords: [37.5685, 22.7970],
     checkIn: "2026-08-22",
@@ -261,9 +261,6 @@ export const stays: Stay[] = [
       "Someone will meet you on arrival with the keys — host phone +30 697 287 8529",
       "Free cancellation until 7 August 2026 23:59",
       "Keeps the last-night plan in the old town instead of near the airport"
-    ],
-    warnings: [
-      "PENDING DECISION — duplicate booking with Philia Boutique Hotel, Athens, same night (22–23 Aug)."
     ],
     image: "./images/stay-nafplio.jpg",
     imageCredit: {
@@ -279,9 +276,9 @@ export const stays: Stay[] = [
     category: "stay",
     region: "south",
     routeStatus: "alternate",
-    shortDescription: "PENDING — alternate to the Nafplio last night, in Psyrri, Athens",
+    shortDescription: "CANCELLED — Nafplio is the kept last night",
     description:
-      "Junior Suite with Garden View, 1 night (22–23 Aug), in Psyrri near central Athens. The alternate plan to Nafplio's Traditional house of 1898 for the last night — closer to the airport, but trades away the old-town evening.",
+      "Junior Suite with Garden View, 1 night (22–23 Aug), in Psyrri near central Athens. Was the alternate to Nafplio's Traditional house of 1898 for the last night — cancelled now that Nafplio is confirmed as the plan.",
     address: "16 Agiou Dimitriou, Psyrri, Athens, 10554, Greece",
     coords: [37.9773, 23.7256],
     checkIn: "2026-08-22",
@@ -289,15 +286,10 @@ export const stays: Stay[] = [
     nights: 1,
     highlights: [
       "Booking.com confirmation 5911625902, PIN 6418",
-      "Free cancellation until 14 August 2026 23:59",
-      "Shorter drive to the airport the next morning than from Nafplio",
-      "Private transfer available on request — €55 one-way for up to 4 people",
-      "Checkout by 11:00; luggage storage available if arranged a day ahead"
+      "Free cancellation until 14 August 2026 23:59"
     ],
     warnings: [
-      "PENDING DECISION — duplicate booking with Traditional house of 1898, Nafplio, same night.",
-      "Reception isn't 24h — emergency contact +30 698 084 4054",
-      "Valid passport number + issuing country required at check-in (Greek Hospitality Authority requirement)"
+      "CANCELLED — Traditional house of 1898, Nafplio is the kept booking for this night."
     ],
     image: "./images/stay-athens-philia.jpg",
     imageCredit: {
