@@ -99,16 +99,16 @@ export const stays: Stay[] = [
     nights: 1,
     highlights: [
       "Booking.com confirmation 6584233490, PIN 2645",
-      "Apartment, ground floor, 2 adults + 2 children (5 and 8)",
+      "Apartment, ground floor, 1 bedroom + 1 bathroom, 2 adults + 2 children (5 and 8)",
       "€196.24 total — no meal plan, self-catered",
       "Free cancellation until 4 August 2026 23:59 — after that, full price if cancelled or no-show",
       "Host phone +30 231 028 0125",
       "Unit P 03 | Deluxe Apartment Sea View Ground Floor, property code 20576",
-      "Pre-Check-In Form required before arrival (Greek law) — the property sends it by email, complete it ahead of time",
+      "Pre-Check-In Form completed via the guest portal (guests.loggia.net) — unit P 03 confirmed, 1 bed / 1 bath / 4 guests",
       "Door code arrives by email at 12:00 PM on arrival day (19 Aug), valid from 15:00 onward — no need to message the property about arrival time"
     ],
     warnings: [
-      "Contactless check-in — no reception. The Pre-Check-In Form must be completed before the door code is issued.",
+      "Contactless check-in — no reception. Pre-Check-In Form is done; just wait for the door code by email on arrival day.",
       "Property doesn't accommodate hen/stag parties; guests under 18 need a parent or guardian to check in",
       "Official contact is info@omliving.gr — the property warned against responding to any other source about personal data or payment"
     ],

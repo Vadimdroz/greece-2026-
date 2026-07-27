@@ -272,7 +272,7 @@ export const itinerary: Day[] = [
         time: "Evening",
         title: "Check in — Om Living Pelion, Agios Dimitrios",
         description:
-          "Ground-floor apartment, booked to replace Faros — Faros couldn't move its check-in to today, so that booking was cancelled and this one took its place. Booking.com confirmation 6584233490, PIN 2645. Contactless check-in — complete the Pre-Check-In Form ahead of time (required by Greek law); the door code arrives by email at 12:00 PM today, valid from 15:00 onward. One bedroom with a double bed plus a sofa bed for the kids, confirmed by the property. Just 1 km from Agios Ioannis, where tomorrow's boat trip departs.",
+          "Ground-floor apartment, booked to replace Faros — Faros couldn't move its check-in to today, so that booking was cancelled and this one took its place. Booking.com confirmation 6584233490, PIN 2645. Contactless check-in — Pre-Check-In Form already completed (unit P 03, 1 bed / 1 bath / 4 guests confirmed); the door code arrives by email at 12:00 PM today, valid from 15:00 onward. One bedroom with a double bed plus a sofa bed for the kids, confirmed by the property. Just 1 km from Agios Ioannis, where tomorrow's boat trip departs.",
         tag: "nature"
       },
       {
@@ -286,7 +286,7 @@ export const itinerary: Day[] = [
     driveNotes: "Plastiras → Meteora ≈ 1 h 30 · Meteora → Pelion (Agios Ioannis) ≈ 1 h 45",
     dayTips: [
       "This whole day replaces the old horse-riding/archery rest day — Plastiras dropped to 2 nights, and Meteora + Pelion moved up a day to fill the gap Kazarma's shorter stay left open",
-      "Om Living Pelion has no reception — complete the Pre-Check-In Form the property emails you before arrival; the door code follows automatically at 12:00 PM on arrival day, valid from 15:00",
+      "Om Living Pelion has no reception — Pre-Check-In Form is already done; the door code follows automatically at 12:00 PM on arrival day, valid from 15:00",
       "Keep the Meteora stop to photos and one short walk, not a full monastery tour"
     ],
     drinkOfTheDay: {
