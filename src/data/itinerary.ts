@@ -160,7 +160,7 @@ export const itinerary: Day[] = [
         time: "15:00",
         title: "Check in — Kazarma Hotel, Kalyvia Fylaktis",
         description:
-          "Superior Double/Twin room with lake view, 2 nights (17–19 Aug). Confirmation #5911663775, PIN 1975 — modified 26 July to drop the 3rd night, €428 total."
+          "Superior Double/Twin room with lake view, 2 nights (17–19 Aug). Confirmation #5911663775, PIN 1975 — modified 26 July to drop the 3rd night, €428 total. Bed configuration confirmed by the property: 1 extra-large double bed + 2 separate sofa beds, no extra charge."
       },
       {
         time: "Evening",
@@ -272,7 +272,7 @@ export const itinerary: Day[] = [
         time: "Evening",
         title: "Check in — Om Living Pelion, Agios Dimitrios",
         description:
-          "Ground-floor apartment, booked to replace Faros — Faros couldn't move its check-in to today, so that booking was cancelled and this one took its place. Booking.com confirmation 6584233490, PIN 2645. Contactless check-in — the property sends a door code the day before arrival, so confirm your arrival time with them ahead of time. Just 1 km from Agios Ioannis, where tomorrow's boat trip departs.",
+          "Ground-floor apartment, booked to replace Faros — Faros couldn't move its check-in to today, so that booking was cancelled and this one took its place. Booking.com confirmation 6584233490, PIN 2645. Contactless check-in — complete the Pre-Check-In Form ahead of time (required by Greek law); the door code arrives by email at 12:00 PM today, valid from 15:00 onward. One bedroom with a double bed plus a sofa bed for the kids, confirmed by the property. Just 1 km from Agios Ioannis, where tomorrow's boat trip departs.",
         tag: "nature"
       },
       {
@@ -286,7 +286,7 @@ export const itinerary: Day[] = [
     driveNotes: "Plastiras → Meteora ≈ 1 h 30 · Meteora → Pelion (Agios Ioannis) ≈ 1 h 45",
     dayTips: [
       "This whole day replaces the old horse-riding/archery rest day — Plastiras dropped to 2 nights, and Meteora + Pelion moved up a day to fill the gap Kazarma's shorter stay left open",
-      "Om Living Pelion has no reception — message the property ahead with your expected arrival time so the door code arrives before you do",
+      "Om Living Pelion has no reception — complete the Pre-Check-In Form the property emails you before arrival; the door code follows automatically at 12:00 PM on arrival day, valid from 15:00",
       "Keep the Meteora stop to photos and one short walk, not a full monastery tour"
     ],
     drinkOfTheDay: {
@@ -330,7 +330,7 @@ export const itinerary: Day[] = [
         time: "16:00",
         title: "Check in — S Hotel Boutique Thessaloniki, then White Tower",
         description:
-          "Junior Suite, 1 night (20–21 Aug). Confirmation #5365254420, PIN 9179, €272.21 — booked to replace the old September Hotel / City Hotel double-booking, which should both be cancelled (free until 18 Aug). Once settled, it's a short walk to the White Tower and waterfront.",
+          "Junior Suite, 1 night (20–21 Aug). Confirmation #5365254420, PIN 9179, €272.21 — booked to replace the old September Hotel / City Hotel double-booking, which should both be cancelled (free until 18 Aug). Property confirmed the junior suite fits 4, with sofa beds prepared for the kids. Once settled, it's a short walk to the White Tower and waterfront.",
         attractionId: "white-tower",
         tag: "view"
       },
@@ -393,10 +393,10 @@ export const itinerary: Day[] = [
         rideToNext: { duration: "5 min", note: "hotel check-in" }
       },
       {
-        time: "Evening",
+        time: "17:00",
         title: "Check in — Mitsis Galini Wellness Spa Resort",
         description:
-          "1 night (21–22 Aug), 2 rooms, breakfast + dinner included. Confirmation #6652799478, PIN 4393, €444 total. The resort's outdoor thermal pool draws on Kamena Vourla's natural radioactive/radon springs — same source as the town's free public baths, just with loungers and changing rooms attached. Free cancellation ended 13 Aug. Plan is a genuine rest night here — no excursions.",
+          "1 night (21–22 Aug), 2 rooms, breakfast + dinner included. Confirmation #6652799478, PIN 4393, €444 total. Check-in time approved for 17:00–18:00, no extra charge — both rooms are singles with one queen bed each. Dinner is a buffet at the main restaurant, 19:00–22:00 (cold plates sent to the room if you arrive later). The resort's outdoor thermal pool draws on Kamena Vourla's natural radioactive/radon springs — same source as the town's free public baths, just with loungers and changing rooms attached. Free cancellation ended 13 Aug. Plan is a genuine rest night here — no excursions.",
         tag: "nature"
       }
     ],
