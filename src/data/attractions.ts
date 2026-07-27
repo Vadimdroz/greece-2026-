@@ -131,7 +131,7 @@ export const attractions: POI[] = [
     dayTripFrom: "stay-plastiras",
     shortDescription: "Kid-friendly archery session near the horse riding centre",
     description:
-      "A short, structured archery session — a nice complement to the morning horse ride and popular with kids around Thomas's age.",
+      "A short, structured archery session — a nice complement to the horse ride and popular with kids around Thomas's age.",
     address: "Lake Plastiras area, Karditsa, Greece",
     coords: [39.3650, 21.6900],
     tags: ["family"],
@@ -151,7 +151,7 @@ export const attractions: POI[] = [
     dayTripFrom: "stay-plastiras",
     shortDescription: "Kayaks, paddleboards and pedal boats on the lake, plus a swim",
     description:
-      "The lakeshore bases around Neochori and Lampero rent kayaks, stand-up paddleboards, and pedal boats by the hour, with calm, shallow-edged water that's easy for the kids and a welcome cool-off in the August heat. The best way to spend the hottest part of a Plastiras day between the morning horse ride and dinner by the lake.",
+      "The lakeshore bases around Neochori and Lampero rent kayaks, stand-up paddleboards, and pedal boats by the hour, with calm, shallow-edged water that's easy for the kids. Best first thing in the morning, when the lake is glassiest and the paddling easiest — an early cool-off before the day warms up and the afternoon at the farm.",
     address: "Lake Plastiras waterfront (Neochori / Lampero), Karditsa, Greece",
     coords: [39.2900, 21.7300],
     tags: ["water", "family"],
