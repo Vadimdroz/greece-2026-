@@ -85,12 +85,12 @@ export const stays: Stay[] = [
   },
   {
     id: "stay-pelion",
-    name: "Om Living Pelion",
+    name: "Om Living Pelion — P 03, Deluxe Apartment Sea View",
     category: "stay",
     region: "transit",
     shortDescription: "Confirmed — 1 night, 19–20 Aug, Agios Dimitrios",
     description:
-      "Ground-floor apartment in Agios Dimitrios, a small hillside village just 1 km southwest of Agios Ioannis — a couple of minutes from where the \"Mamma Mia\" boat trip departs. Booked to replace Faros, Milopotamos: Faros couldn't move its check-in from 20 to 19 Aug (needed so the night after Kazarma's new checkout wasn't left unbooked), so that booking was cancelled and this one took its place. Self-catered, reception-free contactless check-in — the property sends a door code the day before arrival.",
+      "Ground-floor apartment in Agios Dimitrios, a small hillside village just 1 km southwest of Agios Ioannis — a couple of minutes from where the \"Mamma Mia\" boat trip departs. Booked to replace Faros, Milopotamos: Faros couldn't move its check-in from 20 to 19 Aug (needed so the night after Kazarma's new checkout wasn't left unbooked), so that booking was cancelled and this one took its place. Self-catered, reception-free contactless check-in — the property sends a door code the day before arrival. The specific unit is P 03, a sea-view ground-floor apartment, 1 bedroom, sleeps up to 4.",
     address: "Agios Dimitrios, Agios Dimitrios, 37012, Greece",
     coords: [39.3544, 23.2160],
     checkIn: "2026-08-19",
@@ -101,12 +101,14 @@ export const stays: Stay[] = [
       "Apartment, ground floor, 2 adults + 2 children (5 and 8)",
       "€196.24 total — no meal plan, self-catered",
       "Free cancellation until 4 August 2026 23:59 — after that, full price if cancelled or no-show",
-      "Host phone +30 231 028 0125 — door code sent one day before arrival"
+      "Host phone +30 231 028 0125 — door code sent one day before arrival",
+      "Unit P 03 | Deluxe Apartment Sea View Ground Floor, property code 20576"
     ],
     warnings: [
       "Contactless check-in — no reception. Confirm your arrival time with the property ahead so the door code arrives in time.",
       "Property doesn't accommodate hen/stag parties; guests under 18 need a parent or guardian to check in"
     ],
+    website: "https://guests.loggia.net/en/19696/overview/1424607",
     image: "./images/stay-pelion.jpg",
     imageCredit: {
       author: "Anaximander",

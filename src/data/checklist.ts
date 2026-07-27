@@ -38,9 +38,10 @@ export const checklist: ChecklistItem[] = [
     category: "hotels",
     text: "Pelion hotel booked — Om Living Pelion (19–20 Aug)",
     detail:
-      "Confirmed: Booking.com conf. 6584233490, PIN 2645, apartment, €196.24 total. Replaces the original Faros booking, which couldn't move its check-in from 20 to 19 Aug — that booking was cancelled and this one took its place. 1 km from Agios Ioannis, where the boat trip departs.",
+      "Confirmed: Booking.com conf. 6584233490, PIN 2645, apartment, €196.24 total. Replaces the original Faros booking, which couldn't move its check-in from 20 to 19 Aug — that booking was cancelled and this one took its place. 1 km from Agios Ioannis, where the boat trip departs. Unit P 03 | Deluxe Apartment Sea View Ground Floor, property code 20576 — guest portal: guests.loggia.net (login required).",
     done: true,
-    mapsUrl: maps("Om Living Pelion Agios Dimitrios Greece")
+    mapsUrl: maps("Om Living Pelion Agios Dimitrios Greece"),
+    website: "https://guests.loggia.net/en/19696/overview/1424607"
   },
   {
     id: "book-kamena-vourla-hotel",
