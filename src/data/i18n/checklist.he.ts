@@ -27,8 +27,8 @@ export const checklistHE: Record<string, Partial<Pick<ChecklistItem, "text" | "d
     detail: "ההחלטה התקבלה: משאירים את בית מסורתי 1898, נאפפליו (אישור 5347700468). לבטל את Philia Boutique Hotel, אתונה (אישור 5911625902) לפני מועד הביטול החינם."
   },
   "book-rafting-reconfirm": {
-    text: "לאשר שוב את הרפטינג באליאקמונס עם Active Nature",
-    detail: "שעת ונקודת מפגש מדויקות ל-18.8 — לאשר שוב כמה ימים לפני הטיול."
+    text: "לקבל אישור מחיר/הזמנה סופי לרפטינג באליאקמונס",
+    detail: "שעת מפגש 10:00 ל-19.8 כבר אושרה במייל עם כריסטוס מ-Active Nature — עדיין מחכים לאישור מחיר והזמנה סופי ממנו, אז כדאי לעקוב כמה ימים לפני הטיול."
   },
   "book-mavri-thalassa": {
     text: "Mavri Thalassa מאושר — 20.8, 19:30, שולחן ל-4",

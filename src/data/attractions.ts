@@ -81,17 +81,17 @@ export const attractions: POI[] = [
     dayTripFrom: "stay-plastiras",
     shortDescription: "Family-friendly grade 1–2 rafting near Grevena",
     description:
-      "A 6–7 km stretch of the Aliakmonas — the longest river in Greece — run by Active Nature with certified guides. Grade 1–2 water, suitable for first-time family rafters. On-water time is roughly 1.5–2 hours; the full outing with transport, kitting up, and changing runs 4–5 hours.",
+      "A 6–7 km stretch of the Aliakmonas — the longest river in Greece — run by Active Nature with certified guides. Grade 1–2 water, suitable for first-time family rafters. On-water time is roughly 1.5–2 hours; the full outing with transport, kitting up, and changing runs about 4 hours.",
     website: "https://www.active-nature.gr/en/activities/rafting/rafting-in-aliakmonas-river/",
     address: "Active Nature rafting base, Felli, Grevena, Greece",
     coords: [40.0167, 21.4167],
     tags: ["water", "extreme", "family"],
-    bookingNote: "Booked activity — reconfirm exact meeting time with Active Nature a few days ahead.",
+    bookingNote: "Meeting time confirmed by email with Christos at Active Nature — 10:00, kids from 6 are fine at the late-August water level. Final pricing/booking confirmation still pending — follow up before the trip.",
     difficulty: "moderate",
     tips: [
       "Bring swimsuits under your clothes, a full dry change, and towels for the ride back",
       "Old sports shoes or neoprene booties beat sandals",
-      "Suitable for kids Sophia and Thomas's ages, but confirm the operator's minimum age at booking"
+      "Suitable for kids Sophia and Thomas's ages — already confirmed with the operator for this water level"
     ],
     image: "./images/aliakmonas-rafting.jpg",
     imageCredit: {
@@ -180,7 +180,7 @@ export const attractions: POI[] = [
     coords: [39.7217, 21.6306],
     tags: ["view", "culture"],
     difficulty: "easy",
-    tips: ["Go early — cool light, no crowds, and it keeps the stop to about an hour", "Pull off along the panoramic loop road above Kalambaka for the best photos", "Dress code to enter any monastery: shoulders AND knees covered — bring a light scarf/shawl and a longer layer, as door wraps aren't guaranteed"],
+    tips: ["This trip's stop is in the afternoon, on the way from the Aliakmonas raft to Pelion — a calmer break after the morning's activity rather than a rushed one before it", "Pull off along the panoramic loop road above Kalambaka for the best photos", "Dress code to enter any monastery: shoulders AND knees covered — bring a light scarf/shawl and a longer layer, as door wraps aren't guaranteed"],
     image: "./images/meteora-viewpoint.jpg",
     imageCredit: {
       author: "Stathis floros",

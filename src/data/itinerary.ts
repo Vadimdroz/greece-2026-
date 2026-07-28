@@ -256,58 +256,59 @@ export const itinerary: Day[] = [
     dayNumber: 5,
     date: "2026-08-19",
     weekday: "Wednesday",
-    departureTime: "09:00",
-    rideToFirst: { duration: "1 h 30", note: "Kazarma / Lake Plastiras → Meteora" },
+    departureTime: "07:45",
+    rideToFirst: { duration: "2 h 15", note: "Kazarma / Lake Plastiras → Active Nature raft base, Grevena (via Kalambaka, no stop)" },
     region: "transit",
     base: "Pelion (Agios Dimitrios)",
-    title: "Meteora, rafting, then Pelion",
-    subtitle: "Kazarma checkout, an hour at Meteora, the Aliakmonas raft, and on to the coast",
+    title: "Rafting, then Meteora, on to Pelion",
+    subtitle: "Kazarma checkout, the Aliakmonas raft at 10:00, Meteora on the way east, then the coast",
     activities: [
       {
-        time: "10:30",
-        title: "Meteora — one-hour viewpoint stop",
-        description:
-          "Drive the panoramic loop road above Kalambaka and pull off at the main overlooks (Agios Nikolaos Anapafsas, the road above the town) for photos of the monasteries on their sandstone pillars. It's mid-morning, so the loop-road viewpoints beat queuing to go inside — keep it to about an hour: photos and one short walk, not a full monastery tour. If anyone does want to duck into a monastery, mind the dress code (see today's tips).",
-        attractionId: "meteora-viewpoint",
-        tag: "view",
-        rideToNext: { duration: "45 min", note: "Meteora → Active Nature raft base, Grevena" }
-      },
-      {
-        time: "12:30",
+        time: "10:00",
         title: "Rafting on the Aliakmonas — Active Nature",
         description:
-          "The family grade 1–2 stretch of Greece's longest river near Grevena — roughly 1.5–2 h on the water with certified guides. Book a ~12:30 meeting time (confirm it's available — see tips) so the whole outing (kitting up, water, changing) runs about 3.5–4 hours and you're rolling toward Pelion by mid-afternoon. Swimsuits under clothes, a full dry change, and towels for the car.",
+          "The family grade 1–2 stretch of Greece's longest river near Grevena — roughly 1.5–2 h on the water with certified guides. Confirmed with Christos at Active Nature: a 10:00 meeting time, with the whole outing (transport, kitting up, the river, changing) running about 4 hours. Kids from 6 are fine at this water level so late in August. Swimsuits under clothes, a full dry change, and towels for the car.",
         attractionId: "aliakmonas-rafting",
         tag: "water",
-        rideToNext: { duration: "2 h 30", note: "Grevena → Pelion (Agios Ioannis / Agios Dimitrios)" }
+        rideToNext: { duration: "45 min", note: "Grevena raft base → Meteora" }
+      },
+      {
+        time: "Afternoon",
+        title: "Meteora — viewpoint stop on the way east",
+        description:
+          "Drive the panoramic loop road above Kalambaka and pull off at the main overlooks (Agios Nikolaos Anapafsas, the road above the town) for photos of the monasteries on their sandstone pillars — a calm stop after the morning's rafting, not squeezed in beforehand. Keep it to about 45 minutes to an hour: photos and one short walk, not a full monastery tour. Change into dry clothes here before continuing. If anyone does want to duck into a monastery, mind the dress code (see today's tips).",
+        attractionId: "meteora-viewpoint",
+        tag: "view",
+        rideToNext: { duration: "1 h 45", note: "Meteora → Pelion (Agios Ioannis / Agios Dimitrios)" }
       },
       {
         time: "Evening",
         title: "Check in — Om Living Pelion, Agios Dimitrios",
         description:
-          "Ground-floor apartment, booked to replace Faros — Faros couldn't move its check-in to today, so that booking was cancelled and this one took its place. Booking.com confirmation 6584233490, PIN 2645. Contactless check-in — Pre-Check-In Form already completed (unit P 03, 1 bed / 1 bath / 4 guests confirmed); the door code arrives by email at 12:00 PM today, valid from 15:00 onward — so an early-evening arrival (~18:30) after the raft is fine. One bedroom with a double bed plus a sofa bed for the kids, confirmed by the property. Just 1 km from Agios Ioannis, where tomorrow's boat trip departs.",
+          "Ground-floor apartment, booked to replace Faros — Faros couldn't move its check-in to today, so that booking was cancelled and this one took its place. Booking.com confirmation 6584233490, PIN 2645. Contactless check-in — Pre-Check-In Form already completed (unit P 03, 1 bed / 1 bath / 4 guests confirmed); the door code arrives by email at 12:00 PM today, valid from 15:00 onward — so a late-afternoon arrival (roughly 17:15–17:30) after the raft and Meteora stop is fine. One bedroom with a double bed plus a sofa bed for the kids, confirmed by the property. Just 1 km from Agios Ioannis, where tomorrow's boat trip departs.",
         tag: "nature"
       },
       {
         time: "Night",
         title: "Beach evening, easy dinner",
-        description: "After a big day — an hour at Meteora, a morning on the river, and the drive east — an unstructured evening on the beach or a seafront taverna in Agios Ioannis is the right pace.",
+        description: "After a big day — a morning on the river, an hour at Meteora, and the drive east — an unstructured evening on the beach or a seafront taverna in Agios Ioannis is the right pace.",
         tag: "food",
         optional: true
       }
     ],
-    driveNotes: "Kazarma / Plastiras → Meteora ≈ 1 h 30 · Meteora → Grevena raft base ≈ 45 min · Grevena → Pelion (Agios Ioannis) ≈ 2 h 30 · about 4 h 45 driving across the day",
+    driveNotes: "Kazarma / Plastiras → Grevena raft base ≈ 2 h 15 (direct, via Kalambaka) · Grevena → Meteora ≈ 45 min · Meteora → Pelion (Agios Ioannis) ≈ 1 h 45 · about 4 h 45 driving across the day",
     dayTips: [
-      "Leave Kazarma by 09:00 — Meteora around 10:30 for an hour, the raft at ~12:30, and you're into Pelion by early evening (roughly 18:30)",
+      "Leave Kazarma by 07:45 for the confirmed 10:00 raft meeting — no stop on the way in, since the drive alone takes the full 2 h 15. Rafting runs to about 14:00 with transport, then Meteora on the way east, and into Pelion by late afternoon (roughly 17:15–17:30)",
+      "Raft first, Meteora after: it's a calmer sightseeing stop once the kids have had their big activity, rather than an early-morning stop under time pressure before it",
+      "Confirmed by email with Christos at Active Nature: 10:00 meeting for the Aliakmonas raft, ~4 hours total with transport, kids from 6 are fine at this water level — still waiting on his final pricing/booking confirmation, so follow up before the trip",
       "METEORA DRESS CODE: to step inside any monastery, shoulders AND knees must be covered — remind Irina (and everyone) to wear or pack a light scarf/shawl and a longer layer. Wraps are sometimes lent at the door, but don't count on it.",
-      "Reconfirm the raft with Active Nature — they schedule by arrangement, not fixed public slots, so ask directly whether a ~12:30 meeting time works; a midday start is normal and should be easy to arrange",
-      "Om Living Pelion is contactless with no reception — door code arrives by email at 12:00 today, valid from 15:00, so arriving late afternoon is fine",
+      "Om Living Pelion is contactless with no reception — door code arrives by email at 12:00 today, valid from 15:00, so a late-afternoon arrival is fine",
       "This one long transit day replaces the old two-day split (raft one day, Meteora + Pelion the next) — yesterday at Plastiras is now the easy horses-and-lake day"
     ],
     gear: [
-      { item: "Light scarf/shawl + a knee-covering layer for the Meteora monasteries", for: "meteora-viewpoint" },
       { item: "Swimsuits under your clothes + old shoes that can get soaked", for: "aliakmonas-rafting" },
-      { item: "Full dry change of clothes + towels for the drive to Pelion" }
+      { item: "Full dry change of clothes + towels — change right after the raft, before Meteora" },
+      { item: "Light scarf/shawl + a knee-covering layer for the Meteora monasteries", for: "meteora-viewpoint" }
     ],
     drinkOfTheDay: {
       name: "Tsipouro (Pelion-style)",
