@@ -270,13 +270,20 @@ export const itinerary: Day[] = [
           "The family grade 1–2 stretch of Greece's longest river near Grevena — roughly 1.5–2 h on the water with certified guides. Confirmed with Christos at Active Nature: a 10:00 meeting time, with the whole outing (transport, kitting up, the river, changing) running about 4 hours. Kids from 6 are fine at this water level so late in August. Swimsuits under clothes, a full dry change, and towels for the car.",
         attractionId: "aliakmonas-rafting",
         tag: "water",
-        rideToNext: { duration: "45 min", note: "Grevena raft base → Meteora" }
+        rideToNext: { duration: "45 min", note: "Grevena raft base → Kalambaka (Meteora)" }
       },
       {
-        time: "Afternoon",
+        time: "14:45",
+        title: "Quick lunch in Kalambaka",
+        description:
+          "Straight off the river, the kids will be starving well before a sit-down taverna could feed them — grab something fast in Kalambaka instead of a separate stop. The town's main street (right where you already are for the Meteora viewpoints) is lined with souvlaki and gyro grill houses geared to exactly this Meteora day-trip crowd — quick turnaround, no reservation, and everyone's fed within 30–45 minutes.",
+        tag: "food"
+      },
+      {
+        time: "Mid-afternoon",
         title: "Meteora — viewpoint stop on the way east",
         description:
-          "Drive the panoramic loop road above Kalambaka and pull off at the main overlooks (Agios Nikolaos Anapafsas, the road above the town) for photos of the monasteries on their sandstone pillars — a calm stop after the morning's rafting, not squeezed in beforehand. Keep it to about 45 minutes to an hour: photos and one short walk, not a full monastery tour. Change into dry clothes here before continuing. If anyone does want to duck into a monastery, mind the dress code (see today's tips).",
+          "Drive the panoramic loop road above Kalambaka and pull off at the main overlooks (Agios Nikolaos Anapafsas, the road above the town) for photos of the monasteries on their sandstone pillars — a calm stop after the morning's rafting and lunch, not squeezed in beforehand. Keep it to about 45 minutes to an hour: photos and one short walk, not a full monastery tour. Change into dry clothes here before continuing, if you haven't already at lunch. If anyone does want to duck into a monastery, mind the dress code (see today's tips).",
         attractionId: "meteora-viewpoint",
         tag: "view",
         rideToNext: { duration: "1 h 45", note: "Meteora → Pelion (Agios Ioannis / Agios Dimitrios)" }
@@ -285,21 +292,22 @@ export const itinerary: Day[] = [
         time: "Evening",
         title: "Check in — Om Living Pelion, Agios Dimitrios",
         description:
-          "Ground-floor apartment, booked to replace Faros — Faros couldn't move its check-in to today, so that booking was cancelled and this one took its place. Booking.com confirmation 6584233490, PIN 2645. Contactless check-in — Pre-Check-In Form already completed (unit P 03, 1 bed / 1 bath / 4 guests confirmed); the door code arrives by email at 12:00 PM today, valid from 15:00 onward — so a late-afternoon arrival (roughly 17:15–17:30) after the raft and Meteora stop is fine. One bedroom with a double bed plus a sofa bed for the kids, confirmed by the property. Just 1 km from Agios Ioannis, where tomorrow's boat trip departs.",
+          "Ground-floor apartment, booked to replace Faros — Faros couldn't move its check-in to today, so that booking was cancelled and this one took its place. Booking.com confirmation 6584233490, PIN 2645. Contactless check-in — Pre-Check-In Form already completed (unit P 03, 1 bed / 1 bath / 4 guests confirmed); the door code arrives by email at 12:00 PM today, valid from 15:00 onward — so a late-afternoon arrival (roughly 18:00–18:15) after the raft, lunch, and Meteora stop is fine. One bedroom with a double bed plus a sofa bed for the kids, confirmed by the property. Just 1 km from Agios Ioannis, where tomorrow's boat trip departs.",
         tag: "nature"
       },
       {
         time: "Night",
         title: "Beach evening, easy dinner",
-        description: "After a big day — a morning on the river, an hour at Meteora, and the drive east — an unstructured evening on the beach or a seafront taverna in Agios Ioannis is the right pace.",
+        description: "After a big day — a morning on the river, lunch and an hour at Meteora, and the drive east — an unstructured evening on the beach or a seafront taverna in Agios Ioannis is the right pace.",
         tag: "food",
         optional: true
       }
     ],
-    driveNotes: "Kazarma / Plastiras → Grevena raft base ≈ 2 h 15 (direct, via Kalambaka) · Grevena → Meteora ≈ 45 min · Meteora → Pelion (Agios Ioannis) ≈ 1 h 45 · about 4 h 45 driving across the day",
+    driveNotes: "Kazarma / Plastiras → Grevena raft base ≈ 2 h 15 (direct, via Kalambaka) · Grevena → Kalambaka (lunch + Meteora) ≈ 45 min · Meteora → Pelion (Agios Ioannis) ≈ 1 h 45 · about 4 h 45 driving across the day, plus the lunch/viewpoint stop in Kalambaka",
     dayTips: [
-      "Leave Kazarma by 07:45 for the confirmed 10:00 raft meeting — no stop on the way in, since the drive alone takes the full 2 h 15. Rafting runs to about 14:00 with transport, then Meteora on the way east, and into Pelion by late afternoon (roughly 17:15–17:30)",
+      "Leave Kazarma by 07:45 for the confirmed 10:00 raft meeting — no stop on the way in, since the drive alone takes the full 2 h 15. Rafting runs to about 14:00 with transport, then a quick lunch and Meteora in Kalambaka, and into Pelion by late afternoon (roughly 18:00–18:15)",
       "Raft first, Meteora after: it's a calmer sightseeing stop once the kids have had their big activity, rather than an early-morning stop under time pressure before it",
+      "Lunch is folded into the Kalambaka stop rather than a separate location — the kids will be hungry straight off the river, and Kalambaka's grill houses (souvlaki/gyro) are fast and right where you're already stopping for the viewpoints. Skip a sit-down taverna here; it'll eat into the drive to Pelion.",
       "Confirmed by email with Christos at Active Nature: 10:00 meeting for the Aliakmonas raft, ~4 hours total with transport, kids from 6 are fine at this water level — still waiting on his final pricing/booking confirmation, so follow up before the trip",
       "METEORA DRESS CODE: to step inside any monastery, shoulders AND knees must be covered — remind Irina (and everyone) to wear or pack a light scarf/shawl and a longer layer. Wraps are sometimes lent at the door, but don't count on it.",
       "Om Living Pelion is contactless with no reception — door code arrives by email at 12:00 today, valid from 15:00, so a late-afternoon arrival is fine",
@@ -307,7 +315,8 @@ export const itinerary: Day[] = [
     ],
     gear: [
       { item: "Swimsuits under your clothes + old shoes that can get soaked", for: "aliakmonas-rafting" },
-      { item: "Full dry change of clothes + towels — change right after the raft, before Meteora" },
+      { item: "A quick snack for the car (fruit, granola bars) — the 45-min drive from the raft to Kalambaka will feel long to hungry kids otherwise" },
+      { item: "Full dry change of clothes + towels — change right after the raft, at lunch or at the latest before Meteora" },
       { item: "Light scarf/shawl + a knee-covering layer for the Meteora monasteries", for: "meteora-viewpoint" }
     ],
     drinkOfTheDay: {
