@@ -97,9 +97,9 @@ export const checklist: ChecklistItem[] = [
   {
     id: "book-rafting-reconfirm",
     category: "attractions",
-    text: "Reconfirm Aliakmonas rafting with Active Nature",
+    text: "Get final pricing/booking confirmation for Aliakmonas rafting",
     detail:
-      "Exact meeting time and point for 18 Aug — reconfirm a few days ahead of the trip.",
+      "10:00 meeting time for 19 Aug already confirmed by email with Christos at Active Nature — still waiting on his final price and booking confirmation, so follow up a few days ahead of the trip.",
     dueBy: "2026-08-15",
     mapsUrl: maps("Active Nature rafting base Felli Grevena Greece"),
     website:
