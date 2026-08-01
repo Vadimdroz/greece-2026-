@@ -55,11 +55,11 @@ export const checklist: ChecklistItem[] = [
   {
     id: "resolve-last-night",
     category: "hotels",
-    text: "Nafplio or Athens for the last night?",
+    text: "Cancel Philia Boutique Hotel, Athens — Nafplio is the pick",
     detail:
-      "Traditional house of 1898, Nafplio (conf. 5347700468, free cancel until 7 Aug) vs. Philia Boutique Hotel, Athens (conf. 5911625902, free cancel until 14 Aug). Both booked for 22–23 Aug. Current plan assumes Nafplio.",
+      "Decision made: keeping Traditional house of 1898, Nafplio (conf. 5347700468). Cancel Philia Boutique Hotel, Athens (conf. 5911625902) before its free-cancellation deadline.",
     urgent: true,
-    dueBy: "2026-08-07",
+    dueBy: "2026-08-14",
     mapsUrl: maps("Traditional house of 1898 Spiliadou 2 Nafplio")
   },
 
@@ -97,9 +97,9 @@ export const checklist: ChecklistItem[] = [
   {
     id: "book-rafting-reconfirm",
     category: "attractions",
-    text: "Reconfirm Aliakmonas rafting with Active Nature",
+    text: "Get final pricing/booking confirmation for Aliakmonas rafting",
     detail:
-      "Exact meeting time and point for 18 Aug — reconfirm a few days ahead of the trip.",
+      "10:00 meeting time for 19 Aug already confirmed by email with Christos at Active Nature — still waiting on his final price and booking confirmation, so follow up a few days ahead of the trip.",
     dueBy: "2026-08-15",
     mapsUrl: maps("Active Nature rafting base Felli Grevena Greece"),
     website:

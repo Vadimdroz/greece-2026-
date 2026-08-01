@@ -149,6 +149,7 @@ Work top to bottom; each row depends on the ones above.
 | 9 | **Gemininio** | **Persona & party:** §15 (`persona.ts`). **Keys, Live, REST:** §16. `.env.local` `VITE_GEMINI_API_KEY` + GitHub Actions secret; restrict key by **HTTP referrer** in AI Studio. |
 | 10 | **Optional audio** | Pre-generated MP3s + scripts (§14) — run locally, never commit TTS secrets. Scripts read **`GEMINI_API_KEY`** (no `VITE_` prefix), separate from the in-app key. |
 | 11 | **Deploy** | `.github/workflows/deploy.yml`; Pages **Source = GitHub Actions** (§19). |
+| 12 | **Optional checklist sync** | Only if you want "done" checkboxes to sync across family devices (§4, "Lists: cross-device sync"). Add the new trip id to the shared Firebase project's Realtime Database rules and update `REMOTE_PATH` in `src/lib/checklistSync.ts`. Skip this row entirely if `localStorage`-only is fine for the trip. |
 
 ### Where flights, car, and paperwork belong
 
@@ -208,7 +209,9 @@ end every "should we do X?" debate later.
   exactly until the trip starts. Spend the time to verify every
   address, opening hour, and phone number.
 - **Static but updatable.** No backend. Just a Vite app deployed to
-  GitHub Pages so you can push tiny edits from your phone.
+  GitHub Pages so you can push tiny edits from your phone. The one
+  deliberate exception is the checklist's cross-device "done" state —
+  see §4, "Lists: cross-device sync."
 - **"Magazine guide" feel.** Earthy, editorial, photographic. Big
   serif headings, lots of white space, photographs that earn their
   bytes. Think *Cereal* or *Condé Nast Traveler*, not a SaaS dashboard.
@@ -241,7 +244,10 @@ do the talking.
 | Lint | **ESLint 9** (`eslint.config.js`, flat config) + TypeScript ESLint + `eslint-plugin-react-hooks` (React Compiler rules) + `eslint-plugin-react-refresh` | Run `npm run lint` locally before merging; keeps hooks valid and aligns with Vite Fast Refresh expectations. |
 
 What we deliberately **didn't** add:
-- A backend.
+- A backend — with one narrow exception: the checklist's "done" state
+  syncs across devices via Firebase Realtime Database's public REST +
+  `EventSource` API (no SDK, no auth, no other feature touches it).
+  See §4, "Lists: cross-device sync," for why and how.
 - A CMS.
 - A state library (React `useState` + a small `MapFocusContext` was
   enough for ~5 cross-component interactions).
@@ -422,6 +428,58 @@ Plan · Places · Food · Map · Neighborhood · Tips · Lists · Emergency
 The mobile **bottom nav** can only fit 4–5 primary tabs + a "More"
 overlay. Pick the four exploration-essential tabs (Plan, Places,
 Food, Map for us) and tuck the rest behind More.
+
+### Lists: cross-device sync
+
+The checklist's "done" checkbox state used to be `localStorage`-only,
+like every other piece of app state (§1/§2). That's fine for
+single-device use, but a family checklist is inherently multiplayer —
+someone books the rental car on their laptop, and everyone else's
+phone should show it checked off without them re-doing it.
+
+Rather than add a full backend + SDK for one feature, we use Firebase
+**Realtime Database's public REST API** directly:
+- **Writes:** a plain `fetch(..., { method: "PUT" })` to
+  `https://<db>.firebaseio.com/checklists/<trip-id>/<itemId>.json`
+  with a JSON boolean body.
+- **Live subscription:** the browser's native `EventSource` pointed at
+  `.../checklists/<trip-id>.json` — Firebase's REST API streams
+  `put`/`patch` server-sent events on that connection, so no SDK is
+  needed. `EventSource` reconnects automatically, which also gives you
+  offline→online recovery for free.
+- **Offline queue:** writes update `localStorage` immediately
+  (optimistic) and are queued for retry if the `fetch` fails; the
+  queue flushes on the `EventSource`'s next successful (re)connect.
+
+See `src/lib/checklistSync.ts` for the full implementation and
+`src/components/ChecklistSection.tsx` for how it's wired into the UI
+(`subscribeChecklist` in a `useEffect`, `writeChecklistItem` in the
+toggle handler).
+
+**Security model:** the Firebase project's Realtime Database rules
+scope read/write to exactly `checklists/<trip-id>` and validate every
+value as a boolean — everything else is denied by default. The
+client-side config (API key, database URL) is not a secret; Firebase's
+security model relies on these server-side rules, not on hiding the
+key. When setting this up for a new trip:
+1. In the Firebase console for the shared project, Realtime
+   Database → Rules, add a block for the new trip id:
+   ```json
+   "checklists": {
+     "<new-trip-id>": {
+       ".read": true,
+       ".write": true,
+       "$itemId": { ".validate": "newData.isBoolean()" }
+     }
+   }
+   ```
+   (merge into the existing `rules` object rather than replacing it —
+   other trips' paths must keep working.)
+2. Update `REMOTE_PATH` in `checklistSync.ts` to the new trip id.
+
+This pattern is intentionally narrow — don't extend it to sync other
+app state (itinerary edits, bookings, etc.) without deciding that
+tradeoff deliberately; the rest of the app should stay backend-free.
 
 ---
 

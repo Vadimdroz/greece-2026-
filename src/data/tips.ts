@@ -10,9 +10,9 @@ export const tips: Tip[] = [
   },
   {
     id: "double-bookings",
-    title: "Three legs have duplicate hotel bookings — resolve before each cancellation deadline",
+    title: "Three legs had duplicate hotel bookings — decisions made, cancellations still due",
     body:
-      "Delphi (Amalia vs Acropole, cancel by 12 Aug), Thessaloniki (September vs City Hotel, cancel by 18 Aug), and the last night (Nafplio vs Philia Boutique Hotel Athens, deadlines 7 Aug and 14 Aug respectively) are all double-booked for the same dates. Pick one on each leg and cancel the other before its free-cancellation window closes.",
+      "Delphi (keeping Acropole, cancel Amalia by 12 Aug), Thessaloniki (keeping S Hotel Boutique, cancel September and City Hotel by 18 Aug), and the last night (keeping Nafplio's Traditional house of 1898, cancel Philia Boutique Hotel Athens by 14 Aug) are all decided. The losing booking on each leg still needs to be actually cancelled before its free-cancellation window closes.",
     severity: "critical"
   },
   {
