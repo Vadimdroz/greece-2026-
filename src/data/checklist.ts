@@ -97,13 +97,22 @@ export const checklist: ChecklistItem[] = [
   {
     id: "book-rafting-reconfirm",
     category: "attractions",
-    text: "Get final pricing/booking confirmation for Aliakmonas rafting",
+    text: "Aliakmonas rafting — booked & paid with Greek Adventure",
     detail:
-      "10:00 meeting time for 19 Aug already confirmed by email with Christos at Active Nature — still waiting on his final price and booking confirmation, so follow up a few days ahead of the trip.",
-    dueBy: "2026-08-15",
-    mapsUrl: maps("Active Nature rafting base Felli Grevena Greece"),
-    website:
-      "https://www.active-nature.gr/en/activities/rafting/rafting-in-aliakmonas-river/"
+      "Booking ref 08.19-00 AN.Raft.Aliak.Drozdovski.4p (4 people), 19 Aug, 10:00 meeting. Contact: Litsa Koletsou, Reservation Dept — +30 2462 087999 / WhatsApp +30 6948 214871, reservations@greekadventure.com.",
+    done: true,
+    mapsUrl: "https://maps.app.goo.gl/ELCePNxFKXrdzQTo7",
+    website: "https://www.greekadventure.com/"
+  },
+  {
+    id: "rafting-participation-form",
+    category: "attractions",
+    text: "Fill out Greek Adventure's Participation Form — one per person (4 total)",
+    detail:
+      "Required before the Aliakmonas rafting day (19 Aug). Sent by Litsa Koletsou at Greek Adventure — each of the 4 of you completes a separate copy of the same form.",
+    urgent: true,
+    dueBy: "2026-08-18",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSdVy1SFxKkEi7HaKXQ2aEG7R038uAYX_u-ripOAgOfCcLhQig/viewform?usp=pp_url"
   },
   {
     id: "book-waterland-tickets",
@@ -207,7 +216,7 @@ export const checklist: ChecklistItem[] = [
     category: "packing",
     text: "Dry bag or waterproof pouch",
     detail:
-      "Phones, wallet, car key for the rafting day — no dry bags mentioned in the Active Nature booking."
+      "Phones, wallet, car key for the rafting day — no dry bags mentioned in the Greek Adventure booking."
   },
   {
     id: "swim-gear",

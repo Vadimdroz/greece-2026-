@@ -257,7 +257,7 @@ export const itinerary: Day[] = [
     date: "2026-08-19",
     weekday: "Wednesday",
     departureTime: "07:45",
-    rideToFirst: { duration: "2 h 15", note: "Kazarma / Lake Plastiras → Active Nature raft base, Grevena (via Kalambaka, no stop)" },
+    rideToFirst: { duration: "2 h 15", note: "Kazarma / Lake Plastiras → Greek Adventure raft base, Grevena (via Kalambaka, no stop)" },
     region: "transit",
     base: "Pelion (Agios Dimitrios)",
     title: "Rafting, then Meteora, on to Pelion",
@@ -265,9 +265,9 @@ export const itinerary: Day[] = [
     activities: [
       {
         time: "10:00",
-        title: "Rafting on the Aliakmonas — Active Nature",
+        title: "Rafting on the Aliakmonas — Greek Adventure",
         description:
-          "The family grade 1–2 stretch of Greece's longest river near Grevena — roughly 1.5–2 h on the water with certified guides. Confirmed with Christos at Active Nature: a 10:00 meeting time, with the whole outing (transport, kitting up, the river, changing) running about 4 hours. Kids from 6 are fine at this water level so late in August. Swimsuits under clothes, a full dry change, and towels for the car.",
+          "The family grade 1–2 stretch of Greece's longest river near Grevena — roughly 1.5–2 h on the water with certified guides. Booked and paid — Greek Adventure, booking ref 08.19-00 AN.Raft.Aliak.Drozdovski.4p (4 people, 19 Aug). Christos at Active Nature made the initial arrangements; Greek Adventure is the operator running the trip on the day. Meeting point at 10:00: https://maps.app.goo.gl/ELCePNxFKXrdzQTo7. The whole outing (transport, kitting up, the river, changing) runs about 4 hours. Kids from 6 are fine at this water level so late in August. Swimsuits under clothes, a second pair of shoes or closed sandals, a full dry change, towels, and sun cream. Each of the 4 of you needs to fill out Greek Adventure's online Participation Form before the day.",
         attractionId: "aliakmonas-rafting",
         tag: "water",
         rideToNext: { duration: "45 min", note: "Grevena raft base → Kalambaka (Meteora)" }
@@ -308,13 +308,14 @@ export const itinerary: Day[] = [
       "Leave Kazarma by 07:45 for the confirmed 10:00 raft meeting — no stop on the way in, since the drive alone takes the full 2 h 15. Rafting runs to about 14:00 with transport, then a quick lunch and Meteora in Kalambaka, and into Pelion by late afternoon (roughly 18:00–18:15)",
       "Raft first, Meteora after: it's a calmer sightseeing stop once the kids have had their big activity, rather than an early-morning stop under time pressure before it",
       "Lunch is folded into the Kalambaka stop rather than a separate location — the kids will be hungry straight off the river, and Kalambaka's grill houses (souvlaki/gyro) are fast and right where you're already stopping for the viewpoints. Skip a sit-down taverna here; it'll eat into the drive to Pelion.",
-      "Confirmed by email with Christos at Active Nature: 10:00 meeting for the Aliakmonas raft, ~4 hours total with transport, kids from 6 are fine at this water level — still waiting on his final pricing/booking confirmation, so follow up before the trip",
+      "Aliakmonas rafting is booked and paid — Greek Adventure, booking ref 08.19-00 AN.Raft.Aliak.Drozdovski.4p, 10:00 meeting, ~4 hours total with transport. Still to do: each of the 4 of you fills out Greek Adventure's Participation Form before the 19th",
       "METEORA DRESS CODE: to step inside any monastery, shoulders AND knees must be covered — remind Irina (and everyone) to wear or pack a light scarf/shawl and a longer layer. Wraps are sometimes lent at the door, but don't count on it.",
       "Om Living Pelion is contactless with no reception — door code arrives by email at 12:00 today, valid from 15:00, so a late-afternoon arrival is fine",
       "This one long transit day replaces the old two-day split (raft one day, Meteora + Pelion the next) — yesterday at Plastiras is now the easy horses-and-lake day"
     ],
     gear: [
-      { item: "Swimsuits under your clothes + old shoes that can get soaked", for: "aliakmonas-rafting" },
+      { item: "Swimsuits under your clothes + a second pair of shoes or closed sandals (Greek Adventure's requirement)", for: "aliakmonas-rafting" },
+      { item: "Sun cream — Greek Adventure asks everyone to bring their own", for: "aliakmonas-rafting" },
       { item: "A quick snack for the car (fruit, granola bars) — the 45-min drive from the raft to Kalambaka will feel long to hungry kids otherwise" },
       { item: "Full dry change of clothes + towels — change right after the raft, at lunch or at the latest before Meteora" },
       { item: "Light scarf/shawl + a knee-covering layer for the Meteora monasteries", for: "meteora-viewpoint" }

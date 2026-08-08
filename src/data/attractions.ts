@@ -75,23 +75,24 @@ export const attractions: POI[] = [
   // ---------- LAKE PLASTIRAS ----------
   {
     id: "aliakmonas-rafting",
-    name: "Aliakmonas River Rafting — Active Nature",
+    name: "Aliakmonas River Rafting — Greek Adventure",
     category: "attraction",
     region: "north",
     dayTripFrom: "stay-plastiras",
     shortDescription: "Family-friendly grade 1–2 rafting near Grevena",
     description:
-      "A 6–7 km stretch of the Aliakmonas — the longest river in Greece — run by Active Nature with certified guides. Grade 1–2 water, suitable for first-time family rafters. On-water time is roughly 1.5–2 hours; the full outing with transport, kitting up, and changing runs about 4 hours.",
-    website: "https://www.active-nature.gr/en/activities/rafting/rafting-in-aliakmonas-river/",
-    address: "Active Nature rafting base, Felli, Grevena, Greece",
+      "A 6–7 km stretch of the Aliakmonas — the longest river in Greece — run by Greek Adventure with certified guides. Grade 1–2 water, suitable for first-time family rafters. On-water time is roughly 1.5–2 hours; the full outing with transport, kitting up, and changing runs about 4 hours.",
+    website: "https://www.greekadventure.com/",
+    address: "Greek Adventure rafting base, Felli, Grevena, Greece",
     coords: [40.0167, 21.4167],
     tags: ["water", "extreme", "family"],
-    bookingNote: "Meeting time confirmed by email with Christos at Active Nature — 10:00, kids from 6 are fine at the late-August water level. Final pricing/booking confirmation still pending — follow up before the trip.",
+    bookingNote: "Booked and paid — Greek Adventure, booking ref 08.19-00 AN.Raft.Aliak.Drozdovski.4p (4 people, 19 Aug 2026). Meeting point at 10:00: https://maps.app.goo.gl/ELCePNxFKXrdzQTo7. Reservations contact: Litsa Koletsou — +30 2462 087999 / WhatsApp +30 6948 214871, reservations@greekadventure.com. Christos at Active Nature made the initial arrangements; Greek Adventure runs the trip on the day. Each of the 4 of you must complete Greek Adventure's online Participation Form before the day.",
     difficulty: "moderate",
     tips: [
-      "Bring swimsuits under your clothes, a full dry change, and towels for the ride back",
-      "Old sports shoes or neoprene booties beat sandals",
-      "Suitable for kids Sophia and Thomas's ages — already confirmed with the operator for this water level"
+      "Bring swimsuits under your clothes, a second pair of shoes or closed sandals, a full dry change, towels, and sun cream",
+      "Old sports shoes or neoprene booties beat open sandals",
+      "Suitable for kids Sophia and Thomas's ages — already confirmed with the operator for this water level",
+      "Each participant fills out Greek Adventure's online Participation Form before the day — one form per person"
     ],
     image: "./images/aliakmonas-rafting.jpg",
     imageCredit: {
