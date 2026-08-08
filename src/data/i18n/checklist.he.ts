@@ -27,8 +27,12 @@ export const checklistHE: Record<string, Partial<Pick<ChecklistItem, "text" | "d
     detail: "ההחלטה התקבלה: משאירים את בית מסורתי 1898, נאפפליו (אישור 5347700468). לבטל את Philia Boutique Hotel, אתונה (אישור 5911625902) לפני מועד הביטול החינם."
   },
   "book-rafting-reconfirm": {
-    text: "לקבל אישור מחיר/הזמנה סופי לרפטינג באליאקמונס",
-    detail: "שעת מפגש 10:00 ל-19.8 כבר אושרה במייל עם כריסטוס מ-Active Nature — עדיין מחכים לאישור מחיר והזמנה סופי ממנו, אז כדאי לעקוב כמה ימים לפני הטיול."
+    text: "רפטינג באליאקמונס — שולם ואושר מול Greek Adventure",
+    detail: "מספר הזמנה 08.19-00 AN.Raft.Aliak.Drozdovski.4p (4 אנשים), 19.8, מפגש ב-10:00. איש קשר: ליצה קולצו, מחלקת הזמנות — +30 2462 087999 / וואטסאפ +30 6948 214871, reservations@greekadventure.com."
+  },
+  "rafting-participation-form": {
+    text: "למלא את טופס ההשתתפות של Greek Adventure — אחד לכל אדם (4 בסך הכל)",
+    detail: "נדרש לפני יום הרפטינג באליאקמונס (19.8). נשלח על ידי ליצה קולצו מ-Greek Adventure — כל אחד מארבעתכם ממלא עותק נפרד של אותו טופס."
   },
   "book-mavri-thalassa": {
     text: "Mavri Thalassa מאושר — 20.8, 19:30, שולחן ל-4",
@@ -118,7 +122,7 @@ export const checklistHE: Record<string, Partial<Pick<ChecklistItem, "text" | "d
   },
   "dry-bag": {
     text: "תיק יבש או כיס עמיד למים",
-    detail: "טלפונים, ארנק, מפתח רכב ליום הרפטינג — ההזמנה של Active Nature לא מזכירה תיקים יבשים."
+    detail: "טלפונים, ארנק, מפתח רכב ליום הרפטינג — ההזמנה של Greek Adventure לא מזכירה תיקים יבשים."
   },
   "swim-gear": {
     text: "בגדי ים + משקפי שחייה לכל אחד",
