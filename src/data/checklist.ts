@@ -117,10 +117,10 @@ export const checklist: ChecklistItem[] = [
   {
     id: "book-waterland-tickets",
     category: "attractions",
-    text: "Waterland Water Park tickets (21 Aug morning)",
+    text: "Waterland tickets — bought & paid (order #81358)",
     detail:
-      "Peraia, near Thessaloniki — the first stop on Day 7, before the drive to Kamena Vourla. Check whether buying online ahead is cheaper than at the gate.",
-    dueBy: "2026-08-20",
+      "4 tickets bought online for 21 Aug: 2× Day Pass 12-64 (Vadim, Irina — €22 each) + 2× Kids day pass 4-11 (Thomas, Sophia — €18 each), €80 total, paid by card. Separate e-ticket emails with barcodes arrived per person — save them to your phone before the day.",
+    done: true,
     mapsUrl: maps("Waterland Water Park Tagarades Thessaloniki"),
     website: "https://www.waterland.gr/en/"
   },
