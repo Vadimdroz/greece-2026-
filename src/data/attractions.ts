@@ -203,6 +203,7 @@ export const attractions: POI[] = [
     coords: [40.4667, 22.9333],
     tags: ["water", "family"],
     difficulty: "easy",
+    bookingNote: "Tickets bought and paid online for 21 Aug — order #81358, €80 total (2× adult Day Pass at €22, 2× kids day pass at €18, one per family member). E-tickets with barcodes were emailed separately per person — have them ready on your phone at the gate.",
     tips: ["Swimsuits on under clothes saves a changing-room queue", "Bring your own towels — rentals add up fast"],
     image: "./images/waterland.jpg",
     imageCredit: {

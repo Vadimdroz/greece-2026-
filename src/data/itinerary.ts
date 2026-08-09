@@ -411,7 +411,7 @@ export const itinerary: Day[] = [
         time: "09:00",
         title: "Waterland Water Park",
         description:
-          "Slides, a wave pool, a lazy/crazy river, and a kids' area, in Peraia — on your way south out of Thessaloniki, not a detour. Reviews call it solid and clean rather than spectacular: expect a good half-day, not a full one. Free shuttle exists from central Thessaloniki if you ever needed it, but you'll drive straight there.",
+          "Slides, a wave pool, a lazy/crazy river, and a kids' area, in Peraia — on your way south out of Thessaloniki, not a detour. Reviews call it solid and clean rather than spectacular: expect a good half-day, not a full one. Free shuttle exists from central Thessaloniki if you ever needed it, but you'll drive straight there. Tickets are already bought and paid — order #81358, 2 adult Day Passes and 2 kids day passes, €80 total. Bring up the e-tickets with barcodes from email (one per person) at the gate.",
         attractionId: "waterland",
         tag: "water",
         rideToNext: { duration: "3 h 20", note: "Waterland → Kamena Vourla" }
@@ -435,6 +435,7 @@ export const itinerary: Day[] = [
     dayTips: [
       "This is a brand-new stop, swapped in to break up what used to be a single brutal 5–6 hour drive straight to Nafplio",
       "Bring swimsuits already on under clothes to save a changing-room queue at Waterland",
+      "Waterland tickets are already bought and paid (order #81358, €80 for all 4) — pull up each person's e-ticket/barcode from email at the gate, no need to queue for tickets",
       "Deliberately unstructured evening — the point of this stop is rest before tomorrow's shorter drive",
       "If you want the natural springs without the resort setting, Kamena Vourla also has free public thermal pools (Kouniaviti/Asklipios) a short drive from the hotel"
     ],
