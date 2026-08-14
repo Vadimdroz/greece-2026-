@@ -21,7 +21,7 @@ export const itinerary: Day[] = [
         time: "Evening",
         title: "Arrive in Delphi, settle in",
         description:
-          "Check in — you have two Delphi hotels booked for these dates and haven't picked one yet (see Tickets & Stays below). Short walk through Delphi village for a first look at the gorge view before dinner."
+          "Check in at Acropole Delphi City Hotel — the pick between the two Delphi bookings (Amalia Hotel Delphi is being cancelled). Short walk through Delphi village for a first look at the gorge view before dinner."
       }
     ],
     driveNotes: "Athens Airport → Delphi ≈ 2 h 30 via GR-8A/E75",
@@ -29,7 +29,7 @@ export const itinerary: Day[] = [
       "Greek law: child seats mandatory for under-12 or under-150 cm — confirm both booster seats are in the car before leaving the lot",
       "You declined Record Go's own insurance at the desk — third-party cover is via Rentalcars.com (Zurich-backed)",
       "Download offline Google Maps for the Delphi–Plastiras mountain roads now, while you still have airport wifi",
-      "Two Delphi hotels are booked for tonight — cancel one before 12 Aug (Amalia) / check Acropole's policy to avoid a no-show fee"
+      "Acropole Delphi City Hotel is the pick for tonight — Amalia Hotel Delphi is being cancelled before 12 Aug to avoid a stray charge"
     ],
     drinkOfTheDay: {
       name: "Metaxa",
