@@ -1,6 +1,29 @@
 import type { POI } from "./types";
 
 export const attractions: POI[] = [
+  // ---------- EN ROUTE: ATHENS → DELPHI ----------
+  {
+    id: "arachova-viewpoint",
+    name: "Arachova — Clock Tower & Agios Georgios Church",
+    category: "attraction",
+    region: "transit",
+    enRouteBetween: ["ath", "stay-delphi-acropole"],
+    shortDescription: "Mountain village clock tower and hilltop church, 10 min before Delphi",
+    description:
+      "Arachova is a stone mountain village built into the slope of Mount Parnassus, right on the road into Delphi. Its landmark Clock Tower sits on a rocky outcrop in the village center — a short climb up a spiral staircase for a panoramic view over the valley. For a bigger payoff, 264 stone steps lead further up to Agios Georgios Church, with sweeping views tied to the 1826 Battle of Arachova.",
+    address: "Arachova, 32004, Greece",
+    coords: [38.4794, 22.5875],
+    tags: ["view", "culture", "village"],
+    difficulty: "moderate",
+    tips: [
+      "The Clock Tower alone is a quick 10–15 minute stop — good if energy is running low after the flight and drive",
+      "Agios Georgios adds 264 steps each way; treat it as optional rather than the plan",
+      "Cobblestone streets — comfortable shoes over sandals",
+      "Right on the way into Delphi — essentially no detour"
+    ],
+    website: "https://onparnassos.gr/en/place/agios-georgios-in-arachova/"
+  },
+
   // ---------- DELPHI ----------
   {
     id: "delphi-sanctuary",
