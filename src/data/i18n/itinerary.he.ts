@@ -69,9 +69,9 @@ export const itineraryHE: Record<number, DayHE> = {
       servingNote: "נקי, כוס קטנה, טמפרטורת החדר"
     },
     italianWords: [
-      { meaning: "שלום (רשמי/רבים)" },
-      { meaning: "תודה" },
-      { meaning: "ברוכים הבאים" }
+      { meaning: "שלום (רשמי/רבים)", exampleMeaning: "שלום, ערב טוב!" },
+      { meaning: "תודה", exampleMeaning: "תודה רבה!" },
+      { meaning: "ברוכים הבאים", exampleMeaning: "ברוכים הבאים לדלפי!" }
     ]
   },
   2: {
@@ -112,7 +112,12 @@ export const itineraryHE: Record<number, DayHE> = {
     drinkOfTheDay: {
       pairing: "יין לבן בטעם שרף, ילידי מרכז יוון — התאמה קלה ומתאימה לאוכל לארוחת ערב בטברנה בכפר דלפי.",
       servingNote: "קר, כוס קטנה"
-    }
+    },
+    italianWords: [
+      { meaning: "כן", exampleMeaning: "כן, יפה כאן!" },
+      { meaning: "לא", exampleMeaning: "לא, תודה." },
+      { meaning: "יפה!/נחמד!", exampleMeaning: "מוזיאון יפה!" }
+    ]
   },
   3: {
     title: "תרמופילאי, ואז אל ההרים: אגם פלסטירה",
@@ -161,7 +166,12 @@ export const itineraryHE: Record<number, DayHE> = {
     drinkOfTheDay: {
       pairing: "התשובה ההררית לאוזו — לא מתוק, לרוב מוגש עם צלחת מזה קטנה. מתאים למצב הרוח הקריר יותר של פלסטירה יותר מקוקטייל חוף.",
       servingNote: "כוס קרה קטנה, נלגמת לאט עם זיתים או גבינה"
-    }
+    },
+    italianWords: [
+      { meaning: "בבקשה / על לא דבר", exampleMeaning: "מים, בבקשה." },
+      { meaning: "סליחה", exampleMeaning: "סליחה, איפה השירותים?" },
+      { meaning: "איפה נמצא...?", exampleMeaning: "איפה המלון?" }
+    ]
   },
   4: {
     title: "יום באגם פלסטירה",
@@ -209,7 +219,12 @@ export const itineraryHE: Record<number, DayHE> = {
     drinkOfTheDay: {
       pairing: "טקס הקפה הקר של יוון, מוקצף לקצף — בדיוק מה שכדאי ללגום ליד האגם בין החתירה של הבוקר לרכיבה של מאוחר אחר הצהריים.",
       servingNote: "כוס גבוהה, קרח, קשית, מתיקות לפי טעם (מטריו = בינוני)"
-    }
+    },
+    italianWords: [
+      { meaning: "מים", exampleMeaning: "המים קרים!" },
+      { meaning: "סוס", exampleMeaning: "הסוס גדול." },
+      { meaning: "טעים!", exampleMeaning: "הדג טעים!" }
+    ]
   },
   5: {
     title: "רפטינג, ואז מטאורה, והלאה לפליון",
@@ -268,7 +283,12 @@ export const itineraryHE: Record<number, DayHE> = {
     drinkOfTheDay: {
       pairing: "פליון הוא אחד מאזורי המוצא של הטסיפורו — טברנה קרובה למלון היא מקום טוב לנסות בקבוק של יצרן מקומי עם דגים טריים.",
       servingNote: "כוס קרה קטנה, עם צלחת מזה"
-    }
+    },
+    italianWords: [
+      { meaning: "נהר", exampleMeaning: "אנחנו עושים ראפטינג בנהר!" },
+      { meaning: "מהר!", exampleMeaning: "הנהר מהיר!" },
+      { meaning: "בואו נלך! / קדימה!", exampleMeaning: "קדימה לראפטינג!" }
+    ]
   },
   6: {
     title: "מערות הים של פליון, ואז תסלוניקי",
@@ -321,7 +341,12 @@ export const itineraryHE: Record<number, DayHE> = {
     drinkOfTheDay: {
       pairing: "יין לבן יווני ארומטי שמתאים באופן טבעי לפירות הים של Mavri Thalassa — לבקש מהשולחן בקבוק להתאמה לפירות הים.",
       servingNote: "קר מאוד, כוס רחבה"
-    }
+    },
+    italianWords: [
+      { meaning: "ים", exampleMeaning: "הים כחול!" },
+      { meaning: "סירה", exampleMeaning: "אנחנו עולים על הסירה!" },
+      { meaning: "דג", exampleMeaning: "אני רוצה דג לארוחת ערב." }
+    ]
   },
   7: {
     title: "Waterland, ואז קמנה וורלה",
@@ -360,7 +385,12 @@ export const itineraryHE: Record<number, DayHE> = {
     drinkOfTheDay: {
       pairing: "כוס קפה יווני איטית ולא ממהרת ליד הבריכה החמה — הערב הזה הוא על מנוחה, לא על יעד.",
       servingNote: "כוס קטנה, מטריו (מתוק בינוני) הוא ברירת המחדל הקלה"
-    }
+    },
+    italianWords: [
+      { meaning: "שחייה", exampleMeaning: "בואו נשחה!" },
+      { meaning: "חם", exampleMeaning: "המים חמים." },
+      { meaning: "כיף!", exampleMeaning: "הרבה כיף היום!" }
+    ]
   },
   8: {
     title: "בוקר ספא בקמנה וורלה, ואז דרומה לנאפפליו",
@@ -399,7 +429,12 @@ export const itineraryHE: Record<number, DayHE> = {
     drinkOfTheDay: {
       pairing: "נמאה, אזור היין האדום המוכר ביותר של יוון, הוא סטייה קצרה מנאפפליו — בקבוק אגיורגיטיקו הוא הדרך הטבעית לסגור את המעגל בקטע היבשתי של הטיול.",
       servingNote: "טמפרטורת החדר, דיקנטר אם יש 20 דקות"
-    }
+    },
+    italianWords: [
+      { meaning: "יפה", exampleMeaning: "נאפפליו יפה!" },
+      { meaning: "גלידה", exampleMeaning: "אני רוצה גלידה, בבקשה." },
+      { meaning: "לילה טוב", exampleMeaning: "לילה טוב, נתראה מחר!" }
+    ]
   },
   9: {
     title: "בוקר קל בנאפפליו, טיסה הביתה",
@@ -430,6 +465,11 @@ export const itineraryHE: Record<number, DayHE> = {
     drinkOfTheDay: {
       pairing: "כוס קצרה ולא ממהרת על הטיילת של העיר העתיקה — התו הנכון לסיים איתו את הטיול לפני יום של נסיעות.",
       servingNote: "כוס קטנה, לתת לשקעים לשקוע, מטריו (מתוק בינוני) הוא ברירת המחדל הקלה"
-    }
+    },
+    italianWords: [
+      { meaning: "נסיעה טובה", exampleMeaning: "נסיעה טובה הביתה!" },
+      { meaning: "להתראות", exampleMeaning: "להתראות, יוון!" },
+      { meaning: "נתראה שוב!", exampleMeaning: "יוון, נתראה שוב!" }
+    ]
   }
 };

@@ -144,7 +144,30 @@ export const itinerary: Day[] = [
       type: "wine",
       pairing: "Resin-scented white wine, native to central Greece — an easy, food-friendly match for a taverna dinner in Delphi village.",
       servingNote: "Chilled, small tumbler"
-    }
+    },
+    italianWords: [
+      {
+        word: "Ναι (Ne)",
+        pronounce: "NEH",
+        meaning: "Yes",
+        example: "Ναι, είναι όμορφο εδώ!",
+        exampleMeaning: "Yes, it's beautiful here!"
+      },
+      {
+        word: "Όχι (Ochi)",
+        pronounce: "OH-hee",
+        meaning: "No",
+        example: "Όχι, ευχαριστώ.",
+        exampleMeaning: "No, thank you."
+      },
+      {
+        word: "Ωραίο! (Oreo!)",
+        pronounce: "oh-REH-oh",
+        meaning: "Nice!/Beautiful!",
+        example: "Ωραίο μουσείο!",
+        exampleMeaning: "Nice museum!"
+      }
+    ]
   },
   {
     dayNumber: 3,
@@ -205,6 +228,29 @@ export const itinerary: Day[] = [
       pairing: "The mountains' answer to ouzo — unsweetened, often served with a small meze plate. Fits Plastiras' cooler, alpine-lake mood better than a beach cocktail would.",
       servingNote: "Small chilled glass, sipped slowly with olives or cheese"
     },
+    italianWords: [
+      {
+        word: "Παρακαλώ (Parakalo)",
+        pronounce: "pa-ra-ka-LOH",
+        meaning: "Please / You're welcome",
+        example: "Νερό, παρακαλώ.",
+        exampleMeaning: "Water, please."
+      },
+      {
+        word: "Συγγνώμη (Signomi)",
+        pronounce: "see-GHNO-mee",
+        meaning: "Sorry / Excuse me",
+        example: "Συγγνώμη, πού είναι η τουαλέτα;",
+        exampleMeaning: "Excuse me, where is the toilet?"
+      },
+      {
+        word: "Πού είναι...; (Pou ine...?)",
+        pronounce: "poo EE-neh",
+        meaning: "Where is...?",
+        example: "Πού είναι το ξενοδοχείο;",
+        exampleMeaning: "Where is the hotel?"
+      }
+    ],
     leadImage: "./images/plastiras-horses.jpg",
     leadImageCredit: {
       author: "Αλεξανδρής Αλέξης",
@@ -273,7 +319,30 @@ export const itinerary: Day[] = [
       type: "coffee",
       pairing: "Greece's iced-coffee ritual, shaken to a foam — the right thing to sip lakeside between the morning paddle and the late-afternoon ride.",
       servingNote: "Tall glass, ice, straw, sweetness to taste (metrio = medium)"
-    }
+    },
+    italianWords: [
+      {
+        word: "Νερό (Nero)",
+        pronounce: "neh-ROH",
+        meaning: "Water",
+        example: "Το νερό είναι κρύο!",
+        exampleMeaning: "The water is cold!"
+      },
+      {
+        word: "Άλογο (Alogo)",
+        pronounce: "AH-loh-goh",
+        meaning: "Horse",
+        example: "Το άλογο είναι μεγάλο.",
+        exampleMeaning: "The horse is big."
+      },
+      {
+        word: "Νόστιμο! (Nostimo!)",
+        pronounce: "NOS-tee-moh",
+        meaning: "Delicious!",
+        example: "Το ψάρι είναι νόστιμο!",
+        exampleMeaning: "The fish is delicious!"
+      }
+    ]
   },
   {
     dayNumber: 5,
@@ -348,7 +417,30 @@ export const itinerary: Day[] = [
       type: "digestif",
       pairing: "Pelion is one of tsipouro's home regions — a seafront taverna in Agios Ioannis is a good place to try a local producer's bottle with fresh-caught fish.",
       servingNote: "Small chilled glass, with a meze plate"
-    }
+    },
+    italianWords: [
+      {
+        word: "Ποτάμι (Potami)",
+        pronounce: "po-TA-mee",
+        meaning: "River",
+        example: "Κάνουμε ράφτινγκ στο ποτάμι!",
+        exampleMeaning: "We're rafting on the river!"
+      },
+      {
+        word: "Γρήγορα! (Grigora!)",
+        pronounce: "GHREE-ghoh-rah",
+        meaning: "Fast!/Quickly!",
+        example: "Το ποτάμι είναι γρήγορο!",
+        exampleMeaning: "The river is fast!"
+      },
+      {
+        word: "Πάμε! (Pame!)",
+        pronounce: "PA-meh",
+        meaning: "Let's go!",
+        example: "Πάμε για ράφτινγκ!",
+        exampleMeaning: "Let's go rafting!"
+      }
+    ]
   },
   {
     dayNumber: 6,
@@ -417,7 +509,30 @@ export const itinerary: Day[] = [
       type: "wine",
       pairing: "An aromatic Greek white that pairs naturally with Mavri Thalassa's seafood — ask the table for a bottle to go with the shellfish.",
       servingNote: "Well chilled, wide glass"
-    }
+    },
+    italianWords: [
+      {
+        word: "Θάλασσα (Thalassa)",
+        pronounce: "THA-la-sa",
+        meaning: "Sea",
+        example: "Η θάλασσα είναι γαλάζια!",
+        exampleMeaning: "The sea is blue!"
+      },
+      {
+        word: "Βάρκα (Varka)",
+        pronounce: "VAR-ka",
+        meaning: "Boat",
+        example: "Μπαίνουμε στη βάρκα!",
+        exampleMeaning: "We're getting on the boat!"
+      },
+      {
+        word: "Ψάρι (Psari)",
+        pronounce: "PSA-ree",
+        meaning: "Fish",
+        example: "Θέλω ψάρι για βραδινό.",
+        exampleMeaning: "I want fish for dinner."
+      }
+    ]
   },
   {
     dayNumber: 7,
@@ -467,7 +582,30 @@ export const itinerary: Day[] = [
       type: "coffee",
       pairing: "An easy, unhurried cup by the thermal pool — tonight is about resting, not a destination drink.",
       servingNote: "Small cup, metrio (medium sweet) is the easy default"
-    }
+    },
+    italianWords: [
+      {
+        word: "Κολύμπι (Kolimbi)",
+        pronounce: "koh-LEEM-bee",
+        meaning: "Swimming",
+        example: "Πάμε για κολύμπι!",
+        exampleMeaning: "Let's go swimming!"
+      },
+      {
+        word: "Ζεστό (Zesto)",
+        pronounce: "zes-TOH",
+        meaning: "Hot",
+        example: "Το νερό είναι ζεστό.",
+        exampleMeaning: "The water is hot."
+      },
+      {
+        word: "Διασκέδαση! (Diaskedasi!)",
+        pronounce: "dee-ah-SKEH-da-see",
+        meaning: "Fun!",
+        example: "Πολλή διασκέδαση σήμερα!",
+        exampleMeaning: "Lots of fun today!"
+      }
+    ]
   },
   {
     dayNumber: 8,
@@ -515,7 +653,30 @@ export const itinerary: Day[] = [
       type: "wine",
       pairing: "Nemea, Greece's best-known red-wine region, is a short detour from Nafplio — a bottle of Agiorgitiko is the natural way to close the loop on the mainland leg of the trip.",
       servingNote: "Room temperature, decanted if you have 20 minutes"
-    }
+    },
+    italianWords: [
+      {
+        word: "Όμορφο (Omorfo)",
+        pronounce: "OH-mor-foh",
+        meaning: "Beautiful",
+        example: "Το Ναύπλιο είναι όμορφο!",
+        exampleMeaning: "Nafplio is beautiful!"
+      },
+      {
+        word: "Παγωτό (Pagoto)",
+        pronounce: "pa-ghoh-TOH",
+        meaning: "Ice cream",
+        example: "Θέλω παγωτό, παρακαλώ.",
+        exampleMeaning: "I want ice cream, please."
+      },
+      {
+        word: "Καληνύχτα (Kalinychta)",
+        pronounce: "ka-lee-NEEKH-ta",
+        meaning: "Good night",
+        example: "Καληνύχτα, τα λέμε αύριο!",
+        exampleMeaning: "Good night, see you tomorrow!"
+      }
+    ]
   },
   {
     dayNumber: 9,
@@ -555,6 +716,29 @@ export const itinerary: Day[] = [
       type: "coffee",
       pairing: "A short, unhurried cup on the old-town waterfront — the right note to end the trip on before a day of travel.",
       servingNote: "Small cup, let the grounds settle, metrio (medium sweet) is the easy default"
-    }
+    },
+    italianWords: [
+      {
+        word: "Καλό ταξίδι (Kalo taxidi)",
+        pronounce: "ka-LOH tak-SEE-dee",
+        meaning: "Have a good trip",
+        example: "Καλό ταξίδι στο σπίτι!",
+        exampleMeaning: "Have a good trip home!"
+      },
+      {
+        word: "Αντίο (Adio)",
+        pronounce: "an-DEE-oh",
+        meaning: "Goodbye",
+        example: "Αντίο, Ελλάδα!",
+        exampleMeaning: "Goodbye, Greece!"
+      },
+      {
+        word: "Θα τα ξαναπούμε! (Tha ta xanapoume!)",
+        pronounce: "tha ta ksa-na-POO-meh",
+        meaning: "See you again!",
+        example: "Ελλάδα, θα τα ξαναπούμε!",
+        exampleMeaning: "Greece, we'll see you again!"
+      }
+    ]
   }
 ];
