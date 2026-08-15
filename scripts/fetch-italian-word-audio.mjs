@@ -153,42 +153,72 @@ function pickField(block, key) {
   return m ? m[1] : undefined;
 }
 
+/** This trip's itinerary runs 9 days (forked from a 10-day template —
+ *  keep this as the single source of truth for the day-boundary regexes
+ *  and the main loop below). */
+const TOTAL_DAYS = 9;
+
+/** Splits a `[ {...}, {...} ]` array body into its top-level object chunks
+ *  by brace-depth, so it works regardless of whether each object is
+ *  formatted multi-line (EN) or single-line (HE uses `{ meaning: "..." }`). */
 function parseWordObjects(inner) {
   const out = [];
-  let pos = 0;
-  while (true) {
-    const s = inner.indexOf("\n      {", pos);
-    if (s < 0) break;
-    const e = inner.indexOf("\n      }", s + 1);
-    if (e < 0) break;
-    const chunk = inner.slice(s, e + "\n      }".length);
-    out.push(chunk);
-    pos = e + 1;
+  let i = 0;
+  while (i < inner.length) {
+    while (i < inner.length && inner[i] !== "{") i++;
+    if (i >= inner.length) break;
+    const start = i;
+    let depth = 1;
+    i++;
+    while (i < inner.length && depth > 0) {
+      const c = inner[i];
+      if (c === '"') {
+        i++;
+        while (i < inner.length) {
+          if (inner[i] === "\\") {
+            i += 2;
+            continue;
+          }
+          if (inner[i] === '"') {
+            i++;
+            break;
+          }
+          i++;
+        }
+        continue;
+      }
+      if (c === "{") depth++;
+      else if (c === "}") depth--;
+      i++;
+    }
+    out.push(inner.slice(start, i));
   }
   return out;
 }
 
 function extractEnDayInner(src, dayNum) {
-  if (dayNum < 10) {
+  if (dayNum < TOTAL_DAYS) {
     const re = new RegExp(
       `\\n  \\{\\n    dayNumber: ${dayNum},([\\s\\S]*?)\\n  \\},\\n  \\{\\n    dayNumber: ${dayNum + 1},`
     );
     const m = src.match(re);
     return m ? m[1] : null;
   }
-  const m = src.match(/\n  \{\n    dayNumber: 10,([\s\S]*?)\n  \}\n\];/);
+  const re = new RegExp(`\\n  \\{\\n    dayNumber: ${TOTAL_DAYS},([\\s\\S]*?)\\n  \\}\\n\\];`);
+  const m = src.match(re);
   return m ? m[1] : null;
 }
 
 function extractHeDayInner(src, dayNum) {
-  if (dayNum < 10) {
+  if (dayNum < TOTAL_DAYS) {
     const re = new RegExp(
       `\\n  ${dayNum}: \\{([\\s\\S]*?)\\n  \\},\\n  ${dayNum + 1}: \\{`
     );
     const m = src.match(re);
     return m ? m[1] : null;
   }
-  const m = src.match(/\n  10: \{([\s\S]*?)\n  \}\n\};/);
+  const re = new RegExp(`\\n  ${TOTAL_DAYS}: \\{([\\s\\S]*?)\\n  \\}\\n\\};`);
+  const m = src.match(re);
   return m ? m[1] : null;
 }
 
@@ -231,7 +261,9 @@ function parseEnWordsForDay(src, dayNum) {
   const day = extractEnDayInner(src, dayNum);
   if (!day) throw new Error(`EN day ${dayNum} block not found`);
   const inner = extractItalianWordsInner(day);
-  if (!inner) throw new Error(`EN day ${dayNum} italianWords not found`);
+  /* Not every day has a word-of-the-day carousel — treat a missing
+     `italianWords` field as "zero words for this day", not an error. */
+  if (!inner) return [];
   const objs = parseWordObjects(inner);
   return objs.map(chunk => ({
     word: pickField(chunk, "word"),
@@ -245,7 +277,7 @@ function parseHeWordsForDay(src, dayNum) {
   const day = extractHeDayInner(src, dayNum);
   if (!day) throw new Error(`HE day ${dayNum} block not found`);
   const inner = extractItalianWordsInner(day);
-  if (!inner) throw new Error(`HE day ${dayNum} italianWords not found`);
+  if (!inner) return [];
   const objs = parseWordObjects(inner);
   return objs.map(chunk => ({
     meaning: pickField(chunk, "meaning"),
@@ -416,7 +448,7 @@ async function main() {
   const heSrc = (await readFile(ITINERARY_HE, "utf8")).replace(/\r\n/g, "\n");
 
   if (parseOnly) {
-    for (let dayNum = 1; dayNum <= 10; dayNum++) {
+    for (let dayNum = 1; dayNum <= TOTAL_DAYS; dayNum++) {
       const enWords = parseEnWordsForDay(enSrc, dayNum);
       const heWords = parseHeWordsForDay(heSrc, dayNum);
       if (enWords.length !== heWords.length) {
@@ -493,7 +525,7 @@ async function main() {
     let wrote = 0;
     let skipped = 0;
 
-    for (let dayNum = 1; dayNum <= 10; dayNum++) {
+    for (let dayNum = 1; dayNum <= TOTAL_DAYS; dayNum++) {
       const enWords = parseEnWordsForDay(enSrc, dayNum);
       const heWords = parseHeWordsForDay(heSrc, dayNum);
       if (enWords.length !== heWords.length) {
