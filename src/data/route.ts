@@ -36,7 +36,8 @@ export const ROUTE_ANCHORS: RouteAnchor[] = [
 ];
 
 export const ROUTE_TRANSITIONS: RouteTransition[] = [
-  { id: "t1", from: "ath", to: "stay-delphi-acropole", bend: [[38.1, 23.2]] },
+  // Bends through Arachova's coords, the Clock Tower/dinner stop en route to Delphi.
+  { id: "t1", from: "ath", to: "stay-delphi-acropole", bend: [[38.1, 23.2], [38.4794, 22.5875]] },
   // Bends route through Thermopylae's own coords — the family drives
   // there and back on the way to Plastiras (see itinerary Day 3).
   { id: "t2", from: "stay-delphi-acropole", to: "stay-plastiras", bend: [[38.7967, 22.5361]] },

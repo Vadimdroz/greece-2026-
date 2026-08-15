@@ -3,6 +3,19 @@ import type { Service } from "./types";
 export const services: Service[] = [
   // ==================== NORTH — Delphi / Lake Plastiras ====================
   {
+    id: "rest-taverna-christos",
+    name: "Taverna Christos, Arachova",
+    category: "restaurant",
+    region: "north",
+    base: "north",
+    shortDescription: "Traditional taverna with a view over Livadi, running since 1989",
+    description:
+      "A long-running family taverna in Arachova, known for its view over the Livadi valley and hearty traditional dishes — the cheese bread and pumpkin soup are the standouts. A natural dinner stop on the way into Delphi, a short walk from the Clock Tower.",
+    address: "Arachova, 32004, Greece",
+    coords: [38.4790, 22.5878],
+    hours: "Lunch & dinner"
+  },
+  {
     id: "rest-taverna-delphi",
     name: "Village taverna, Delphi",
     category: "restaurant",

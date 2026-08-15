@@ -15,21 +15,44 @@ export const itinerary: Day[] = [
         title: "Pick up the car — Record Go, Athens Airport",
         description:
           "Booking #782539337, MG ZS (compact, 5 seats). Walk ~250 m right of exit B5 to the mini-van parking area for the free shuttle to the Record Go office. Bring: driving licence, passport/ID, credit card in Vadim's name, and the voucher.",
-        rideToNext: { duration: "2 h 30", note: "via GR-8A/E75 · ≈ 180 km, mountain road for the last stretch", departAt: "14:30" }
+        rideToNext: { duration: "2 h 10", note: "via GR-8A/E75 toward Arachova · ≈ 165 km, mountain road for the last stretch", departAt: "14:30" }
+      },
+      {
+        time: "Late afternoon",
+        title: "Clock Tower & Agios Georgios Church, Arachova",
+        description:
+          "A stone mountain village right on the way into Delphi. Climb the spiral staircase up the Clock Tower for a quick panoramic view over the valley — 10–15 minutes, an easy stretch after the drive. If everyone still has energy, 264 stone steps lead further up to Agios Georgios Church for an even bigger view.",
+        attractionId: "arachova-viewpoint",
+        tag: "view",
+        rideToNext: { duration: "5 min", note: "walk to the tavernas" }
       },
       {
         time: "Evening",
+        title: "Dinner — Taverna Christos, Arachova",
+        description:
+          "A long-running local taverna with a view over the Livadi valley — try the cheese bread and pumpkin soup. An easy, scenic dinner stop before the short final drive into Delphi.",
+        tag: "food",
+        rideToNext: { duration: "10 min", note: "Arachova → Delphi, the final stretch" }
+      },
+      {
+        time: "Night",
         title: "Arrive in Delphi, settle in",
         description:
-          "Check in at Acropole Delphi City Hotel — the pick between the two Delphi bookings (Amalia Hotel Delphi is being cancelled). Short walk through Delphi village for a first look at the gorge view before dinner."
+          "Check in at Acropole Delphi City Hotel — the pick between the two Delphi bookings (Amalia Hotel Delphi is being cancelled). After dinner in Arachova, it's just a short final stretch into the village to settle in for the night."
       }
     ],
-    driveNotes: "Athens Airport → Delphi ≈ 2 h 30 via GR-8A/E75",
+    driveNotes: "Athens Airport → Arachova ≈ 2 h 10 via GR-8A/E75 · Arachova → Delphi ≈ 10 min",
+    restaurants: ["rest-taverna-christos"],
+    gear: [
+      { item: "Comfortable shoes for Arachova's cobblestones and stairs", for: "arachova-viewpoint" }
+    ],
     dayTips: [
       "Greek law: child seats mandatory for under-12 or under-150 cm — confirm both booster seats are in the car before leaving the lot",
       "You declined Record Go's own insurance at the desk — third-party cover is via Rentalcars.com (Zurich-backed)",
       "Download offline Google Maps for the Delphi–Plastiras mountain roads now, while you still have airport wifi",
-      "Acropole Delphi City Hotel is the pick for tonight — Amalia Hotel Delphi is being cancelled before 12 Aug to avoid a stray charge"
+      "Acropole Delphi City Hotel is the pick for tonight — Amalia Hotel Delphi is being cancelled before 12 Aug to avoid a stray charge",
+      "Arachova's Clock Tower is the quick win; treat the 264 steps up to Agios Georgios as optional depending on everyone's energy after the flight",
+      "Taverna Christos is a small, popular local spot with no online booking — arrive a little early in peak season in case it's full"
     ],
     drinkOfTheDay: {
       name: "Metaxa",

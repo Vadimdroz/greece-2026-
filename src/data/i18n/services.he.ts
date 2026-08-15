@@ -4,6 +4,14 @@ export const servicesHE: Record<
   string,
   Partial<Pick<Service, "name" | "shortDescription" | "description" | "address" | "hours" | "bookingNote">>
 > = {
+  "rest-taverna-christos": {
+    name: "טברנה כריסטוס, אראחובה",
+    shortDescription: "טברנה מסורתית עם נוף לעמק ליבאדי, פועלת מאז 1989",
+    description:
+      "טברנה משפחתית ותיקה באראחובה, ידועה בנוף שלה לעמק ליבאדי ובמנות מסורתיות עשירות — לחם הגבינה ומרק הדלעת הם המנות הבולטות. עצירת ארוחת ערב טבעית בדרך לדלפי, הליכה קצרה ממגדל השעון.",
+    address: "אראחובה, 32004, יוון",
+    hours: "צהריים וערב"
+  },
   "rest-taverna-delphi": {
     name: "טברנה כפרית, דלפי",
     shortDescription: "ארוחת ערב קלה בטברנה עם נוף לקניון",
