@@ -11,6 +11,7 @@ import ServicesSection from "./components/ServicesSection";
 import FoodAndWineSection from "./components/FoodAndWineSection";
 import ChecklistSection from "./components/ChecklistSection";
 import TipsSection from "./components/TipsSection";
+import MythologySection from "./components/MythologySection";
 import EmergencySection from "./components/EmergencySection";
 import Footer from "./components/Footer";
 import MobileBottomNav from "./components/MobileBottomNav";
@@ -81,6 +82,9 @@ export default function App() {
 
       <SectionOrnament />
       <TipsSection />
+
+      <SectionOrnament />
+      <MythologySection />
 
       <SectionOrnament />
       <ChecklistSection />

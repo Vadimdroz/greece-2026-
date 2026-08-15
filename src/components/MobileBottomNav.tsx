@@ -16,11 +16,12 @@ const TABS: { id: string; key: DictKey; Icon: typeof CalendarDays }[] = [
 ];
 
 const MORE_LINKS: { id: string; key: DictKey }[] = [
-  { id: "bookings",  key: "nav_bookings" },
-  { id: "stays",     key: "nav_stays" },
-  { id: "tips",      key: "nav_tips" },
-  { id: "checklist", key: "nav_checklist" },
-  { id: "emergency", key: "nav_emergency" }
+  { id: "bookings",   key: "nav_bookings" },
+  { id: "stays",      key: "nav_stays" },
+  { id: "tips",       key: "nav_tips" },
+  { id: "mythology",  key: "nav_mythology" },
+  { id: "checklist",  key: "nav_checklist" },
+  { id: "emergency",  key: "nav_emergency" }
 ];
 
 const MORE_LABEL: Record<"en" | "he", string> = { en: "More", he: "עוד" };
@@ -37,6 +38,7 @@ const SECTION_IDS = [
   "food",
   "stays",
   "tips",
+  "mythology",
   "checklist",
   "emergency"
 ];
@@ -48,6 +50,7 @@ const MORE_SECTION_IDS = new Set([
   "stays",
   "services",
   "tips",
+  "mythology",
   "checklist",
   "emergency"
 ]);

@@ -13,6 +13,7 @@
     "repair:greek-words-audio": "node scripts/repair-italian-word-mp3.mjs",
     "tts:attractions-he": "node scripts/fetch-attraction-audio-he.mjs",
     "tts:attractions-he:eleven": "node scripts/fetch-attraction-audio-he.mjs --elevenlabs",
+    "tts:mythology": "node scripts/fetch-mythology-audio.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
