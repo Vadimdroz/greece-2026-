@@ -68,6 +68,7 @@ export const DICT = {
   nav_services: { en: "Local", he: "מקומי" },
   nav_food: { en: "Food", he: "אוכל" },
   nav_tips: { en: "Tips", he: "טיפים" },
+  nav_mythology: { en: "Myths", he: "מיתולוגיה" },
   nav_checklist: { en: "Lists", he: "רשימות" },
   nav_emergency: { en: "Emergency", he: "חירום" },
 
@@ -332,6 +333,18 @@ export const DICT = {
   tips_kicker: {
     en: "What we learned the hard way, so you don't have to",
     he: "מה שלמדנו בדרך הקשה — כדי שלא תצטרכו"
+  },
+
+  /* ---------- Mythology section ---------- */
+  mythology_eyebrow: { en: "For the kids, in Russian", he: "לילדים, ברוסית" },
+  mythology_title: { en: "Greek myths & legends", he: "מיתוסים ואגדות יווניות" },
+  mythology_kicker: {
+    en: "Zeus, Hera, Hercules, Achilles and more — the gods and heroes behind the places we're visiting",
+    he: "זאוס, הרה, הרקולס, אכילס ועוד — האלים והגיבורים שמאחורי המקומות שנבקר בהם"
+  },
+  mythology_intro: {
+    en: "Bedtime-style stories, same warm voice as the Russian narration on the attraction cards — offered here regardless of which language the app is set to.",
+    he: "סיפורים בסגנון סיפור לפני השינה, באותו קול חם כמו הקריינות הרוסית בכרטיסי האטרקציות — מוצעים כאן ללא קשר לשפת האפליקציה."
   },
 
   /* ---------- Checklist ---------- */
