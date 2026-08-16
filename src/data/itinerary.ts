@@ -126,17 +126,28 @@ export const itinerary: Day[] = [
         attractionId: "delphi-tholos",
         tag: "view",
         optional: true
+      },
+      {
+        time: "Late afternoon",
+        title: "Optional: beach at Itea or Kirra",
+        description:
+          "If there's time and energy left after the sanctuary, museum, and Tholos, Itea and Kirra sit side by side on the Gulf of Corinth, about 15–20 minutes downhill from Delphi. Itea's entry is gentle and shallow — good for the kids — with loungers and beachfront bars; Kirra next door is quieter. Water runs a touch cooler than the Aegean (~25°C in August) but is still very swimmable.",
+        attractionId: "itea-kirra-beach",
+        tag: "water",
+        optional: true
       }
     ],
     dayTips: [
       "Refillable water bottles — there's very little shade on the upper site",
       "The museum's AC makes it a good midday heat-break, not just an afterthought",
-      "Confirm which Delphi hotel you're keeping before checkout tomorrow"
+      "Confirm which Delphi hotel you're keeping before checkout tomorrow",
+      "If you have afternoon energy left after the Tholos, Itea/Kirra beach is an easy 15–20 min add-on down the hill — just budget the drive back up for dinner"
     ],
     gear: [
       { item: "Sun hats and reef-safe sunscreen", for: "delphi-sanctuary" },
       { item: "Sturdy shoes — the site paths are uneven ancient stone" },
-      { item: "A light jacket for the museum's AC" }
+      { item: "A light jacket for the museum's AC" },
+      { item: "Swimsuits + towels, in case you add the Itea/Kirra beach stop", for: "itea-kirra-beach" }
     ],
     restaurants: ["rest-taverna-delphi"],
     drinkOfTheDay: {

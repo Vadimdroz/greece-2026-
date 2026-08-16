@@ -94,6 +94,26 @@ export const attractions: POI[] = [
       licenseUrl: "https://creativecommons.org/licenses/by/3.0"
     }
   },
+  {
+    id: "itea-kirra-beach",
+    name: "Itea / Kirra Beach",
+    category: "attraction",
+    region: "north",
+    dayTripFrom: "stay-delphi-acropole",
+    shortDescription: "Gentle pebble beach on the Gulf of Corinth, 15–20 min from Delphi",
+    description:
+      "Itea and Kirra sit side by side on the Gulf of Corinth, a short drive downhill from Delphi. Itea's beach has a gentle, shallow entry — no water shoes strictly needed — plus loungers and beachfront bars along its ~500 m stretch; Kirra next door is quieter and less crowded. The water runs a touch cooler than the Aegean (around 25°C in August vs. up to 27–28°C on the warmest Aegean beaches), but still perfectly swimmable.",
+    address: "Itea, Fokida, Greece",
+    coords: [38.4256, 22.4256],
+    tags: ["water", "family"],
+    difficulty: "easy",
+    tips: [
+      "Itea has the gentler, more kid-friendly entry; Kirra next door is the quieter pick if you'd rather skip any crowds",
+      "Pebbly, not sandy, at both — water shoes still help even though the entry itself is gentle",
+      "Budget the ~15–20 min drive back up to Delphi for dinner"
+    ],
+    website: "https://www.tripadvisor.com/Attraction_Review-g189409-d10412486-Reviews-Itea_Beach-Itea_Phocis_Region_Central_Greece.html"
+  },
 
   // ---------- LAKE PLASTIRAS ----------
   {
