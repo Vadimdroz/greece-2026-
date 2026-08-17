@@ -283,6 +283,25 @@ export const attractions: POI[] = [
       licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
     }
   },
+  {
+    id: "thermopylae-hot-springs",
+    name: "Thermopylae Hot Springs",
+    category: "attraction",
+    region: "transit",
+    enRouteBetween: ["stay-delphi-acropole", "stay-plastiras"],
+    shortDescription: "Free natural sulfur springs, right across the road from the Leonidas statue",
+    description:
+      "\"Thermopylae\" means \"Hot Gates\" — a reference to these natural sulfur springs, flowing since antiquity right where the battle happened. Free, open year-round, a constant 40°C. An easy few minutes to dip your feet in the warm stream right after the Leonidas Monument — legend says Hephaestus created the springs at Athena's request to heal the wounds of Hercules.",
+    address: "Thermopylae, Fthiotida, Greece",
+    coords: [38.7970, 22.5358],
+    tags: ["nature", "family"],
+    difficulty: "easy",
+    tips: [
+      "Right across the road from the Leonidas Monument — a couple of minutes' walk, not a separate stop",
+      "Bring a change of socks/sandals if you want to actually wade in rather than just dip toes",
+      "No entry fee, no set hours"
+    ]
+  },
 
   // ---------- THESSALONIKI ----------
   {

@@ -16,6 +16,19 @@ export const services: Service[] = [
     hours: "Lunch & dinner"
   },
   {
+    id: "rest-keramario",
+    name: "Keramario, Drakotrypa",
+    category: "restaurant",
+    region: "north",
+    base: "north",
+    shortDescription: "Family-run mountain taverna with a small live-animal sanctuary",
+    description:
+      "A family-run complex set in an oak forest near Drakotrypa/Filia (Mouzaki area, Karditsa) — deer, peacocks, and ponies wander fenced enclosures around the grounds, a hit with kids. The taverna serves grilled meats, local pites, homemade pasta, and traditional dishes from the Agrafa mountains. About 1 h 15 from Thermopylae and 25–30 min before Lake Plastiras — a good reason to slow the drive down rather than push straight through.",
+    address: "Drakotrypa, 43060 Mouzaki, Karditsa, Greece",
+    coords: [39.40, 21.68],
+    hours: "Lunch & dinner"
+  },
+  {
     id: "rest-taverna-delphi",
     name: "Village taverna, Delphi",
     category: "restaurant",

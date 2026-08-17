@@ -205,13 +205,24 @@ export const itinerary: Day[] = [
           "A short, worthwhile roadside stop at the site of the 480 BC battle — the Leonidas statue and the burial mound (Kolonos Hill) are a 20–30 minute visit, good for stretching legs mid-drive.",
         attractionId: "thermopylae",
         tag: "culture",
-        rideToNext: { duration: "1 h 25", note: "Thermopylae → Kalyvia Fylaktis, via Karditsa" }
+        rideToNext: { duration: "2 min", note: "across the road" }
       },
       {
-        time: "11:30",
-        title: "Drive Thermopylae → Lake Plastiras",
+        time: "11:00",
+        title: "Thermopylae Hot Springs",
         description:
-          "Winding mountain road via Karditsa — one of the best scenic drives of the trip. Stop whenever a viewpoint looks good."
+          "Right across the road from the Leonidas statue — the natural sulfur springs the site is named for (\"Thermopylae\" means \"Hot Gates\"). Free, open year-round, a constant 40°C. Easy to just dip your feet in the warm stream for a few minutes; legend has it Hephaestus created the springs at Athena's request to heal the wounds of Hercules.",
+        attractionId: "thermopylae-hot-springs",
+        tag: "nature",
+        rideToNext: { duration: "1 h 15", note: "Thermopylae → Keramario, near Drakotrypa/Filia (Karditsa area)" }
+      },
+      {
+        time: "12:45",
+        title: "Lunch — Keramario, Drakotrypa",
+        description:
+          "A family-run mountain taverna set in an oak forest with a small live-animal sanctuary — deer, peacocks, and ponies wander fenced enclosures around the grounds. Grilled meats, local pites, homemade pasta, and traditional dishes from the Agrafa mountains. About 25–30 minutes before Lake Plastiras — worth slowing the drive down for rather than pushing straight through.",
+        tag: "food",
+        rideToNext: { duration: "25–30 min", note: "Keramario → Kazarma, Lake Plastiras" }
       },
       {
         time: "15:00",
@@ -226,9 +237,12 @@ export const itinerary: Day[] = [
         tag: "nature"
       }
     ],
-    driveNotes: "Delphi → Thermopylae ≈ 1 h 10 · Thermopylae → Kalyvia Fylaktis ≈ 1 h 25 via Karditsa",
+    driveNotes: "Delphi → Thermopylae ≈ 1 h 10 · Thermopylae → Keramario ≈ 1 h 15 · Keramario → Kazarma ≈ 25–30 min",
+    restaurants: ["rest-keramario"],
     dayTips: [
       "Thermopylae used to be a Day 8 stop, wedged into the Thessaloniki → Nafplio marathon — moving it here costs almost no extra driving and turns that day into two sane ones instead",
+      "The hot springs are literally across the road from the Leonidas statue — free, no set hours, worth the extra 10 minutes",
+      "Keramario's animal enclosures (deer, peacocks, ponies) are a good reason to make lunch here rather than a quick stop — budget more like 45–60 min than a fast bite",
       "Offline maps essential here — signal drops in the mountain passes",
       "Fill the tank before leaving Delphi; fuel stations thin out in the mountains",
       "Kazarma is down to 2 nights now, not 3 — Plastiras Day 5 (horses/archery) was cut to make room for the Meteora/Pelion/Kamena Vourla changes"
