@@ -291,7 +291,7 @@ export const attractions: POI[] = [
     enRouteBetween: ["stay-delphi-acropole", "stay-plastiras"],
     shortDescription: "Free natural sulfur springs, right across the road from the Leonidas statue",
     description:
-      "\"Thermopylae\" means \"Hot Gates\" — a reference to these natural sulfur springs, flowing since antiquity right where the battle happened. Free, open year-round, a constant 40°C. An easy few minutes to dip your feet in the warm stream right after the Leonidas Monument — legend says Hephaestus created the springs at Athena's request to heal the wounds of Hercules.",
+      "“Thermopylae” means “Hot Gates” — a reference to these natural sulfur springs, flowing since antiquity right where the battle happened. Free, open year-round, a constant 40°C. An easy few minutes to dip your feet in the warm stream right after the Leonidas Monument — legend says Hephaestus created the springs at Athena's request to heal the wounds of Hercules.",
     address: "Thermopylae, Fthiotida, Greece",
     coords: [38.7970, 22.5358],
     tags: ["nature", "family"],
