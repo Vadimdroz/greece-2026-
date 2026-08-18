@@ -7,7 +7,7 @@ import type { Booking, BookingsData } from "./bookingsTypes";
  * leaks only *that a day has a ticket*, never any booking detail. Keep in
  * sync with the encrypted packet's dayNumbers.
  */
-export const BOOKED_DAY_NUMBERS = new Set<number>([1, 3, 4, 6, 7, 8, 9]);
+export const BOOKED_DAY_NUMBERS = new Set<number>([1, 3, 5, 6, 7, 8, 9]);
 
 export interface BookingsCtx {
   /** Decrypted packet, or null while still locked. */
