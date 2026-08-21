@@ -109,6 +109,11 @@ export default function ServicesSection() {
                           {it.hours}
                         </div>
                       )}
+                      {it.priceEstimate && (
+                        <div className="text-xs text-terracotta-700/85 mt-0.5">
+                          {it.priceEstimate}
+                        </div>
+                      )}
                       <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
                         <NavigateLinks name={it.name} coords={it.coords} address={it.address} size={11} />
                         <button onClick={() => focusOn(it.id)} className="icon-link">

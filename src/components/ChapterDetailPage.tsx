@@ -1201,6 +1201,11 @@ function RestaurantsForDay({ restaurants }: { restaurants: Service[] }) {
                   {t("hours")} · {r.hours}
                 </div>
               )}
+              {r.priceEstimate && (
+                <div className="mt-0.5 text-[11.5px] sm:text-[12px] text-terracotta-700/85 leading-snug">
+                  {r.priceEstimate}
+                </div>
+              )}
               <div className="mt-2">
                 <NavigateLinks name={r.name} coords={r.coords} address={r.address} size={11} />
               </div>
