@@ -13,7 +13,8 @@ export const services: Service[] = [
       "A long-running family taverna in Arachova, known for its view over the Livadi valley and hearty traditional dishes — the cheese bread and pumpkin soup are the standouts. A natural dinner stop on the way into Delphi, a short walk from the Clock Tower.",
     address: "Arachova, 32004, Greece",
     coords: [38.4790, 22.5878],
-    hours: "Lunch & dinner"
+    hours: "Lunch & dinner",
+    priceEstimate: "Est. €70–90 for 2 adults + 2 kids"
   },
   {
     id: "rest-keramario",
@@ -26,7 +27,8 @@ export const services: Service[] = [
       "A family-run complex set in an oak forest near Drakotrypa/Filia (Mouzaki area, Karditsa) — deer, peacocks, and ponies wander fenced enclosures around the grounds, a hit with kids. The taverna serves grilled meats, local pites, homemade pasta, and traditional dishes from the Agrafa mountains. About 1 h 15 from Thermopylae and 25–30 min before Lake Plastiras — a good reason to slow the drive down rather than push straight through.",
     address: "Drakotrypa, 43060 Mouzaki, Karditsa, Greece",
     coords: [39.40, 21.68],
-    hours: "Lunch & dinner"
+    hours: "Lunch & dinner",
+    priceEstimate: "Est. €65–85 for 2 adults + 2 kids"
   },
   {
     id: "rest-taverna-delphi",
@@ -39,7 +41,8 @@ export const services: Service[] = [
       "Delphi village is small and walkable — several tavernas along the main street have terraces looking over the Pleistos gorge. No single reservation needed; walk until a view and a menu look right, and ask for the fresh fish given Irina's pescatarian/shellfish preference.",
     address: "Delphi village, 33054 Delfoi, Greece",
     coords: [38.4820, 22.4990],
-    hours: "Lunch & dinner"
+    hours: "Lunch & dinner",
+    priceEstimate: "Est. €60–80 for 2 adults + 2 kids"
   },
   {
     id: "market-delphi",
@@ -79,6 +82,7 @@ export const services: Service[] = [
     address: "Nik. Plastira 3, Kalamaria, Thessaloniki 551 32, Greece",
     coords: [40.5794, 22.9497],
     hours: "Tue–Fri 14:00–01:00, Sat–Sun 13:00–01:00, kitchen closes 23:30, closed Mondays",
+    priceEstimate: "Actual: €320 for 2 adults + 2 kids (20 Aug) — a seafood/shellfish destination, priced well above the trip's other tavernas (most ran €60–80); budget accordingly",
     bookingNote: "Reserve ahead — especially for a Friday. Online same-day bookings close at 15:00. Phone +30 231 093 2542."
   },
   {

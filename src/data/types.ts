@@ -143,6 +143,12 @@ export interface Stay extends POI {
 export interface Service extends POI {
   category: "restaurant" | "supermarket" | "gas";
   hours?: string;
+  /** Restaurant-only: a rough total for the family (2 adults + 2 kids),
+   *  so a recommendation sets expectations before you sit down — e.g.
+   *  "Est. €70–90 for 2 adults + 2 kids". Written as a full sentence
+   *  rather than a label+value pair since some entries need to note an
+   *  actual paid amount instead of a forward estimate. */
+  priceEstimate?: string;
   base: "north" | "south";
 }
 
