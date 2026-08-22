@@ -302,6 +302,32 @@ export const attractions: POI[] = [
       "No entry fee, no set hours"
     ]
   },
+  {
+    id: "corinth-canal",
+    name: "Corinth Canal",
+    category: "attraction",
+    region: "transit",
+    enRouteBetween: ["stay-kamena-vourla", "stay-nafplio"],
+    shortDescription: "A 78 m-deep cut through solid rock — the highway crosses right over it",
+    description:
+      "The road from Kamena Vourla to Nafplio already runs straight past the Corinth Canal, so this isn't a detour — just a stop where you'd be driving anyway. Walk out onto the pedestrian bridge at Isthmia and look straight down the narrow, 78 m-deep cut through solid rock connecting the Corinthian and Saronic Gulfs. It's a popular bungee-jumping spot — not something for Thomas or Sophia to try themselves, but fun to watch if anyone's jumping that day.",
+    address: "Isthmia, Corinthia, Greece",
+    coords: [37.9347, 22.9839],
+    tags: ["view"],
+    difficulty: "easy",
+    tips: [
+      "15–30 minutes is plenty — a quick photo-and-look stop, not a full visit",
+      "Free to view from the pedestrian bridge; no entry fee or set hours",
+      "Cafes and a parking area sit right at the viewing platform"
+    ],
+    quizFacts: [
+      {
+        question: "What is the Corinth Canal cut through?",
+        correctAnswer: "Solid rock, connecting two seas",
+        distractors: ["Sand dunes", "An old riverbed", "A volcano crater"]
+      }
+    ]
+  },
 
   // ---------- THESSALONIKI ----------
   {

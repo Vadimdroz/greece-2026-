@@ -640,7 +640,7 @@ export const itinerary: Day[] = [
     region: "south",
     base: "Nafplio",
     title: "Spa morning at Kamena Vourla, then south to Nafplio",
-    subtitle: "A relaxed thermal-pool morning, then a shorter drive that lands you in Nafplio with the afternoon still ahead",
+    subtitle: "A relaxed thermal-pool morning, a quick stop at the Corinth Canal on the way, then into Nafplio with the afternoon still ahead",
     activities: [
       {
         time: "09:00",
@@ -648,12 +648,22 @@ export const itinerary: Day[] = [
         description:
           "Check the resort's thermal-pool access hours when you book — some spa resorts reserve certain windows for treatments rather than general guest use. Worth confirming ahead whether children can use the thermal (vs. freshwater) pool, since some hot-spring pools carry age or temperature restrictions.",
         tag: "nature",
-        rideToNext: { duration: "3 h 10", note: "Kamena Vourla → Nafplio" }
+        rideToNext: { duration: "2 h 10", note: "Kamena Vourla → Corinth Canal" }
       },
       {
         time: "12:00",
-        title: "Drive Kamena Vourla → Nafplio",
-        description: "Roughly half the distance of the old direct Thessaloniki–Nafplio run — you should land in Nafplio around midday with a real afternoon left, not just an evening.",
+        title: "Drive Kamena Vourla → Corinth Canal",
+        description: "The road to Nafplio runs right past the Corinth Canal via Thebes and the Corinth isthmus — this isn't a detour, just a stop where the highway already crosses it.",
+        rideToNext: { duration: "10 min", note: "pull off at the canal viewing platform" }
+      },
+      {
+        time: "14:10",
+        title: "Corinth Canal viewpoint",
+        description:
+          "A quick, dramatic stop — walk out onto the pedestrian bridge at Isthmia and look straight down the 78 m-deep, razor-narrow cut through solid rock. Watch for bungee jumpers if any are running that day (not something for Thomas or Sophia to try themselves, but fun to watch). 15–30 minutes is plenty.",
+        attractionId: "corinth-canal",
+        tag: "view",
+        rideToNext: { duration: "1 h", note: "Corinth Canal → Nafplio" }
       },
       {
         time: "Afternoon",
@@ -668,10 +678,11 @@ export const itinerary: Day[] = [
         tag: "culture"
       }
     ],
-    driveNotes: "Kamena Vourla → Nafplio ≈ 3 h 10",
+    driveNotes: "Kamena Vourla → Corinth Canal ≈ 2 h 10 · Corinth Canal → Nafplio ≈ 1 h",
     dayTips: [
       "This is the day that used to carry Waterland + Thermopylae + a 5–6 hour drive all in one go — splitting the Kamena Vourla stop off yesterday is what makes today light",
-      "Thermopylae has moved to Day 3 (Delphi → Plastiras), so there's no history stop to fit in today — just the pool and the drive"
+      "Thermopylae has moved to Day 3 (Delphi → Plastiras) — the Corinth Canal is today's only stop, and it costs almost no extra time since the highway already crosses right over it",
+      "Mycenae (Lion Gate, Treasury of Atreus) is only ~30–40 min from Nafplio if you want more ancient history, but it's a real visit (entry fee, 45–90 min) — skipped today to keep the full Nafplio afternoon"
     ],
     drinkOfTheDay: {
       name: "Agiorgitiko (Nemea red wine)",
