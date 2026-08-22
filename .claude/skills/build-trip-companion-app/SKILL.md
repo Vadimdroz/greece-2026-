@@ -79,6 +79,11 @@ offer them rather than blocking.
 - **Flights** — airports, rough times, record locators if useful
 - **Ground transport** — rental car or trains; pickup/dropoff, company, caveats
 - **Stays** — property names, towns, check-in/out
+- **Pacing ground rules** (defaults — see [playbook §5](../../../docs/HOW_TO_BUILD_A_VACATION_WEBSITE.md#5-the-plan--itinerary--your-headline-section)):
+  no single drive leg over ~2.5h, and at least 2 nights at any one stay.
+  While drafting a route, flag any leg or stay that breaks these and confirm
+  with the traveller before locking it in — don't silently build around a
+  violation, and don't retrofit an already-booked trip without being asked.
 - **Hard bookings** — museums, cable cars, boats, guided tours with fixed times
 - **Booking confirmations** — order numbers, references/PINs, provider phones,
   addresses, meetup points + arrival times, what's included / to bring. These
