@@ -487,6 +487,31 @@ tradeoff deliberately; the rest of the app should stay backend-free.
 
 This is the section your family will open most. Give it real weight.
 
+### Pacing ground rules
+
+Two defaults, learned the hard way, apply to every trip built from this
+template unless the traveller explicitly overrides them for a specific leg:
+
+- **No drive leg over ~2.5 hours.** Longer than that, look for a
+  natural break — a town, viewpoint, or restaurant roughly at the
+  midpoint — and build it into the day rather than pushing straight
+  through (see [§12 Per-day enrichment](#12-content-guidelines) for the
+  restaurant-stop pattern).
+- **At least 2 nights at any one stay.** Avoid back-to-back one-night
+  stops; they burn a disproportionate share of the trip on packing,
+  driving, and checking in instead of being there.
+
+Apply these when *drafting* a new itinerary during onboarding (§0) or the
+discovery interview: if a proposed route violates one, say so and ask
+before locking it in, rather than silently building a plan that breaks
+the rule. They're defaults, not hard constraints — a traveller may
+deliberately want a one-night stopover — but the assistant should never
+introduce one unasked.
+
+These rules apply going forward, to new legs/stays being planned — don't
+retroactively rework an already-booked itinerary to satisfy them without
+the traveller asking for that explicitly.
+
 ### Magazine-chapter pattern
 
 Each day is a "chapter" with:
