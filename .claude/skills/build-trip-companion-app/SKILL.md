@@ -68,6 +68,12 @@ some in their request, only ask for the gaps. Reasonable defaults are noted —
 offer them rather than blocking.
 
 ### Trip identity
+
+Before asking any of this, check for a standing family/travel-preferences
+record if the traveller has one — e.g., a "Travel Advisor" Claude.ai
+Project — for names, ages, dietary/allergy notes, and patterns from past
+trips, and only ask for what's still missing.
+
 - **Destination / region**
 - **Country** (drives nav deep-links + the geolocation bounding box)
 - **Dates** (local `YYYY-MM-DD` start → end; derive the number of days)
