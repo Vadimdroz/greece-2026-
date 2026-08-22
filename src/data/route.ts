@@ -47,6 +47,7 @@ export const ROUTE_TRANSITIONS: RouteTransition[] = [
   { id: "t4", from: "stay-pelion", to: "stay-thessaloniki-shotel", bend: [[39.3608, 23.2242]] },
   // Bends through Waterland, visited on the way to Kamena Vourla.
   { id: "t5", from: "stay-thessaloniki-shotel", to: "stay-kamena-vourla", bend: [[40.4667, 22.9333]] },
-  { id: "t6", from: "stay-kamena-vourla", to: "stay-nafplio" },
+  // Bends through the Corinth Canal's own coords, the viewpoint stop en route to Nafplio.
+  { id: "t6", from: "stay-kamena-vourla", to: "stay-nafplio", bend: [[37.9347, 22.9839]] },
   { id: "t7", from: "stay-nafplio", to: "ath" }
 ];
