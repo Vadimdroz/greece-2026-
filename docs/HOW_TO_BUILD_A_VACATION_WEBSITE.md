@@ -58,6 +58,11 @@ for depth (map behaviour, hero state machine, audio pipeline, etc.).
 
 Use this as the short runbook before diving into the detailed sections:
 
+**Before step 1:** if the traveller keeps a standing family/travel-preferences
+record — e.g., a "Travel Advisor" Claude.ai Project — check it first for
+names, ages, dietary/allergy notes, and patterns from past trips, and only
+ask for what's still missing. Don't re-interview for facts already on file.
+
 1. **Clone / fork the previous trip app** — start from the same
    Vite + React + Tailwind repo shape unless you have a reason to
    rebuild from scratch.
@@ -1527,6 +1532,15 @@ keepsake. Some things we wish we'd written down sooner:
   Cormorant Garamond italic is gorgeous.
 - **No emoji unless the user asks.** Lucide icons cover everything.
 
+### Verify real-world details before writing them
+
+Drive times, opening hours, prices, water temperatures, "is X on the way
+to Y" claims, whether a trail or landmark actually exists — anything
+checkable should be checked (a live web search or maps lookup) before it
+goes into content. A confident-sounding wrong detail is worse than an
+honest "couldn't confirm this, worth double-checking" — say so rather than
+stating a guess as fact.
+
 ### Per-day enrichment
 
 For every day, include:
@@ -1540,6 +1554,12 @@ For every day, include:
 - **Restaurants for the day** — 2–4 ids from the services list.
   Curate by **the day's location**, not just region — a restaurant
   in southern Maremma is useless on a Lucca day.
+- **Cost estimate on every restaurant recommendation** — a rough total
+  for the family (e.g. "Est. €60–80 for 2 adults + 2 kids"), and call it
+  out explicitly when a pick runs well above the trip's typical range
+  (e.g. "Actual: €320 — a splurge destination, priced well above the
+  trip's other tavernas; budget accordingly") so it's a choice, not a
+  surprise mid-trip.
 - **Drink of the day** — one drink local to the destination (wine,
   cocktail, beer, aperitif, digestif, coffee) with a one-line "why
   tonight" pairing. Keep `name` and `type` universal across UI
